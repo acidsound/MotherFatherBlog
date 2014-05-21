@@ -1,0 +1,16 @@
+<template name="postsList">
+
+  <div class="col-md-12">
+  <div id="item-list" class="list-group">
+    {{#each posts}}
+      <a class="list-group-item" href="{{pathFor 'postPage'}}">
+        <h4 class="list-group-item-heading">{{title}}</h4>
+        <p class="list-group-item-text">
+          submitted by {{author}}
+        </p>
+      </a>
+    {{/each}}
+  </div>
+  </div>
+
+</template>
