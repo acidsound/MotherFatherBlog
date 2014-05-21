@@ -1,15 +1,13 @@
 <template name="postItem">
   <div class="post" id="postItem">
+    <h2 class="menu-title">{{title}}</h2>
+    <!--<h3 class="postTitle"></h3>-->
     <p>
-      submitted by {{author}},
-      <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
+      submitted by {{author}}, {{commentsCount}} comments
       {{#if ownPost}}<a class="btn btn-xs btn-default" href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
     </p>
-    <div class="content well well-lg">
-
-      <h4><a href="{{url}}">{{title}}</a></h4>
-
-      {{{content}}}
-    </div>
+    <div class="content">{{{content}}}</div>
+    <br>
+    <br>
   </div>
 </template>
