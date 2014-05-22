@@ -1,10 +1,16 @@
 <template name="postItem">
   <div class="post" id="postItem">
-    <h2 class="menu-title">{{title}}</h2>
+    <h2><a href="{{pathFor 'postPage'}}">{{title}}</a></h2>
+
     <!--<h3 class="postTitle"></h3>-->
     <p>
-      submitted by {{author}}, {{commentsCount}} comments
-      {{#if ownPost}}<a class="btn btn-xs btn-default" href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      <span class="badge badge-info"><i class="glyphicon glyphicon-user"></i></span> {{author}} &nbsp;
+      <span class="badge badge-info"><i class="glyphicon glyphicon-time"></i></span> {{submitted}} &nbsp;
+      <span class="badge badge-info"><i class="glyphicon glyphicon-comment"></i></span> {{commentsCount}} &nbsp;
+      {{#if ownPost}}
+      <a href="{{pathFor 'postEdit'}}"><span class="badge badge-warning"><i class="glyphicon glyphicon-wrench"></i> 수정</span></a>
+
+      {{/if}}
     </p>
     <div class="content">{{{content}}}</div>
     <br>
