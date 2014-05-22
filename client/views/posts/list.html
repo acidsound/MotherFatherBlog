@@ -1,19 +1,26 @@
 <template name="postsList">
 
   <div class="col-md-12">
-  <div id="item-list" class="list-group">
-    {{#each posts}}
-      <a class="list-group-item" href="{{pathFor 'postPage'}}">
-        <h4 class="list-group-item-heading">{{title}}</h4>
-        <p class="list-group-item-text">
-          submitted by {{author}}
-          ,on {{submitted}}
-          ,{{commentsCount}} comments
-
-        </p>
-      </a>
-    {{/each}}
+    <div id="item-list" class="list-group">
+      {{#each posts}}
+        {{> postStrip}}
+      {{/each}}
+    </div>
   </div>
+
+</template>
+<template name="postStrip">
+  <div class="jumbotron">
+    {{#if stripImage}}
+      <div class="jumbotron-photo">{{{stripImage}}}</div>
+    {{/if}}
+    <div class="jumbotron-contents">
+      <h1>Implementing the HTML and CSS into your user interface project</h1>
+      <h2>HTML Structure</h2>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <h2>CSS Structure</h2>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    </div>
   </div>
 
 </template>
