@@ -1,0 +1,17 @@
+<template name="notifications">
+  <div id="notifications">
+    {{#if notificationCount}}
+      {{#each notifications}}
+        {{> notification}}
+      {{/each}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="notification">
+  <div class="alert alert-warning alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <strong>{{commenterName}}</strong> commented on your post
+    <p><a class="btn btn-warning" href="{{notificationPostPath}}">Move</a></p>
+  </div>
+</template>

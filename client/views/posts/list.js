@@ -6,6 +6,12 @@ Template.postsList.helpers({
     return Posts.find({}, {sort: {submitted: -1}});
   }
 });
+
+Template.postStrip.helpers({
+  submittedMoment : function(){
+    return moment(this.submitted).fromNow();
+  }
+});
 Template.postStrip.stripTag = function(){
   var stripTag = {
     img:"",
@@ -23,7 +29,8 @@ Template.postStrip.stripTag = function(){
 };
 Template.postStrip.rendered = function() {
   $('.content-preview').dotdotdot({
-    watch:true
+    watch:true,
+    ellipsis : "...More"
   });
   $('.content-title').dotdotdot({
     watch:true

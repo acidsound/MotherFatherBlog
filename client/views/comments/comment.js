@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 Template.comment.helpers({
-  submittedText: function() {
-    return new Date(this.submitted).toString();
+  submittedMoment: function() {
+    return moment(this.submitted).fromNow();
   }
 });

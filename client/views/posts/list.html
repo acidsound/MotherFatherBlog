@@ -4,49 +4,14 @@
         {{#each posts}}
           {{> postStrip}}
         {{/each}}
+      {{#if nextPath}}
+        <div class="well well-sm">
+          <a class="btn btn-block btn-info" href="{{nextPath}}">Load more</a>
+        </div>
+      {{/if}}
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-      <div class="panel panel-success">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-      <div class="panel panel-warning">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-      <div class="panel panel-danger">
         <div class="panel-heading">
           <h3 class="panel-title">Panel title</h3>
         </div>
@@ -66,7 +31,7 @@
       <h1  class="content-title"><a href="{{pathFor 'postPage'}}">{{title}}</a></h1>
       <p>
         <span class="badge badge-info"><i class="glyphicon glyphicon-user"></i></span> {{author}} &nbsp;
-        <span class="badge badge-info"><i class="glyphicon glyphicon-time"></i></span> {{submitted}} &nbsp;
+        <span class="badge badge-info"><i class="glyphicon glyphicon-time"></i></span> {{submittedMoment}} &nbsp;
         <span class="badge badge-info"><i class="glyphicon glyphicon-comment"></i></span> {{commentsCount}} &nbsp;
       </p>
       <p class="content-preview">{{stripTag.text}}</p>

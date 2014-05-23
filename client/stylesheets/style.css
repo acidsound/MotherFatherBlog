@@ -14,6 +14,14 @@ body {
     padding-top: 70px;
 }
 
+#iron-router-progress {
+    background-color : #CCD1D9;
+    box-shadow       : 0 0 5px #AAB2BD;
+}
+#iron-router-progress.spinner:before {
+    border-color : #CCD1D9;
+}
+
 .navbar-custom {
     position: fixed;
     top: 0;
@@ -39,6 +47,12 @@ body {
     font-size: 18px;
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);
 }
+#notifications{
+    z-index: 1000;
+    right: 0;
+    position: absolute;
+}
+
 
 #postItem {
     border-bottom: 1px dashed #AAB2BD;
