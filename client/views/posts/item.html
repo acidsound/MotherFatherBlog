@@ -1,15 +1,16 @@
 <template name="postItem">
   <div class="post" id="postItem">
+
     <h3><a href="{{pathFor 'postPage'}}" class="none_style">{{title}}</a></h3>
-
-    <!--<h3 class="postTitle"></h3>-->
-    <p>
-      {{submittedMoment}} &nbsp; {{commentsCount}} comments  &nbsp; submitted by <strong>{{author}}</strong>
-
+    <div class="pull-right">
+      <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-left goList"></i></span>
+      <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-down goComment"></i></span>
       {{#if ownPost}}
-      <a href="{{pathFor 'postEdit'}}"><span class="badge badge-warning"><i class="glyphicon glyphicon-wrench"></i> 수정</span></a>
-
+      <span class="text-muted pointer"><i class="glyphicon glyphicon-wrench goEdit"></i></span>
       {{/if}}
+    </div>
+    <p>
+      {{submittedMoment}} &nbsp; {{commentsCount}} comments <i class="glyphicon glyphicon-search"></i>  &nbsp; submitted by <strong>{{author}}</strong>
     </p>
     <div class="content-wrapper">
       {{{content}}}

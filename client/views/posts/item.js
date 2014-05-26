@@ -11,10 +11,23 @@ Template.postItem.helpers({
   },
   ownPost: function() {
     return this.userId == Meteor.userId();
+  }
+});
+
+Template.postItem.events({
+  'click .goList': function(e) {
+    e.preventDefault();
+    Router.go('postsList');
   },
-  domain: function() {
-    var a = document.createElement('a');
-    a.href = this.url;
-    return a.hostname;
+  'click .goComment': function(e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $(".comment-area").offset().top-70
+    }, 500);
+  },
+  'click .goEdit': function(e) {
+    e.preventDefault();
+    Router.go('postEdit', {_id: this._id});
   }
 });

@@ -13,6 +13,7 @@ body {
     background-color: rgb(241, 242, 246);
     padding-top: 70px;
 }
+.pointer {cursor: pointer}
 .content-wrapper blockquote{
     margin-left: 25px;
 }
@@ -36,6 +37,7 @@ body {
     opacity: .9;
 }
 
+.btn i{top:3px;}
 
 .label {
     padding: .5em .6em .3em;
