@@ -10,6 +10,10 @@ Template.postsList.rendered = function() {
     itemSelector: '.item'
   });
 
+  $("#postList").imagesLoaded( function() {
+    console.log("image Loaded");
+    msnry.layout();
+  });
 }
 Template.postStrip.helpers({
   submittedMoment : function(){
