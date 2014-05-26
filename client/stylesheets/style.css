@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Nanum Gothic Coding';
+    font-family: 'Nanum Gothic Coding','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
@@ -21,7 +21,8 @@ body {
 #iron-router-progress.spinner:before {
     border-color : #CCD1D9;
 }
-
+.none_style{text-decoration: none !important; color: inherit}
+.none_style:hover{color: inherit}
 .navbar-custom {
     position: fixed;
     top: 0;
@@ -47,11 +48,7 @@ body {
     font-size: 18px;
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);
 }
-#notifications{
-    z-index: 1000;
-    right: 0;
-    position: absolute;
-}
+
 
 
 #postItem {
@@ -65,6 +62,9 @@ body {
 #postItem .content img {
     max-width: 100%;
 }
+#postsList .jumbotron {
+    cursor: pointer;
+}
 #postsList .jumbotron .jumbotron-contents .content-title {
     max-height: 135px;
     overflow: hidden;
@@ -74,9 +74,18 @@ body {
     overflow: hidden;
 }
 #postsList .jumbotron>.jumbotron-photo{
-    max-height: 260px;
+    max-height: 333px;
     overflow: hidden;
 }
 #postsList .jumbotron>.jumbotron-photo img{
     height: inherit;
+}
+#notifications{
+    position: fixed;
+    z-index: 2005;
+}
+
+#errors{
+    position: fixed;
+    z-index: 2010;
 }

@@ -24,3 +24,10 @@ Template.commentSubmit.events({
     });
   }
 });
+Template.commentSubmit.rendered = function(){
+  if (!this.rendered){
+    // run my code
+    console.log("rendered");
+    $('#content').wysihtml5();
+  }
+};

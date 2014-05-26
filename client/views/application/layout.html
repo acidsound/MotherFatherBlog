@@ -1,13 +1,16 @@
 <template name="layout">
 
   {{>header}}
+  {{> errors}}
+  {{> notifications}}
   <div class="container">
-    {{> errors}}
-    <div class="row">
+
+
+   <!-- <div class="row">
       <div class="col-md-offset-8 col-md-4">
         {{> notifications}}
       </div>
-    </div>
+    </div>-->
 
 
     <div id="main" class="row">

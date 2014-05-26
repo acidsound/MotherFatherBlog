@@ -6,6 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 Template.postItem.helpers({
+  submittedMoment : function(){
+    return moment(this.submitted).fromNow();
+  },
   ownPost: function() {
     return this.userId == Meteor.userId();
   },
