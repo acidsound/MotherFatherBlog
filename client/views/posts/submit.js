@@ -32,5 +32,7 @@ Template.postSubmit.rendered = function(){
     // run my code
     console.log("rendered");
     $('#content').wysihtml5();
+    //new MediumEditor('#content');
+    //var editor = new MediumEditor('#content');
   }
 };

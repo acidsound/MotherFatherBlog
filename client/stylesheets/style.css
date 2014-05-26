@@ -31,6 +31,7 @@ body {
     border-radius: 0;
     width: 100%;
     z-index: 2000;
+    opacity: .9;
 }
 
 
@@ -49,7 +50,10 @@ body {
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);
 }
 
-
+#postSubmit{}
+#postSubmit .content-wrapper{
+    min-height: 400px;
+}
 
 #postItem {
     border-bottom: 1px dashed #AAB2BD;

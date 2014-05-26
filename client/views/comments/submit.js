@@ -19,6 +19,7 @@ Template.commentSubmit.events({
       if (error){
         throwError(error.reason);
       } else {
+        //$body.html('');
         $body.val('');
       }
     });
@@ -29,5 +30,6 @@ Template.commentSubmit.rendered = function(){
     // run my code
     console.log("rendered");
     $('#content').wysihtml5();
+    //var editor = new MediumEditor('#content',{placeholder:"Comment on this post"});
   }
 };

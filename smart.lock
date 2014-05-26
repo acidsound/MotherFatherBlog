@@ -10,7 +10,8 @@
       "aloha-editor": {},
       "bootstrap3-wysihtml5": {},
       "moment": {},
-      "iron-router-progress": {}
+      "iron-router-progress": {},
+      "medium-editor-updated": {}
     },
     "packages": {
       "iron-router": {
@@ -57,6 +58,11 @@
         "git": "https://github.com/Multiply/iron-router-progress.git",
         "tag": "v0.3.1",
         "commit": "3f7900feb4bb70a1289b39a1fdcd1f438c0335b3"
+      },
+      "medium-editor-updated": {
+        "git": "https://github.com/donflopez/meteor-medium-editor.git",
+        "tag": "v1.2.0",
+        "commit": "6d2f34b560b2682341aae23fc78251ccea504cd8"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
