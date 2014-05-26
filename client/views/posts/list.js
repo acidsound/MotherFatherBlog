@@ -27,6 +27,8 @@ Template.postStrip.helpers({
     return stripTag;
   }
 });
+
+
 Template.postStrip.events({
   'click .jumbotron': function () {
     Router.go('postPage', {_id: this._id});
@@ -40,4 +42,11 @@ Template.postStrip.rendered = function() {
   $('.content-title').dotdotdot({
     watch:true
   });
+  var container = document.querySelector('#postsList');
+
+  var msnry = new Masonry( container, {
+    // options...
+    itemSelector: '.item'
+  });
+
 }

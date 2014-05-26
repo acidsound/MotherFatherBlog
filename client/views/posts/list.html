@@ -1,16 +1,18 @@
 <template name="postsList">
   <div id="postsList">
-    <div class="col-md-8">
+
         {{#each posts}}
           {{> postStrip}}
         {{/each}}
       {{#if nextPath}}
-        <div class="well well-sm">
-          <a class="btn btn-block btn-info" href="{{nextPath}}">Load more</a>
+        <div class="col-md-6 item">
+          <div class="well well-sm">
+            <a class="btn btn-block btn-info" href="{{nextPath}}">Load more</a>
+          </div>
         </div>
       {{/if}}
-    </div>
-    <div class="col-md-4">
+
+    <!--<div class="col-md-4">
       <div class="panel panel-success">
         <div class="panel-heading">
           <h3 class="panel-title">여기에</h3>
@@ -19,10 +21,11 @@
           뭔가 오긴 와야 하는데
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 <template name="postStrip">
+  <div class="col-md-6 item">
   <div class="jumbotron">
     {{#if stripTag.img}}
       <div class="jumbotron-photo">{{{stripTag.img}}}</div>
@@ -38,5 +41,5 @@
       <p class="content-preview">{{stripTag.text}}</p>
     </div>
   </div>
-
+  </div>
 </template>
