@@ -7,8 +7,8 @@ Template.postEdit.events({
     var postProperties = {
      // url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val(),
-      content:  $(e.target).find('#content').data("wysihtml5").editor.getValue()
-      //content: $(e.target).find('#content').find('#content').html()
+      //content:  $(e.target).find('#content').data("wysihtml5").editor.getValue()
+      content: $(e.target).find('#content').html()
     }
 
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
@@ -35,22 +35,18 @@ Template.postEdit.events({
 Template.postEdit.rendered = function(){
   if (!this.rendered){
     // run my code
-    var txtArea = $('#content').wysihtml5({
+    /*var txtArea = $('#content').wysihtml5({
       "html": true
     });
     if(this.data.content){
       txtArea.data("wysihtml5").editor.setValue(this.data.content);
-    }
-      //txtArea.data("wysihtml5").editor.setValue(this.content);
+    }*/
 
-    /*$('#content').wysihtml5({
-      "html": true
+    var editor = new MediumEditor('#content',{
+      buttons : ['header2',  'quote','bold', 'italic', 'underline', 'anchor'],placeholder:""
     });
-    $('#content').val(this.data.content);*/
-    /*var editor = new MediumEditor('#content',{
-      placeholder:""
-    });
-    $('#content').html(this.data.content);*/
-    //console.log();
+    if(this.data.content){
+      $('#content').html(this.data.content);
+    }
   }
 };

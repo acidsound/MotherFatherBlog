@@ -13,7 +13,9 @@ body {
     background-color: rgb(241, 242, 246);
     padding-top: 70px;
 }
-
+.content-wrapper blockquote{
+    margin-left: 25px;
+}
 #iron-router-progress {
     background-color : #CCD1D9;
     box-shadow       : 0 0 5px #AAB2BD;
@@ -54,16 +56,18 @@ body {
 #postSubmit .content-wrapper{
     min-height: 400px;
 }
+#postEdit .content-wrapper{
+    min-height: 400px;
+}
 
 #postItem {
     border-bottom: 1px dashed #AAB2BD;
 }
-
 #postItem .postTitle {
     margin-top: 0;
 }
 
-#postItem .content img {
+#postItem .content-wrapper img {
     max-width: 100%;
 }
 #postList .item{}
@@ -100,3 +104,18 @@ body {
 
 /*wysywic editor modal*/
 .bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}
+
+/*medium-editor*/
+.medium-editor-placeholder {
+    position: relative;
+    margin:0;
+    padding:0;
+}
+
+.medium-editor-placeholder:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: attr(data-placeholder);
+    font-style: italic;
+}

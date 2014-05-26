@@ -12,7 +12,8 @@ Template.postSubmit.events({
     var post = {
       //url: $(event.target).find('[name=url]').val(),
       title: $(event.target).find('[name=title]').val(),
-      content: $(event.target).find('#content').data("wysihtml5").editor.getValue()
+      //content: $(event.target).find('#content').data("wysihtml5").editor.getValue()
+      content: $(event.target).find('#content').html()
     }
     Meteor.call('post', post, function(error, id) {
       if (error) {
@@ -31,16 +32,11 @@ Template.postSubmit.rendered = function(){
   if (!this.rendered){
     // run my code
     console.log("rendered");
-    /*$('#content').wysihtml5({
+    /*var txtArea = $('#content').wysihtml5({
       "html": true
     });*/
-    var txtArea = $('#content').wysihtml5({
-      "html": true
+    var editor = new MediumEditor('#content',{
+      buttons : ['header2',  'quote','bold', 'italic', 'underline', 'anchor'],placeholder:"본문을 작성하세요."
     });
-
-
-
-    //new MediumEditor('#content');
-    //var editor = new MediumEditor('#content');
   }
 };
