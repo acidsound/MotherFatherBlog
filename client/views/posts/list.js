@@ -1,12 +1,16 @@
 Template.postsList.helpers({
   posts: function() {
-
-    //var imgSrcs = (post.content.match(/<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>/g)||[]);
-
     return Posts.find({}, {sort: {submitted: -1}});
   }
 });
+Template.postsList.rendered = function() {
+  var container = document.querySelector('#postsList');
+  var msnry = new Masonry( container, {
+    // options...
+    itemSelector: '.item'
+  });
 
+}
 Template.postStrip.helpers({
   submittedMoment : function(){
     return moment(this.submitted).fromNow();
@@ -28,7 +32,6 @@ Template.postStrip.helpers({
   }
 });
 
-
 Template.postStrip.events({
   'click .jumbotron': function () {
     Router.go('postPage', {_id: this._id});
@@ -42,11 +45,4 @@ Template.postStrip.rendered = function() {
   $('.content-title').dotdotdot({
     watch:true
   });
-  var container = document.querySelector('#postsList');
-
-  var msnry = new Masonry( container, {
-    // options...
-    itemSelector: '.item'
-  });
-
 }
