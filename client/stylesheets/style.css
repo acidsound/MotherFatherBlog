@@ -30,7 +30,7 @@ body {
     border: none;
     border-radius: 0;
     width: 100%;
-    z-index: 2000;
+    z-index: 1045;
     opacity: .9;
 }
 
@@ -86,10 +86,15 @@ body {
 }
 #notifications{
     position: fixed;
-    z-index: 2005;
+    z-index: 1040;
 }
 
 #errors{
     position: fixed;
-    z-index: 2010;
+    z-index: 1030;
 }
+
+
+
+/*wysywic editor modal*/
+.bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}

@@ -10,17 +10,17 @@ Template.commentSubmit.events({
     e.preventDefault();
 
     var $body = $(e.target).find('#content');
+
+    console.log($body.val());
     var comment = {
-      body: $body.val(),
+      body: $body.data("wysihtml5").editor.getValue(),
       postId: template.data._id
     };
-
     Meteor.call('comment', comment, function(error, commentId) {
       if (error){
         throwError(error.reason);
       } else {
-        //$body.html('');
-        $body.val('');
+        $body.data("wysihtml5").editor.setValue("");
       }
     });
   }
@@ -29,7 +29,9 @@ Template.commentSubmit.rendered = function(){
   if (!this.rendered){
     // run my code
     console.log("rendered");
-    $('#content').wysihtml5();
-    //var editor = new MediumEditor('#content',{placeholder:"Comment on this post"});
+    var commentArea = $('#content').wysihtml5({
+      "font-styles": false, //Font styling, e.g. h1, h2, etc. Default true
+      "emphasis": false //Italics, bold, etc. Default true
+    });
   }
 };

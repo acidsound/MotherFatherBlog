@@ -7,7 +7,7 @@ Template.postEdit.events({
     var postProperties = {
      // url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val(),
-      content: $(e.target).find('#content').val()
+      content:  $(e.target).find('#content').data("wysihtml5").editor.getValue()
       //content: $(e.target).find('#content').find('#content').html()
     }
 
@@ -35,8 +35,18 @@ Template.postEdit.events({
 Template.postEdit.rendered = function(){
   if (!this.rendered){
     // run my code
-    $('#content').wysihtml5();
-    $('#content').val(this.data.content);
+    var txtArea = $('#content').wysihtml5({
+      "html": true
+    });
+    if(this.data.content){
+      txtArea.data("wysihtml5").editor.setValue(this.data.content);
+    }
+      //txtArea.data("wysihtml5").editor.setValue(this.content);
+
+    /*$('#content').wysihtml5({
+      "html": true
+    });
+    $('#content').val(this.data.content);*/
     /*var editor = new MediumEditor('#content',{
       placeholder:""
     });

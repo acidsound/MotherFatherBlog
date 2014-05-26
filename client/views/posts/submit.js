@@ -12,7 +12,7 @@ Template.postSubmit.events({
     var post = {
       //url: $(event.target).find('[name=url]').val(),
       title: $(event.target).find('[name=title]').val(),
-      content: $(event.target).find('#content').val()
+      content: $(event.target).find('#content').data("wysihtml5").editor.getValue()
     }
     Meteor.call('post', post, function(error, id) {
       if (error) {
@@ -31,7 +31,15 @@ Template.postSubmit.rendered = function(){
   if (!this.rendered){
     // run my code
     console.log("rendered");
-    $('#content').wysihtml5();
+    /*$('#content').wysihtml5({
+      "html": true
+    });*/
+    var txtArea = $('#content').wysihtml5({
+      "html": true
+    });
+
+
+
     //new MediumEditor('#content');
     //var editor = new MediumEditor('#content');
   }
