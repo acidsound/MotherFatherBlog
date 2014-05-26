@@ -43,7 +43,7 @@ Template.postEdit.rendered = function(){
     }*/
 
     var editor = new MediumEditor('#content',{
-      buttons : ['header2',  'quote','bold', 'italic', 'underline', 'anchor'],placeholder:""
+      buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:""
     });
     if(this.data.content){
       $('#content').html(this.data.content);

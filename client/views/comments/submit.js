@@ -12,9 +12,10 @@ Template.commentSubmit.events({
     //var $body = $(e.target).find('#content');
 
     //console.log($body.val());
+    var imsiEditor = {body : $(e.target).find('#content')};
     var comment = {
       //body: $body.data("wysihtml5").editor.getValue(),
-      body: $(e.target).find('#content').html(),
+      body: imsiEditor.body.html(),
       postId: template.data._id
     };
 
@@ -22,8 +23,12 @@ Template.commentSubmit.events({
       if (error){
         throwError(error.reason);
       } else {
+        //imsiEditor.body.html("");
         //$body.data("wysihtml5").editor.setValue("");
-        $(e.target).find('#content').html("");
+        //$('#content').activate();
+        /*var editor = new MediumEditor('#content',{
+          buttons : ['unorderedlist', 'orderedlist', 'pre','bold', 'italic', 'underline', 'anchor'],placeholder:"댓글을 작성하세요."
+        });*/
       }
     });
   }
@@ -38,6 +43,6 @@ Template.commentSubmit.rendered = function(){
     });*/
   }
   var editor = new MediumEditor('#content',{
-    buttons : ['bold', 'italic', 'underline', 'anchor'],placeholder:"댓글을 쓰라"
+    buttons : ['unorderedlist', 'orderedlist', 'pre','bold', 'italic', 'underline', 'anchor'],placeholder:"댓글을 작성하세요."
   });
 };

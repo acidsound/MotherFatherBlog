@@ -36,7 +36,7 @@ Template.postSubmit.rendered = function(){
       "html": true
     });*/
     var editor = new MediumEditor('#content',{
-      buttons : ['header2',  'quote','bold', 'italic', 'underline', 'anchor'],placeholder:"본문을 작성하세요."
+      buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:"본문을 작성하세요."
     });
   }
 };
