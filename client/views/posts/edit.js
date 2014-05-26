@@ -7,7 +7,7 @@ Template.postEdit.events({
     var postProperties = {
      // url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val(),
-      content: $(e.target).find('#content').find('#content').val()
+      content: $(e.target).find('#content').val()
       //content: $(e.target).find('#content').find('#content').html()
     }
 
