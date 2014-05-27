@@ -11,7 +11,8 @@
       "iron-router-progress": {},
       "medium-editor-updated": {},
       "jquery-masonry": {},
-      "isotope-repackaged": {}
+      "isotope-repackaged": {},
+      "bootboxjs": {}
     },
     "packages": {
       "iron-router": {
@@ -63,6 +64,11 @@
         "git": "https://github.com/mangasocial/meteor-isotope-repackaged.git",
         "tag": "v0.0.2",
         "commit": "b94e1f6b12237f46ef59a0f0477453e96adcd42f"
+      },
+      "bootboxjs": {
+        "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
+        "tag": "v4.2.0",
+        "commit": "2b7d18ad028d9e7b37238ecf2a8a7970735cebd1"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

@@ -7,6 +7,17 @@
  */
 
 Template.postSubmit.events({
+  'click .showModal':function(event){
+    event.preventDefault();
+    bootbox.prompt("Image Add From URL", function(result) {
+      if (result === null) {
+
+      } else {
+        var imgTag = "<div><img src="+result +"></img></div>";
+        $('#content').html($('#content').html()+imgTag);
+      }
+    });
+  },
   'submit form': function(event) {
     event.preventDefault();
     var post = {
