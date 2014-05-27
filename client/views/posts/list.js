@@ -37,10 +37,6 @@ Template.postsList.events({
 //});
 Template.postStrip.rendered = function() {
   $(this.find('.content-preview')).dotdotdot({
-    watch:true,
-    ellipsis : "...More"
-  });
-  $(this.find('.content-title')).dotdotdot({
     watch:true
   });
   console.log("Item rendered");

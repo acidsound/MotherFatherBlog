@@ -78,8 +78,7 @@ body {
     cursor: pointer;
 }
 #postsList .content-title {
-    max-height: 135px;
-    overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
 #postsList .conetent-image img{
     display: block;
