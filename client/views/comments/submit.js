@@ -6,6 +6,17 @@
  * To change this template use File | Settings | File Templates.
  */
 Template.commentSubmit.events({
+  'click .showModal':function(event){
+    event.preventDefault();
+    bootbox.prompt("Insert Image From URL", function(result) {
+      if (result === null) {
+
+      } else {
+        var imgTag = "<div><img src="+result +"></img></div>";
+        $('#content').html($('#content').html()+imgTag);
+      }
+    });
+  },
   'submit form': function(e, template) {
     e.preventDefault();
 

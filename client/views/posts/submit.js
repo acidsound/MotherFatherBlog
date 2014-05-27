@@ -9,7 +9,7 @@
 Template.postSubmit.events({
   'click .showModal':function(event){
     event.preventDefault();
-    bootbox.prompt("Image Add From URL", function(result) {
+    bootbox.prompt("Insert Image From URL", function(result) {
       if (result === null) {
 
       } else {
