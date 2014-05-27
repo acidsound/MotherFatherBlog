@@ -1,7 +1,4 @@
-var msnry = new Masonry( $("#postList"), {
-  // options...
-  itemSelector: '.item'
-});
+
 Template.postsList.helpers({
   posts: function() {
 
@@ -10,6 +7,15 @@ Template.postsList.helpers({
 });
 
 Template.postsList.rendered = function() {
+  var msnry = new Masonry( $("#postList"), {
+    // options...
+    itemSelector: '.item'
+  });
+  $("#postList").imagesLoaded( function() {
+    console.log("image Loaded");
+    console.log(this.length);
+    msnry.layout();
+  });
   /*var container = document.querySelector('#postsList');
   var msnry = new Masonry( container, {
     // options...
@@ -57,11 +63,11 @@ Template.postStrip.rendered = function() {
   $('.content-title').dotdotdot({
     watch:true
   });
-  console.log(this);
+  /*console.log(this);
   this.firstNode.imagesLoaded( function() {
     console.log("image Loaded");
     console.log(this.length);
     msnry.layout();
-  });
+  });*/
 
 }
