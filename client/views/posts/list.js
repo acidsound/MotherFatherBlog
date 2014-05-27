@@ -4,7 +4,7 @@ Template.postsList.rendered = function() {
 }
 Template.postStrip.helpers({
   submittedMoment : function(){
-    return moment(this.submitted).fromNow();
+    return moment(this.submitted).format('MMMM Do YYYY, h:mm:ss a');
   },
   stripTag : function(){
     var stripTag = {
@@ -30,11 +30,11 @@ Template.postsList.events({
       Router.go(this.nextPath);
   }
 });
-Template.postStrip.events({
-  'click .jumbotron': function () {
-    Router.go('postPage', {_id: this._id});
-  }
-});
+//Template.postStrip.events({
+//  'click .jumbotron': function () {
+//    Router.go('postPage', {_id: this._id});
+//  }
+//});
 Template.postStrip.rendered = function() {
   $(this.find('.content-preview')).dotdotdot({
     watch:true,
@@ -44,22 +44,4 @@ Template.postStrip.rendered = function() {
     watch:true
   });
   console.log("Item rendered");
- /* var notIso = $(this.find(".item:not(.isotope-item)"));
-  console.log(notIso);
-  if(!$(this.find(".item")).hasClass("isotope-item")){
-    $('#postsList').isotope({
-      // options
-      itemSelector : '.item',
-      masonry: {
-        isFitWidth: true
-      }
-    }).append( notIso )
-      .isotope( 'appended', notIso );
-
-  }*/
- /* if(!$(this.find(".masonry_element")).hasClass("col-md-6")){
-    $(this.find(".masonry_element")).addClass("col-md-6");
-  }
-*/
-
 }

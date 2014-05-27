@@ -77,14 +77,20 @@ body {
 #postsList .jumbotron {
     cursor: pointer;
 }
-#postsList .jumbotron .jumbotron-contents .content-title {
+#postsList .content-title {
     max-height: 135px;
     overflow: hidden;
 }
-#postsList .jumbotron .jumbotron-contents .content-preview {
+#postsList .conetent-image img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+#postsList .content-preview {
     max-height: 80px;
     overflow: hidden;
 }
+
 #postsList .jumbotron>.jumbotron-photo{
     max-height: 333px;
     overflow: hidden;

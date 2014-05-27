@@ -1,52 +1,86 @@
 <template name="postsList">
   <div id="postsList">
-
-    {{#masonryContainer id="MasonryContainer"}}
     {{#each posts}}
         {{> postStrip}}
     {{/each}}
+
     {{#if nextPath}}
-    <div class="col-md-6 masonry_element">
-      <div class="well well-sm">
+    <div class="col-sm-8">
         <a class="btn btn-block btn-info loadMore">Load more</a>
-      </div>
     </div>
     {{/if}}
-    {{/masonryContainer}}
+    <div class="col-sm-4">
+      <div class="well">
+        <h4>Blog Search</h4>
 
-
-
-
-    <!--<div class="col-md-6">
-      <div class="panel panel-success">
-        <div class="panel-heading">
-          <h3 class="panel-title">여기에</h3>
+        <div class="input-group">
+          <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                              <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
         </div>
-        <div class="panel-body">
-          뭔가 오긴 와야 하는데
-
-          <p>meteor에서 페이징 뭔가 이상해... <a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a> 이런거 처리하기도 빡세다...</p>
+        <!-- /input-group -->
+      </div>
+      <!-- /well -->
+      <div class="well">
+        <h4>Popular Blog Categories</h4>
+        <div class="row">
+          <div class="col-sm-6">
+            <ul class="list-unstyled">
+              <li><a href="#dinosaurs">Dinosaurs</a>
+              </li>
+              <li><a href="#spaceships">Spaceships</a>
+              </li>
+              <li><a href="#fried-foods">Fried Foods</a>
+              </li>
+              <li><a href="#wild-animals">Wild Animals</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul class="list-unstyled">
+              <li><a href="#alien-abductions">Alien Abductions</a>
+              </li>
+              <li><a href="#business-casual">Business Casual</a>
+              </li>
+              <li><a href="#robots">Robots</a>
+              </li>
+              <li><a href="#fireworks">Fireworks</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>-->
+      <!-- /well -->
+      <div class="well">
+        <h4>Side Widget Well</h4>
+
+        <p>Bootstrap's default wells work great for side widgets! What is a widget anyways...?</p>
+      </div>
+      <!-- /well -->
+    </div>
   </div>
 </template>
 <template name="postStrip">
-  <div class="col-sm-6 masonry_element item">
-    <div class="jumbotron">
-      {{#if stripTag.img}}
-        <div class="jumbotron-photo">{{{stripTag.img}}}</div>
-      {{/if}}
-      <div class="jumbotron-contents">
-        <h1  class="content-title"><a href="{{pathFor 'postPage'}}" class="none_style">{{title}}</a></h1>
-        <p>
-          {{submittedMoment}} &nbsp; {{commentsCount}} comments  &nbsp; submitted by <strong>{{author}}</strong>
-          <!--<span class="badge badge-info"><i class="glyphicon glyphicon-user"></i></span> {{author}} &nbsp;
-          <span class="badge badge-info"><i class="glyphicon glyphicon-time"></i></span> {{submittedMoment}} &nbsp;
-          <span class="badge badge-info"><i class="glyphicon glyphicon-comment"></i></span> {{commentsCount}} &nbsp;-->
-        </p>
-        <p class="content-preview">{{stripTag.text}}</p>
-      </div>
+  <div class="col-sm-8">
+    <h1 class="content-title">
+      <a href="{{pathFor 'postPage'}}" class="none_style">{{title}}</a>
+    </h1>
+    <p class="lead">by <strong>{{author}}</strong></p>
+    <hr>
+    <p>
+      <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} {{commentsCount}} comments</p>
+    <hr>
+    {{#if stripTag.img}}
+    <div class="conetent-image">
+      {{{stripTag.img}}}
     </div>
+    <hr>
+    {{/if}}
+    <p class="content-preview">{{stripTag.text}}</p>
+    <a class="btn btn-primary"  href="{{pathFor 'postPage'}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+    <hr>
   </div>
 </template>
