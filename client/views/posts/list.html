@@ -1,33 +1,38 @@
 <template name="postsList">
-  <div id="postsList" class="js-masonry" data-masonry-options='{ "itemSelector": ".item"}'>
+  <div id="postsList">
 
-    <div class="col-md-6">
-      {{#each posts}}
-      {{> postStrip}}
-      {{/each}}
-      {{#if nextPath}}
-      <div class="item">
-        <div class="well well-sm">
-          <a class="btn btn-block btn-info loadMore" href="{{nextPath}}">Load more</a>
-        </div>
+    {{#masonryContainer id="MasonryContainer"}}
+    {{#each posts}}
+        {{> postStrip}}
+    {{/each}}
+    {{#if nextPath}}
+    <div class="col-md-6 masonry_element">
+      <div class="well well-sm">
+        <a class="btn btn-block btn-info loadMore">Load more</a>
       </div>
-      {{/if}}
     </div>
+    {{/if}}
+    {{/masonryContainer}}
 
-    <div class="col-md-6">
+
+
+
+    <!--<div class="col-md-6">
       <div class="panel panel-success">
         <div class="panel-heading">
           <h3 class="panel-title">여기에</h3>
         </div>
         <div class="panel-body">
           뭔가 오긴 와야 하는데
+
+          <p>meteor에서 페이징 뭔가 이상해... <a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a> 이런거 처리하기도 빡세다...</p>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 <template name="postStrip">
-  <div class="item">
+  <div class="col-sm-6 masonry_element item">
     <div class="jumbotron">
       {{#if stripTag.img}}
         <div class="jumbotron-photo">{{{stripTag.img}}}</div>

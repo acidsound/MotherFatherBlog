@@ -2,7 +2,6 @@ Template.postsList.rendered = function() {
   //setTimeout(function(){isososo();},500);
   console.log("List rendered");
 }
-
 Template.postStrip.helpers({
   submittedMoment : function(){
     return moment(this.submitted).fromNow();
@@ -23,13 +22,17 @@ Template.postStrip.helpers({
     return stripTag;
   }
 });
-
+Template.postsList.events({
+  'click .loadMore': function (e) {
+    //setTimeout(function(){isososo();},500);
+    e.preventDefault();
+    //$(".item").removeClass("masonry_element");
+      Router.go(this.nextPath);
+  }
+});
 Template.postStrip.events({
   'click .jumbotron': function () {
     Router.go('postPage', {_id: this._id});
-  },
-  'click .loadMore': function () {
-    setTimeout(function(){isososo();},500);
   }
 });
 Template.postStrip.rendered = function() {
@@ -54,5 +57,9 @@ Template.postStrip.rendered = function() {
       .isotope( 'appended', notIso );
 
   }*/
+ /* if(!$(this.find(".masonry_element")).hasClass("col-md-6")){
+    $(this.find(".masonry_element")).addClass("col-md-6");
+  }
+*/
 
 }

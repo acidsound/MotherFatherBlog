@@ -12,7 +12,8 @@
       "medium-editor-updated": {},
       "jquery-masonry": {},
       "isotope-repackaged": {},
-      "bootboxjs": {}
+      "bootboxjs": {},
+      "masonrify": {}
     },
     "packages": {
       "iron-router": {
@@ -69,6 +70,11 @@
         "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
         "tag": "v4.2.0",
         "commit": "2b7d18ad028d9e7b37238ecf2a8a7970735cebd1"
+      },
+      "masonrify": {
+        "git": "https://github.com/voodoohop/meteor-masonrify.git",
+        "tag": "v0.0.3",
+        "commit": "e7a5e71a4193bd68a7bae4c250931147659b5dcb"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

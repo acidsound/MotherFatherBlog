@@ -73,9 +73,9 @@ body {
     max-width: 100%;
 }
 #postList {}
+
 #postsList .jumbotron {
     cursor: pointer;
-
 }
 #postsList .jumbotron .jumbotron-contents .content-title {
     max-height: 135px;
