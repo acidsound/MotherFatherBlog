@@ -18,7 +18,7 @@ hr.dashed {
     border-top: 1px dashed #ccc;
 }
 hr.dashed_gubun {
-    border-top: 1px dashed  #AAB2BD
+    border-top: 1px solid  #AAB2BD
 }
 .content-wrapper blockquote{
     margin-left: 25px;
@@ -84,7 +84,9 @@ hr.dashed_gubun {
     cursor: pointer;
 }
 #postsList .content-title {
-    text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+    max-height: 112px;
+    overflow: hidden;
+    /*text-overflow: ellipsis; white-space: nowrap; overflow: hidden;*/
 }
 #postsList .conetent-image{
     max-height: 280px;

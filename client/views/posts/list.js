@@ -36,6 +36,9 @@ Template.postsList.events({
 //  }
 //});
 Template.postStrip.rendered = function() {
+  $(this.find('.content-title')).dotdotdot({
+    watch:true
+  });
   $(this.find('.content-preview')).dotdotdot({
     watch:true
   });
