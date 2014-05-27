@@ -87,22 +87,14 @@ hr.lined {
 #postsList .content-title {
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
-#postsList .conetent-image img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-#postsList .content-preview {
-    max-height: 80px;
-    overflow: hidden;
-}
-
-#postsList .jumbotron>.jumbotron-photo{
+#postsList .conetent-image{
     max-height: 333px;
     overflow: hidden;
 }
-#postsList .jumbotron>.jumbotron-photo img{
-    height: inherit;
+#postsList .conetent-image img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
 #notifications{
     position: fixed;

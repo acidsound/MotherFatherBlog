@@ -64,9 +64,9 @@
 </template>
 <template name="postStrip">
     <h1 class="content-title">
-      <a href="{{pathFor 'postPage'}}" class="none_style">{{title}}</a>
+      <a href="{{pathFor 'postPage'}}" >{{title}}</a>
     </h1>
-    <p class="lead">by <strong class="text-primary">{{author}}</strong></p>
+    <p class="lead">by {{author}}</p>
     <hr class="dashed">
     <p>
       <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}</p>
