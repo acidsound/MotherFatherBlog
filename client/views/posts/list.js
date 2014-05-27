@@ -1,33 +1,31 @@
 
 Template.postsList.helpers({
   posts: function() {
-
     return Posts.find({}, {sort: {submitted: -1}});
   }
 });
+function masonize(callback){
+  $container = $('#postsList');
+  // initialize
+  $container.masonry({
+    itemSelector: '.item'
+  });
+  var msnry = $container.data('masonry');
+  if(callback){callback()};
+}
 
 Template.postsList.rendered = function() {
-  var msnry = new Masonry( $("#postList"), {
-    // options...
+  console.log("postListRended");
+  /*setTimeout(function(){
+    masonize(function(){
+    });
+
+  },1000)*/
+  /*var $container = $('#postsList');
+  $container.masonry({
     itemSelector: '.item'
   });
-  $("#postList").imagesLoaded( function() {
-    console.log("image Loaded");
-    console.log(this.length);
-    msnry.layout();
-  });
-  /*var container = document.querySelector('#postsList');
-  var msnry = new Masonry( container, {
-    // options...
-    itemSelector: '.item'
-  });
-
-  $("#postList").imagesLoaded( function() {
-    console.log("image Loaded");
-    console.log(this.length);
-    msnry.layout();
-  });*/
-
+  msnry = $container.data('masonry');*/
 }
 Template.postStrip.helpers({
   submittedMoment : function(){
@@ -56,6 +54,7 @@ Template.postStrip.events({
   }
 });
 Template.postStrip.rendered = function() {
+  console.log("postItemRended");
   $('.content-preview').dotdotdot({
     watch:true,
     ellipsis : "...More"
@@ -63,11 +62,4 @@ Template.postStrip.rendered = function() {
   $('.content-title').dotdotdot({
     watch:true
   });
-  /*console.log(this);
-  this.firstNode.imagesLoaded( function() {
-    console.log("image Loaded");
-    console.log(this.length);
-    msnry.layout();
-  });*/
-
 }

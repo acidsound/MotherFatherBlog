@@ -1,11 +1,10 @@
 <template name="postsList">
-  <div id="postsList">
-
+  <div id="postsList" class="js-masonry" data-masonry-options='{ "itemSelector": ".item"}'>
         {{#each posts}}
           {{> postStrip}}
         {{/each}}
       {{#if nextPath}}
-        <div class="col-lg-6 col-md-6 co-sm-6 col-xs-12 item">
+        <div class=" col-md-12 ">
           <div class="well well-sm">
             <a class="btn btn-block btn-info" href="{{nextPath}}">Load more</a>
           </div>
@@ -25,7 +24,7 @@
   </div>
 </template>
 <template name="postStrip">
-  <div class="col-lg-6 col-md-6 co-sm-6 col-xs-12 item">
+  <div class="col-md-12 ">
     <div class="jumbotron">
       {{#if stripTag.img}}
         <div class="jumbotron-photo">{{{stripTag.img}}}</div>

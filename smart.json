@@ -7,6 +7,7 @@
     "accounts-ui-bootstrap-3": {},
     "moment": {},
     "iron-router-progress": {},
-    "medium-editor-updated": {}
+    "medium-editor-updated": {},
+    "jquery-masonry": {}
   }
 }

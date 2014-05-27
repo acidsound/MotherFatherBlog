@@ -72,8 +72,7 @@ body {
 #postItem .content-wrapper img {
     max-width: 100%;
 }
-#postList {position: relative }
-#postList .item{}
+#postList {}
 #postsList .jumbotron {
     cursor: pointer;
 
