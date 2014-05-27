@@ -1,10 +1,16 @@
+var msnry = new Masonry( $("#postList"), {
+  // options...
+  itemSelector: '.item'
+});
 Template.postsList.helpers({
   posts: function() {
+
     return Posts.find({}, {sort: {submitted: -1}});
   }
 });
+
 Template.postsList.rendered = function() {
-  var container = document.querySelector('#postsList');
+  /*var container = document.querySelector('#postsList');
   var msnry = new Masonry( container, {
     // options...
     itemSelector: '.item'
@@ -12,8 +18,10 @@ Template.postsList.rendered = function() {
 
   $("#postList").imagesLoaded( function() {
     console.log("image Loaded");
+    console.log(this.length);
     msnry.layout();
-  });
+  });*/
+
 }
 Template.postStrip.helpers({
   submittedMoment : function(){
@@ -49,4 +57,11 @@ Template.postStrip.rendered = function() {
   $('.content-title').dotdotdot({
     watch:true
   });
+  console.log(this);
+  this.firstNode.imagesLoaded( function() {
+    console.log("image Loaded");
+    console.log(this.length);
+    msnry.layout();
+  });
+
 }
