@@ -1,32 +1,8 @@
-
-Template.postsList.helpers({
-  posts: function() {
-    return Posts.find({}, {sort: {submitted: -1}});
-  }
-});
-function masonize(callback){
-  $container = $('#postsList');
-  // initialize
-  $container.masonry({
-    itemSelector: '.item'
-  });
-  var msnry = $container.data('masonry');
-  if(callback){callback()};
-}
-
 Template.postsList.rendered = function() {
-  console.log("postListRended");
-  /*setTimeout(function(){
-    masonize(function(){
-    });
-
-  },1000)*/
-  /*var $container = $('#postsList');
-  $container.masonry({
-    itemSelector: '.item'
-  });
-  msnry = $container.data('masonry');*/
+  //setTimeout(function(){isososo();},500);
+  console.log("List rendered");
 }
+
 Template.postStrip.helpers({
   submittedMoment : function(){
     return moment(this.submitted).fromNow();
@@ -51,15 +27,32 @@ Template.postStrip.helpers({
 Template.postStrip.events({
   'click .jumbotron': function () {
     Router.go('postPage', {_id: this._id});
+  },
+  'click .loadMore': function () {
+    setTimeout(function(){isososo();},500);
   }
 });
 Template.postStrip.rendered = function() {
-  console.log("postItemRended");
-  $('.content-preview').dotdotdot({
+  $(this.find('.content-preview')).dotdotdot({
     watch:true,
     ellipsis : "...More"
   });
-  $('.content-title').dotdotdot({
+  $(this.find('.content-title')).dotdotdot({
     watch:true
   });
+  console.log("Item rendered");
+ /* var notIso = $(this.find(".item:not(.isotope-item)"));
+  console.log(notIso);
+  if(!$(this.find(".item")).hasClass("isotope-item")){
+    $('#postsList').isotope({
+      // options
+      itemSelector : '.item',
+      masonry: {
+        isFitWidth: true
+      }
+    }).append( notIso )
+      .isotope( 'appended', notIso );
+
+  }*/
+
 }

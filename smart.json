@@ -8,6 +8,7 @@
     "moment": {},
     "iron-router-progress": {},
     "medium-editor-updated": {},
-    "jquery-masonry": {}
+    "jquery-masonry": {},
+    "isotope-repackaged": {}
   }
 }

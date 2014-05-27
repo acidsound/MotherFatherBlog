@@ -10,7 +10,8 @@
       "moment": {},
       "iron-router-progress": {},
       "medium-editor-updated": {},
-      "jquery-masonry": {}
+      "jquery-masonry": {},
+      "isotope-repackaged": {}
     },
     "packages": {
       "iron-router": {
@@ -57,6 +58,11 @@
         "git": "https://github.com/waltyuyu/meteor-jquery-masonry.git",
         "tag": "v0.1.0",
         "commit": "ec514fa4440f3cd77f5f567f25be27dc38ab57fa"
+      },
+      "isotope-repackaged": {
+        "git": "https://github.com/mangasocial/meteor-isotope-repackaged.git",
+        "tag": "v0.0.2",
+        "commit": "b94e1f6b12237f46ef59a0f0477453e96adcd42f"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
