@@ -5,21 +5,27 @@
  * Time: 오후 3:56
  * To change this template use File | Settings | File Templates.
  */
-var editor = null;
-function initMedium (){
-  var create = function(){
-    editor = new MediumEditor('#content',{
-      buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:"본문을 작성하세요."
-    });
-  };
 
+
+var editor = null;
+function initEditor(){
+  //에디터가 필요한 모든 페이지에서 끄응... 재사용 방법 없나???
+  var options = {
+    editor: $("#content")[0], // {DOM Element} [required]
+    class: 'content', // {String} class of the editor,
+    debug: false, // {Boolean} false by default
+    textarea: '<textarea name="content"></textarea>', // fallback for old browsers
+    list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent','bold', 'italic', 'createlink']
+  }
+  var create = function(){
+    editor = new Pen(options);
+  };
   if(editor == null){
     create();
   }else{
-    var toolbarId = "#medium-editor-toolbar-"+editor.id, anchorId = "#medium-editor-anchor-preview-"+editor.id;
-    $(toolbarId).remove();
-    $(anchorId).remove();
+    editor.destroy();
     editor = null;
+    $('.content-menu').remove();
     create();
   }
 }
@@ -63,14 +69,7 @@ Template.postSubmit.rendered = function(){
     /*var txtArea = $('#content').wysihtml5({
       "html": true
     });*/
-    var options = {
-      editor: $("#content")[0], // {DOM Element} [required]
-      class: 'content', // {String} class of the editor,
-      debug: true, // {Boolean} false by default
-      textarea: '<textarea name="content"></textarea>', // fallback for old browsers
-      list: ['bold', 'italic', 'underline'] // editor menu list
-    }
-    var editor = new Pen(options);
+    initEditor();
 
   }
 };
