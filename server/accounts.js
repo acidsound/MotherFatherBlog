@@ -6,8 +6,8 @@ Meteor.startup(function () {
   Accounts.loginServiceConfiguration.insert({
     service: "facebook",
     appId: "155622374644188",
-    //appId: "325816224210306",
     secret: "f3e7649e2dc8160fea31d7fc4180fdab"
+    //appId: "325816224210306",
     //secret: "c11fa1488d2feefe6c2035304f25c419"
   });
 });
@@ -80,8 +80,8 @@ getAvatarUrl = function(user){
 Accounts.onCreateUser(function(options, user) {
   /* facebook integration */
   return _.extend(user, {
-    username: getUserName(user),
     profile: {
+      name: getUserName(user),
       photo: getAvatarUrl(user)
     }
   });

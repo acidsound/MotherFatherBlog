@@ -1,8 +1,8 @@
 <template name="comment">
   <li class="media">
-    <a class="pull-left" href="#"><img class="media-object img-rounded" src="/images/gaethug.jpg"></a>
+    <a class="pull-left" href="#"><img class="media-object img-rounded" src="{{author.photo}}"></a>
     <div class="media-body">
-      <h4 class="media-heading">{{author}}</h4>
+      <h4 class="media-heading">{{author.name}}</h4>
       <p>{{submittedMoment}}</p>
       <p>{{{body}}}</p>
     </div>
