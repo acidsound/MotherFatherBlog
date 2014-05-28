@@ -13,7 +13,8 @@ function initEditor(){
     class: 'content_pen_editor', // {String} class of the editor,
     debug: false, // {Boolean} false by default
     textarea: '<textarea name="content"></textarea>', // fallback for old browsers
-    list: [ 'pre' , 'bold', 'italic', 'createlink']
+    list: [ 'pre' , 'bold', 'italic', 'createlink'],
+    stay:false
   }
   var create = function(){
     editor = new Pen(options);
@@ -28,6 +29,10 @@ function initEditor(){
   }
 }
 Template.commentSubmit.events({
+  'click .focusPlz' : function(event){
+    event.preventDefault();
+    $('#content').focus();
+  },
   'click .showModal':function(event){
     event.preventDefault();
     bootbox.prompt("Insert Image From URL", function(result) {

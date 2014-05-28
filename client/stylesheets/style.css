@@ -13,7 +13,8 @@ body {
     background-color: rgb(241, 242, 246);
     padding-top: 70px;
 }
-.glyphicon{top:3px;}
+span.glyphicon{top:3px;}
+i.glyphicon{top:1px;}
 .pointer {cursor: pointer}
 hr{border-top: 1px solid #CCD1D9;}
 hr.dashed {
@@ -46,8 +47,6 @@ hr.dashed_gubun {
     width: 100%;
     z-index: 1045;
 }
-
-.btn i{top:3px;}
 
 .label {
     padding: .5em .6em .3em;
