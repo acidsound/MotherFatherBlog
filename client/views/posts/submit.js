@@ -63,8 +63,14 @@ Template.postSubmit.rendered = function(){
     /*var txtArea = $('#content').wysihtml5({
       "html": true
     });*/
-
-    initMedium ();
+    var options = {
+      editor: $("#content")[0], // {DOM Element} [required]
+      class: 'content', // {String} class of the editor,
+      debug: true, // {Boolean} false by default
+      textarea: '<textarea name="content"></textarea>', // fallback for old browsers
+      list: ['bold', 'italic', 'underline'] // editor menu list
+    }
+    var editor = new Pen(options);
 
   }
 };
