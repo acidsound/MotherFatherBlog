@@ -2,7 +2,6 @@ var editor = null;
 function initMedium (){
   var create = function(){
     editor = new MediumEditor('#content',{
-      targetBlank:true,
       buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:"본문을 작성하세요."
     });
   };
