@@ -13,12 +13,14 @@ body {
     background-color: rgb(241, 242, 246);
     padding-top: 70px;
 }
+.glyphicon{top:3px;}
 .pointer {cursor: pointer}
+hr{border-top: 1px solid #CCD1D9;}
 hr.dashed {
-    border-top: 1px dashed #ccc;
+    border-top: 1px dashed #656D78;
 }
 hr.dashed_gubun {
-    border-top: 1px solid  #AAB2BD
+    border-top: 2px solid  #CCD1D9
 }
 .content-wrapper blockquote{
     margin-left: 25px;
@@ -40,7 +42,6 @@ hr.dashed_gubun {
     border-radius: 0;
     width: 100%;
     z-index: 1045;
-    opacity: .9;
 }
 
 .btn i{top:3px;}
@@ -79,10 +80,6 @@ hr.dashed_gubun {
     max-width: 100%;
 }
 #postList {}
-
-#postsList .jumbotron {
-    cursor: pointer;
-}
 #postsList .content-title {
     max-height: 112px;
     overflow: hidden;
@@ -112,8 +109,10 @@ hr.dashed_gubun {
     z-index: 1030;
 }
 
-
-
+#postPage .media-list .media .media-object{
+   width: 64px;
+   height:64px;
+}
 /*wysywic editor modal*/
 .bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}
 

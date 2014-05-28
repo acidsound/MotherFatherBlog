@@ -1,6 +1,5 @@
 <template name="postsList">
   <div id="postsList">
-    <div class="col-sm-8">
     {{#each posts}}
         {{> postStrip}}
     {{/each}}
@@ -10,70 +9,22 @@
         <br>
         <br>
     {{/if}}
-    </div>
-    <div class="col-sm-4">
-      <div class="well">
-        <h4>Blog Search</h4>
-
-        <div class="input-group">
-          <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                              <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-        </div>
-        <!-- /input-group -->
-      </div>
-      <!-- /well -->
-      <div class="well">
-        <h4>Popular Blog Categories</h4>
-        <div class="row">
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><a href="#dinosaurs">Dinosaurs</a>
-              </li>
-              <li><a href="#spaceships">Spaceships</a>
-              </li>
-              <li><a href="#fried-foods">Fried Foods</a>
-              </li>
-              <li><a href="#wild-animals">Wild Animals</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><a href="#alien-abductions">Alien Abductions</a>
-              </li>
-              <li><a href="#business-casual">Business Casual</a>
-              </li>
-              <li><a href="#robots">Robots</a>
-              </li>
-              <li><a href="#fireworks">Fireworks</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- /well -->
-      <div class="well">
-        <h4>Side Widget Well</h4>
-        <p>Bootstrap's default wells work great for side widgets! What is a widget anyways...?</p>
-      </div>
-      <!-- /well -->
-    </div>
   </div>
 </template>
 <template name="postStrip">
+  <div class="jumbotron">
+    <div class="jumbotron-contents">
+
+
     <h1 class="content-title">
       {{title}}
     </h1>
     <p class="lead">by {{author}}</p>
-    <hr class="dashed">
+    <hr class="">
     <p>
       <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
     </p>
-    <hr class="dashed">
+    <hr class="">
     {{#if stripTag.img}}
     <div class="conetent-image">
       {{{stripTag.img}}}
@@ -82,5 +33,6 @@
     {{/if}}
     <p class="content-preview">{{stripTag.text}}</p>
     <a class="btn btn-primary"  href="{{pathFor 'postPage'}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-    <hr class="dashed_gubun">
+    </div>
+  </div>
 </template>

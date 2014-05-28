@@ -1,21 +1,18 @@
 <template name="postPage">
-  <div class="col-md-12">
+  <div id="postPage">
   {{> postItem}}
-  </div>
-  <div class="col-md-12">
+
     <h2 class="menu-title comment-area">Comments</h2>
     <ul class="media-list content-wrapper">
       {{#each comments}}
       {{> comment}}
       {{/each}}
     </ul>
+  {{#if currentUser}}
+  {{> commentSubmit}}
+  {{else}}
+  <p>Please log in to leave a comment.</p>
+  {{/if}}
 
-    {{#if currentUser}}
-    {{> commentSubmit}}
-    {{else}}
-    <p>Please log in to leave a comment.</p>
-    {{/if}}
   </div>
-
-
 </template>

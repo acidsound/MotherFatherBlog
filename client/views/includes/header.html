@@ -14,10 +14,11 @@
 
         <ul class="nav navbar-nav">
           <!--<li class="active"><a href="#">Link</a></li>-->
-          {{#if currentUser}} <a href="{{pathFor 'postSubmit'}}" class="btn btn-warning navbar-btn">Write <i class="glyphicon glyphicon-pencil"></i> </a>{{/if}}
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}
+          {{#if currentUser}} <a href="{{pathFor 'postSubmit'}}" class="btn btn-warning navbar-btn"> <i class="glyphicon glyphicon-pencil"></i> </a>{{/if}}
         </ul>
       </div>
     </div>

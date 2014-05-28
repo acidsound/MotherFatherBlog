@@ -1,20 +1,30 @@
 <template name="postItem">
   <div class="post" id="postItem">
+    <div class="jumbotron">
+      <div class="jumbotron-contents">
 
-    <h3><a href="{{pathFor 'postPage'}}" class="none_style">{{title}}</a></h3>
-    <div class="pull-right">
-      <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-left goList"></i></span>
-      <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-down goComment"></i></span>
-      {{#if ownPost}}
-      <span class="text-muted pointer"><i class="glyphicon glyphicon-wrench goEdit"></i></span>
-      {{/if}}
+
+        <h1 class="content-title">
+          {{title}}
+        </h1>
+        <p class="lead">by {{author}}</p>
+        <hr class="">
+        <p>
+          <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
+          <div class="pull-right">
+        <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-down goComment"></i></span>
+        {{#if ownPost}}
+        <span class="text-muted pointer"><i class="glyphicon glyphicon-wrench goEdit"></i></span>
+        {{/if}}
+
+      </div>
+
+
+        </p>
+        <hr class="">
+        <div class="content-wrapper">{{{content}}}</div>
+        <button type="button" class="btn btn-primary goList">List <span class="glyphicon glyphicon-chevron-left"></span></button>
+      </div>
     </div>
-    <p>
-      {{submittedMoment}} &nbsp; {{commentsCount}} comments &nbsp; submitted by <strong>{{author}}</strong>
-    </p>
-    <div class="content-wrapper">
-      {{{content}}}
-    </div>
-    <br>
   </div>
 </template>
