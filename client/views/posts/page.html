@@ -2,7 +2,6 @@
   <div id="postPage">
 
   {{> postItem}}
-
     <h2 class="menu-title comment-area">Comments</h2>
     <ul class="media-list content-wrapper">
       {{#each comments}}
@@ -12,7 +11,9 @@
   {{#if currentUser}}
   {{> commentSubmit}}
   {{else}}
-  <p>Please log in to leave a comment.</p>
+    <div class="well well-lg content-wrapper">
+      <p><strong>Please log in to leave a comment.</strong></p>
+    </div>
   {{/if}}
 
   </div>
@@ -38,6 +39,7 @@
         </p>
         <hr class="">
         <div class="content-wrapper">{{{content}}}</div>
+        <br>
         <button type="button" class="btn btn-primary goList">List <span class="glyphicon glyphicon-chevron-left"></span></button>
       </div>
     </div>
