@@ -4,7 +4,7 @@ Template.postsList.rendered = function() {
 }
 Template.postStrip.helpers({
   submittedMoment : function(){
-    return moment(this.submitted).format('MMMM Do YYYY, h:mm:ss a');
+    return moment(this.submitted).format('LLLL');
   },
   stripTag : function(){
     var stripTag = {

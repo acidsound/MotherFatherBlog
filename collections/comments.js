@@ -19,7 +19,7 @@ Meteor.methods({
       throw new Meteor.Error(422, 'You must comment on a post');
     comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), {
       userId: user._id,
-      author: user.username,
+      author: user.profile.name,
       submitted: new Date().getTime()
     });
 

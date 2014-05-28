@@ -6,13 +6,14 @@
 standard-app-packages
 iron-router
 spin
-accounts-password
 bootstrap-3
 accounts-ui-bootstrap-3
 moment
 iron-router-progress
-medium-editor-updated
 jquery-masonry
 isotope-repackaged
 bootboxjs
 masonrify
+medium-editor-updated
+accounts-facebook
+accounts-google

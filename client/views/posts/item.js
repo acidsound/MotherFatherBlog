@@ -7,7 +7,7 @@
  */
 Template.postItem.helpers({
   submittedMoment : function(){
-    return moment(this.submitted).fromNow();
+    return moment(this.submitted).format('LLLL');
   },
   ownPost: function() {
     return this.userId == Meteor.userId();

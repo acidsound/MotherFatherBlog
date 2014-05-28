@@ -1,3 +1,14 @@
+Meteor.startup(function () {
+  Accounts.loginServiceConfiguration.remove({
+    service: "facebook"
+  });
+
+  Accounts.loginServiceConfiguration.insert({
+    service: "facebook",
+    appId: "155622374644188",
+    secret: "f3e7649e2dc8160fea31d7fc4180fdab"
+  });
+});
 if (Posts.find().count() === 0) {
  /* var now = new Date().getTime();
 
