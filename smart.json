@@ -11,6 +11,7 @@
     "jquery-masonry": {},
     "isotope-repackaged": {},
     "bootboxjs": {},
-    "masonrify": {}
+    "masonrify": {},
+    "medium-editor": {}
   }
 }

@@ -5,6 +5,25 @@
  * Time: 오후 4:51
  * To change this template use File | Settings | File Templates.
  */
+var editor = null;
+function initMedium (){
+  var create = function(){
+    editor = new MediumEditor('#content',{
+      targetBlank:true,
+      buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:"본문을 작성하세요."
+    });
+  };
+
+  if(editor == null){
+    create();
+  }else{
+    var toolbarId = "#medium-editor-toolbar-"+editor.id, anchorId = "#medium-editor-anchor-preview-"+editor.id;
+    $(toolbarId).remove();
+    $(anchorId).remove();
+    editor = null;
+    create();
+  }
+}
 Template.commentSubmit.events({
   'click .showModal':function(event){
     event.preventDefault();
@@ -34,6 +53,9 @@ Template.commentSubmit.events({
       if (error){
         throwError(error.reason);
       } else {
+        imsiEditor.body.html("");
+        initMedium ();
+
         //imsiEditor.body.html("");
         //$body.data("wysihtml5").editor.setValue("");
         //$('#content').activate();
@@ -53,7 +75,9 @@ Template.commentSubmit.rendered = function(){
       "emphasis": false //Italics, bold, etc. Default true
     });*/
   }
-  var editor = new MediumEditor('#content',{
+  /*var editor = new MediumEditor('#content',{
+    targetBlank:true,
     buttons : ['unorderedlist', 'orderedlist', 'pre','bold', 'italic', 'underline', 'anchor'],placeholder:"댓글을 작성하세요."
-  });
+  });*/
+  initMedium ();
 };

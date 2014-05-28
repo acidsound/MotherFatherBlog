@@ -1,3 +1,22 @@
+var editor = null;
+function initMedium (){
+  var create = function(){
+    editor = new MediumEditor('#content',{
+      targetBlank:true,
+      buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:"본문을 작성하세요."
+    });
+  };
+
+  if(editor == null){
+    create();
+  }else{
+    var toolbarId = "#medium-editor-toolbar-"+editor.id, anchorId = "#medium-editor-anchor-preview-"+editor.id;
+    $(toolbarId).remove();
+    $(anchorId).remove();
+    editor = null;
+    create();
+  }
+}
 Template.postEdit.events({
   'click .showModal':function(event){
     event.preventDefault();
@@ -53,10 +72,7 @@ Template.postEdit.rendered = function(){
     if(this.data.content){
       txtArea.data("wysihtml5").editor.setValue(this.data.content);
     }*/
-
-    var editor = new MediumEditor('#content',{
-      buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:""
-    });
+    initMedium ();
     if(this.data.content){
       $('#content').html(this.data.content);
     }
