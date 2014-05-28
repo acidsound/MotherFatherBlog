@@ -5,10 +5,12 @@ Meteor.startup(function () {
 
   Accounts.loginServiceConfiguration.insert({
     service: "facebook",
-    appId: "155622374644188",
-    secret: "f3e7649e2dc8160fea31d7fc4180fdab"
-    //appId: "325816224210306",
-    //secret: "c11fa1488d2feefe6c2035304f25c419"
+    //appId: "155622374644188",
+    //secret: "f3e7649e2dc8160fea31d7fc4180fdab"
+
+    //로칼용
+    appId: "325816224210306",
+    secret: "c11fa1488d2feefe6c2035304f25c419"
   });
 });
 

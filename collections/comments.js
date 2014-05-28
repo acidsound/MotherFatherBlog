@@ -17,7 +17,7 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Please write some content');
     if (!post)
       throw new Meteor.Error(422, 'You must comment on a post');
-    comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), {
+    var comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), {
       userId: user._id,
       author: {name:user.profile.name,photo:user.profile.photo},
       submitted: new Date().getTime()

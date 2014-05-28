@@ -1,5 +1,6 @@
 <template name="postPage">
   <div id="postPage">
+
   {{> postItem}}
 
     <h2 class="menu-title comment-area">Comments</h2>
@@ -14,5 +15,31 @@
   <p>Please log in to leave a comment.</p>
   {{/if}}
 
+  </div>
+</template>
+<template name="postItem">
+  <div class="post" id="postItem">
+    <div class="jumbotron">
+      <div class="jumbotron-contents">
+        <h1 class="content-title">
+          {{title}}
+        </h1>
+        <p class="lead">by {{author.name}}</p>
+        <hr class="">
+        <p>
+          <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
+        <div class="pull-right">
+          <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-down goComment"></i></span>
+          {{#if ownPost}}
+          <span class="text-muted pointer"><i class="glyphicon glyphicon-wrench goEdit"></i></span>
+          {{/if}}
+
+        </div>
+        </p>
+        <hr class="">
+        <div class="content-wrapper">{{{content}}}</div>
+        <button type="button" class="btn btn-primary goList">List <span class="glyphicon glyphicon-chevron-left"></span></button>
+      </div>
+    </div>
   </div>
 </template>

@@ -41,7 +41,8 @@ Meteor.methods({
       userId: user._id,
       author: {name:user.profile.name,photo:user.profile.photo},
       submitted: new Date().getTime(),
-      commentsCount: 0
+      commentsCount: 0,
+      hitCount:0
     });
 
     var postId = Posts.insert(post);

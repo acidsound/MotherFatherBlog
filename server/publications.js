@@ -9,6 +9,8 @@ Meteor.publish('posts', function(options) {
   return Posts.find({}, options);
 });
 Meteor.publish('singlePost', function(id) {
+  //히트 수 증가. 여기가 최선이 아닐까...
+  Posts.update(id, {$inc: {hitCount: 1}});
   return id && Posts.find(id);
 });
 Meteor.publish('comments', function(postId) {
