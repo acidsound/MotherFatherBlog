@@ -1,3 +1,18 @@
+Meteor.startup(function () {
+  Accounts.loginServiceConfiguration.remove({
+    service: "facebook"
+  });
+
+  Accounts.loginServiceConfiguration.insert({
+    service: "facebook",
+    appId: "155622374644188",
+    //appId: "325816224210306",
+    secret: "f3e7649e2dc8160fea31d7fc4180fdab"
+    //secret: "c11fa1488d2feefe6c2035304f25c419"
+  });
+});
+
+
 getProperty = function(object, property){
   // recursive function to get nested properties
   var array = property.split('.');
@@ -14,7 +29,7 @@ getProperty = function(object, property){
 getUserName = function(user){
   return user.username
     || getProperty(user, 'services.twitter.screenName')
-    || getProperty(user, 'services.facebook.username')
+    || getProperty(user, 'services.facebook.name')
     || getProperty(user, 'services.google.name');
 };
 
