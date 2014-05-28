@@ -12,7 +12,7 @@ function initEditor(){
   //에디터가 필요한 모든 페이지에서 끄응... 재사용 방법 없나???
   var options = {
     editor: $("#content")[0], // {DOM Element} [required]
-    class: 'content', // {String} class of the editor,
+    class: 'content_pen_editor', // {String} class of the editor,
     debug: false, // {Boolean} false by default
     textarea: '<textarea name="content"></textarea>', // fallback for old browsers
     list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent','bold', 'italic', 'createlink']

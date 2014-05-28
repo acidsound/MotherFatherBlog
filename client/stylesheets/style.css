@@ -22,6 +22,9 @@ hr.dashed {
 hr.dashed_gubun {
     border-top: 2px solid  #CCD1D9
 }
+.content_pen_editor{
+    outline: none;
+}
 .content-wrapper blockquote{
     margin-left: 25px;
 }

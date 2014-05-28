@@ -1,18 +1,22 @@
 var editor = null;
-function initMedium (){
+function initEditor(){
+  //에디터가 필요한 모든 페이지에서 끄응... 재사용 방법 없나???
+  var options = {
+    editor: $("#content")[0], // {DOM Element} [required]
+    class: 'content_pen_editor', // {String} class of the editor,
+    debug: false, // {Boolean} false by default
+    textarea: '<textarea name="content"></textarea>', // fallback for old browsers
+    list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent','bold', 'italic', 'createlink']
+  }
   var create = function(){
-    editor = new MediumEditor('#content',{
-      buttons : ['header2',  'quote', 'unorderedlist', 'orderedlist', 'pre', 'bold', 'italic', 'underline', 'anchor','strikethrough'],placeholder:"본문을 작성하세요."
-    });
+    editor = new Pen(options);
   };
-
   if(editor == null){
     create();
   }else{
-    var toolbarId = "#medium-editor-toolbar-"+editor.id, anchorId = "#medium-editor-anchor-preview-"+editor.id;
-    $(toolbarId).remove();
-    $(anchorId).remove();
+    editor.destroy();
     editor = null;
+    $('.content-menu').remove();
     create();
   }
 }
@@ -71,7 +75,7 @@ Template.postEdit.rendered = function(){
     if(this.data.content){
       txtArea.data("wysihtml5").editor.setValue(this.data.content);
     }*/
-    initMedium ();
+    initEditor ();
     if(this.data.content){
       $('#content').html(this.data.content);
     }
