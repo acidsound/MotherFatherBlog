@@ -8,9 +8,9 @@
     </div>
     <div class="form-group">
       <div class="col-md-8">
-        <select class="form-control" id="selectedCategory" value="{{category}}">
+        <select class="form-control" id="selectedCategory">
           {{#each categories}}
-          <option>{{body}}</option>
+            <option value="{{_id}}" selected="{{isSelected _id body}}">{{body}}</option>
           {{/each}}
         </select>
       </div>

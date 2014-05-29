@@ -114,6 +114,12 @@ hr.dashed_gubun {
    width: 64px;
    height:64px;
 }
+
+#popularCategories{}
+#popularCategories .category-item{
+    text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+}
+
 /*wysywic editor modal*/
 .bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}
 

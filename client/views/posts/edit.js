@@ -23,6 +23,9 @@ function initEditor(){
 Template.postEdit.helpers({
   categories: function() {
     return Categories.find();
+  },
+  isSelected : function(key, val){
+    return Posts.findOne().category._id == key ? true : false;
   }
 });
 Template.postEdit.events({
@@ -64,7 +67,17 @@ Template.postEdit.events({
       title: $(e.target).find('[name=title]').val(),
       //content:  $(e.target).find('#content').data("wysihtml5").editor.getValue()
       content: $(e.target).find('#content').html(),
-      category : $("#selectedCategory").val()
+      category : Categories.find().fetch().filter(function(category){return $("#selectedCategory").val() === category._id})[0]
+    }
+
+    //왐마 카테고리 어쩐데
+    if(postProperties.category._id !== this.category._id){
+      // 카테고리에 변경사항이 있으면 기존 카테고리에서 pull, 새 카테고리에 push
+      // 이 모든 헛짓거리는 popular Category 때문
+
+      Categories.update(this.category._id,{"$pull":{postIds:currentPostId}});
+
+      Categories.update(postProperties.category._id,{"$push":{postIds:currentPostId}});
     }
 
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
@@ -101,5 +114,6 @@ Template.postEdit.rendered = function(){
     if(this.data.content){
       $('#content').html(this.data.content);
     }
+
   }
 };

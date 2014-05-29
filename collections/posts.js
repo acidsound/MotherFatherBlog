@@ -41,15 +41,18 @@ Meteor.methods({
     }
 
     // pick out the whitelisted keys
-    var post = _.extend(_.pick(postAttributes, 'title', 'content', 'category'), {
+    var post = _.extend(_.pick(postAttributes, 'title', 'content'), {
       userId: user._id,
       author: {name:user.profile.name,photo:user.profile.photo},
       submitted: new Date().getTime(),
       commentsCount: 0,
-      hitCount:0
+      hitCount:0,
+      category : postAttributes.category    //짱난다 걍 통째로 갈아 넣어
     });
 
     var postId = Posts.insert(post);
+
+    Categories.update(postAttributes.category._id,{"$push":{postIds:postId}});
 
     return postId;
   }

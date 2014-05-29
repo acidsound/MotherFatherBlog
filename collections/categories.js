@@ -6,6 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 Categories = new Meteor.Collection('categories');
+Categories.allow({
+  update: function(userId, doc) {
+    // only allow posting if you are logged in
+    return !! userId;
+  }
+});
 Meteor.methods({
   category: function(categoryAttributes) {
     var user = Meteor.user();

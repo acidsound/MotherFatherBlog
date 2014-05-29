@@ -48,7 +48,7 @@ Template.postSubmit.events({
           Router.go('postPage', {_id: error.details})
       } else {
         $('#createCategory').val("");
-        $("#selectedCategory").val(newCategory.body);
+        $("#selectedCategory").val(newCategory._id);
       }
     });
   },
@@ -65,10 +65,13 @@ Template.postSubmit.events({
   },
   'submit form': function(event) {
     event.preventDefault();
+
+    console.log(this);
+    console.log(Categories);
     var post = {
       title: $(event.target).find('[name=title]').val(),
       content: $(event.target).find('#content').html(),
-      category : $("#selectedCategory").val()
+      category : Categories.find().fetch().filter(function(category){return $("#selectedCategory").val() === category._id})[0] || null
     }
     Meteor.call('post', post, function(error, id) {
       if (error) {

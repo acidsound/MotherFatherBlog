@@ -11,7 +11,7 @@
           <select class="form-control" id="selectedCategory">
             <option selected="selected" disabled="disabled">Choose Category</option>
             {{#each categories}}
-              <option>{{body}}</option>
+              <option value="{{_id}}">{{body}}</option>
             {{/each}}
           </select>
         </div>

@@ -1,0 +1,9 @@
+<template name="popularCategories">
+  <div id = "popularCategories" class="row">
+    {{#each popularList}}
+    <div class="col-sm-6 category-item">
+      <a href="#" class="category-text">{{body}}</a> <small>{{postIds.length}}</small>
+    </div>
+    {{/each}}
+  </div>
+</template>
