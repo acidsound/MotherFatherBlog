@@ -13,7 +13,7 @@ Meteor.methods({
     // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to make comments");
-    if (!commentAttributes.body)
+    if (!commentAttributes.body||commentAttributes.body=="")
       throw new Meteor.Error(422, 'Please write some content');
     if (!post)
       throw new Meteor.Error(422, 'You must comment on a post');

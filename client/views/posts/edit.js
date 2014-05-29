@@ -22,32 +22,34 @@ function initEditor(){
 }
 Template.postEdit.helpers({
   categories: function() {
-    return Categories.find();
-  },
-  isSelected : function(key, val){
-    if(Posts.findOne().category){
-      return Posts.findOne().category._id == key ? true : false;
-    }else{
-      return false;
-    }
+    var currentPost = this;
+    var categories = Categories.find().fetch();
+    _.forEach(categories,function(category){
+      if(!!currentPost.category){
+        category.isSelected = currentPost.category._id == category._id ? true : false;
+      }
 
+    });
+    return categories;
   }
 });
 Template.postEdit.events({
-  'click .createCategoryBtn':function(event){
+  'click .showCategoryModal':function(event){
     event.preventDefault();
-    var category = {
-      body: $('#createCategory').val()
-    }
-    Meteor.call('category', category, function(error, newCategory) {
-      if (error) {
-        // display the error to the user
-        throwError(error.reason);
-        if (error.error === 302)
-          Router.go('postPage', {_id: error.details})
+    bootbox.prompt("새 카테고리를 추가합니다.", function(result) {
+      if (result == null || result == "") {
       } else {
-        $('#createCategory').val("");
-        $("#selectedCategory").val(newCategory._id);
+        Meteor.call('category', {body:result}, function(error, newCategory) {
+          if (error) {
+            // display the error to the user
+            throwError(error.reason);
+            if (error.error === 302)
+              Router.go('postPage', {_id: error.details})
+          } else {
+            $("#selectedCategory").val(newCategory._id);
+          }
+        });
+
       }
     });
   },

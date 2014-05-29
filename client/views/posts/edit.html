@@ -10,17 +10,12 @@
       <div class="col-md-8">
         <select class="form-control" id="selectedCategory">
           {{#each categories}}
-            <option value="{{_id}}" selected="{{isSelected _id body}}">{{body}}</option>
+            <option value="{{_id}}" selected="{{isSelected}}">{{body}}</option>
           {{/each}}
         </select>
       </div>
       <div class="col-md-4">
-        <div class="input-group">
-          <input type="text" class="form-control" name="createCategory" id="createCategory" placeholder="새로운 카테고리">
-            <span class="input-group-btn">
-              <button class="btn btn-default createCategoryBtn" type="button">Add</button>
-            </span>
-        </div>
+          <button class="btn btn-default btn-block showCategoryModal" type="button">새로운 카테고리</button>
       </div>
     </div>
 
@@ -39,8 +34,17 @@
 
     <div class="form-group">
       <div class="col-md-12">
-        <input type="submit" value="Edit" class="btn btn-warning"/>
-        <a class="btn btn-danger delete" href="#">Delete</a>
+
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group">
+            <input type="submit" value="Edit" class="btn btn-warning"/>
+          </div>
+          <div class="btn-group">
+            <a class="btn btn-danger delete" href="#">Delete</a>
+          </div>
+        </div>
+        <br>
+
       </div>
     </div>
   </form>

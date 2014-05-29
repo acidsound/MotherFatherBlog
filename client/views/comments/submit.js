@@ -46,10 +46,6 @@ Template.commentSubmit.events({
   },
   'submit form': function(e, template) {
     e.preventDefault();
-
-    //var $body = $(e.target).find('#content');
-
-    //console.log($body.val());
     var imsiEditor = {body : $(e.target).find('#content')};
     var comment = {
       //body: $body.data("wysihtml5").editor.getValue(),
@@ -63,29 +59,13 @@ Template.commentSubmit.events({
       } else {
         imsiEditor.body.html("");
         initEditor ();
-
-        //imsiEditor.body.html("");
-        //$body.data("wysihtml5").editor.setValue("");
-        //$('#content').activate();
-        /*var editor = new MediumEditor('#content',{
-          buttons : ['unorderedlist', 'orderedlist', 'pre','bold', 'italic', 'underline', 'anchor'],placeholder:"댓글을 작성하세요."
-        });*/
       }
     });
   }
 });
 Template.commentSubmit.rendered = function(){
   if (!this.rendered){
-    // run my code
-    /*console.log("rendered");
-    var commentArea = $('#content').wysihtml5({
-      "font-styles": false, //Font styling, e.g. h1, h2, etc. Default true
-      "emphasis": false //Italics, bold, etc. Default true
-    });*/
+    initEditor ();
   }
-  /*var editor = new MediumEditor('#content',{
-    targetBlank:true,
-    buttons : ['unorderedlist', 'orderedlist', 'pre','bold', 'italic', 'underline', 'anchor'],placeholder:"댓글을 작성하세요."
-  });*/
-  initEditor ();
+
 };
