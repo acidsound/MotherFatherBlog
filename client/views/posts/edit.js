@@ -47,7 +47,7 @@ Template.postEdit.events({
           Router.go('postPage', {_id: error.details})
       } else {
         $('#createCategory').val("");
-        $("#selectedCategory").val(newCategory.body);
+        $("#selectedCategory").val(newCategory._id);
       }
     });
   },

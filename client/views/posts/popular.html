@@ -1,0 +1,7 @@
+<template name="popularPosts">
+  <div id = "popularPosts">
+    {{#each popularList}}
+    <p><a href="{{pathFor 'postPage'}}">{{title}}</a></p>
+    {{/each}}
+  </div>
+</template>

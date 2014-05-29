@@ -116,10 +116,14 @@ hr.dashed_gubun {
 }
 
 #popularCategories{}
+
 #popularCategories .category-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
-
+#popularPosts{}
+#popularPosts p{
+    text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+}
 /*wysywic editor modal*/
 .bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}
 
