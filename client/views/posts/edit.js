@@ -53,7 +53,7 @@ Template.postEdit.events({
       }
     });
   },
-  'click .showModal':function(event){
+  'click .showImageModal':function(event){
     event.preventDefault();
     bootbox.prompt("Insert Image From URL", function(result) {
       if (result === null) {
@@ -102,11 +102,17 @@ Template.postEdit.events({
   'click .delete': function(e) {
     e.preventDefault();
 
-    if (confirm("Delete this post?")) {
-      var currentPostId = this._id;
-      Posts.remove(currentPostId);
-      Router.go('postsList');
-    }
+    bootbox.confirm("Delete this post? 레알?", function(result) {
+      if (result) {
+        var currentPostId = this._id;
+
+        Categories.update(this.category._id,{"$pull":{postIds:currentPostId}});
+
+        Posts.remove(currentPostId);
+        Router.go('postsList');
+      } else {
+      }
+    });
   }
 });
 

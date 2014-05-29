@@ -9,14 +9,14 @@
       <div class="form-group">
         <div class="col-md-8">
           <select class="form-control" id="selectedCategory">
-            <option selected="selected" disabled="disabled">Choose Category</option>
+            <option selected="selected" disabled="disabled">카테고리 선택</option>
             {{#each categories}}
               <option value="{{_id}}">{{body}}</option>
             {{/each}}
           </select>
         </div>
         <div class="col-md-4">
-            <button class="btn btn-default btn-block showCategoryModal" type="button">새로운 카테고리 추가</button>
+            <button class="btn btn-default btn-block showCategoryModal" type="button">새로운 카테고리</button>
         </div>
       </div>
       <div class="form-group">
@@ -24,23 +24,17 @@
           <div class="well well-lg content-wrapper">
             <div id="content" class="content">
             </div>
-            <div class="pull-right">
-              <button class="btn btn-xs btn-info showModal" type="button"><i class="glyphicon glyphicon-picture"></i></button>
-            </div>
+          </div>
+          <div>
+            <button class="btn btn-default btn-block showImageModal" type="button">이미지 삽입</button>
           </div>
         </div>
       </div>
-
+      <br>
       <div class="form-group">
         <div class="col-md-12">
-          <div class="btn-group btn-group-justified">
-            <div class="btn-group">
-              <input type="submit" value="Post" class="btn btn-primary"/>
-            </div>
-          </div>
+          <input type="submit" value="Post" class="btn btn-primary btn-block"/>
           <br>
-
-
         </div>
       </div>
     </form>

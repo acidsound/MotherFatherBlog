@@ -54,7 +54,7 @@ Template.postSubmit.events({
       }
     });
   },
-  'click .showModal':function(event){
+  'click .showImageModal':function(event){
     event.preventDefault();
     bootbox.prompt("Insert Image From URL", function(result) {
       if (result === null) {
