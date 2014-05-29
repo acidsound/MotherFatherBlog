@@ -59,7 +59,7 @@ Template.postEdit.events({
       if (result === null) {
 
       } else {
-        var imgTag = "<div><img src="+result +"></img></div>";
+        var imgTag = "<div><img src="+result +"></img></div><div>&nbsp;</div>";
         $('#content').html($('#content').html()+imgTag);
       }
     });
