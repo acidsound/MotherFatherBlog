@@ -20,7 +20,29 @@ function initEditor(){
     create();
   }
 }
+Template.postEdit.helpers({
+  categories: function() {
+    return Categories.find();
+  }
+});
 Template.postEdit.events({
+  'click .createCategoryBtn':function(event){
+    event.preventDefault();
+    var category = {
+      body: $('#createCategory').val()
+    }
+    Meteor.call('category', category, function(error, newCategory) {
+      if (error) {
+        // display the error to the user
+        throwError(error.reason);
+        if (error.error === 302)
+          Router.go('postPage', {_id: error.details})
+      } else {
+        $('#createCategory').val("");
+        $("#selectedCategory").val(newCategory.body);
+      }
+    });
+  },
   'click .showModal':function(event){
     event.preventDefault();
     bootbox.prompt("Insert Image From URL", function(result) {
@@ -39,10 +61,10 @@ Template.postEdit.events({
     var currentPostId = this._id;
 
     var postProperties = {
-     // url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val(),
       //content:  $(e.target).find('#content').data("wysihtml5").editor.getValue()
-      content: $(e.target).find('#content').html()
+      content: $(e.target).find('#content').html(),
+      category : $("#selectedCategory").val()
     }
 
     Posts.update(currentPostId, {$set: postProperties}, function(error) {

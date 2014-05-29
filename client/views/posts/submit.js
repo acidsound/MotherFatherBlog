@@ -29,7 +29,29 @@ function initEditor(){
     create();
   }
 }
+Template.postSubmit.helpers({
+  categories: function() {
+    return Categories.find();
+  }
+});
 Template.postSubmit.events({
+  'click .createCategoryBtn':function(event){
+    event.preventDefault();
+    var category = {
+      body: $('#createCategory').val()
+    }
+    Meteor.call('category', category, function(error, newCategory) {
+      if (error) {
+        // display the error to the user
+        throwError(error.reason);
+        if (error.error === 302)
+          Router.go('postPage', {_id: error.details})
+      } else {
+        $('#createCategory').val("");
+        $("#selectedCategory").val(newCategory.body);
+      }
+    });
+  },
   'click .showModal':function(event){
     event.preventDefault();
     bootbox.prompt("Insert Image From URL", function(result) {
@@ -44,17 +66,16 @@ Template.postSubmit.events({
   'submit form': function(event) {
     event.preventDefault();
     var post = {
-      //url: $(event.target).find('[name=url]').val(),
       title: $(event.target).find('[name=title]').val(),
-      //content: $(event.target).find('#content').data("wysihtml5").editor.getValue()
-      content: $(event.target).find('#content').html()
+      content: $(event.target).find('#content').html(),
+      category : $("#selectedCategory").val()
     }
     Meteor.call('post', post, function(error, id) {
       if (error) {
         // display the error to the user
         throwError(error.reason);
         if (error.error === 302)
-          Router.go('postPage', {_id: error.details})
+          Router.go('postPage', {_id: error.details});
       } else {
         Router.go('postPage', {_id: id});
       }
@@ -70,6 +91,5 @@ Template.postSubmit.rendered = function(){
       "html": true
     });*/
     initEditor();
-
   }
 };

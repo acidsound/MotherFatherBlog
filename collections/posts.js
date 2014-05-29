@@ -29,6 +29,10 @@ Meteor.methods({
     if (!postAttributes.title)
       throw new Meteor.Error(422, 'Please fill in a headline');
 
+    console.log(postAttributes);
+    if (!postAttributes.category)
+      throw new Meteor.Error(423, 'Please choose a category');
+
     // check that there are no previous posts with the same link
     if (postAttributes.url && postWithSameLink) {
       throw new Meteor.Error(302,
@@ -37,7 +41,7 @@ Meteor.methods({
     }
 
     // pick out the whitelisted keys
-    var post = _.extend(_.pick(postAttributes, 'title', 'content'), {
+    var post = _.extend(_.pick(postAttributes, 'title', 'content', 'category'), {
       userId: user._id,
       author: {name:user.profile.name,photo:user.profile.photo},
       submitted: new Date().getTime(),

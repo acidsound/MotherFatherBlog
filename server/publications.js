@@ -19,6 +19,9 @@ Meteor.publish('comments', function(postId) {
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId});
 });
+Meteor.publish('categories', function() {
+  return Categories.find();
+});
 /*
  Meteor.publish('comments', function() {
  return Comments.find();
