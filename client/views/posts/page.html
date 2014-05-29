@@ -22,6 +22,7 @@
   <div class="post" id="postItem">
     <div class="jumbotron">
       <div class="jumbotron-contents">
+        <span class="badge badge-default">{{category.body}}</span>
         <h1 class="content-title">
 
           {{title}}
@@ -29,7 +30,6 @@
         <p class="lead">by {{author.name}}</p>
         <hr class="">
         <p>
-          <span class="badge badge-default pull-right">{{category.body}}</span>
           <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
         <div class="pull-right">
           <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-down goComment"></i></span>
