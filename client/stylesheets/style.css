@@ -121,7 +121,7 @@ hr.dashed_gubun {
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
 #popularPosts{}
-#popularPosts p{
+#popularPosts .post-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
 /*wysywic editor modal*/

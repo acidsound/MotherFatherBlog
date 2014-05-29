@@ -7,6 +7,6 @@
  */
 Template.popularPosts.helpers({
   popularList: function() {
-    return Posts.find({},{sort: {hitCount: -1}, limit: 5});
+    return Posts.find({},{sort: {hitCount: -1}, limit: 10});
   }
 });

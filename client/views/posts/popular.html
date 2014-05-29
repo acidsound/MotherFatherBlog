@@ -1,7 +1,7 @@
 <template name="popularPosts">
   <div id = "popularPosts">
     {{#each popularList}}
-    <p><a href="{{pathFor 'postPage'}}">{{title}}</a></p>
+    <div class="post-item"><a href="{{pathFor 'postPage'}}" class="none_style">{{title}}</a></div>
     {{/each}}
   </div>
 </template>
