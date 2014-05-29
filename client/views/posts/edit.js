@@ -101,12 +101,12 @@ Template.postEdit.events({
 
   'click .delete': function(e) {
     e.preventDefault();
-
+    var currentPost = this;
     bootbox.confirm("Delete this post? 레알?", function(result) {
       if (result) {
-        var currentPostId = this._id;
+        var currentPostId = currentPost._id;
 
-        Categories.update(this.category._id,{"$pull":{postIds:currentPostId}});
+        Categories.update(currentPost.category._id,{"$pull":{postIds:currentPostId}});
 
         Posts.remove(currentPostId);
         Router.go('postsList');
