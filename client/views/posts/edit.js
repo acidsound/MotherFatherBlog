@@ -25,7 +25,12 @@ Template.postEdit.helpers({
     return Categories.find();
   },
   isSelected : function(key, val){
-    return Posts.findOne().category._id == key ? true : false;
+    if(Posts.findOne().category){
+      return Posts.findOne().category._id == key ? true : false;
+    }else{
+      return false;
+    }
+
   }
 });
 Template.postEdit.events({
