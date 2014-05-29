@@ -76,7 +76,7 @@ Template.postEdit.events({
     }
 
     //왐마 카테고리 어쩐데
-    if(postProperties.category == null){  //기존에 만들어놓은 포스팅 때문에 ㅠㅠ
+    if(this.category == null){  //기존에 만들어놓은 포스팅 때문에 ㅠㅠ
       Categories.update(postProperties.category._id,{"$push":{postIds:currentPostId}});
     }else if(postProperties.category._id !== this.category._id){
       // 카테고리에 변경사항이 있으면 기존 카테고리에서 pull, 새 카테고리에 push
