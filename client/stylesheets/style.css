@@ -30,11 +30,11 @@ hr.dashed_gubun {
     margin-left: 25px;
 }
 #iron-router-progress {
-    background-color : #CCD1D9;
-    box-shadow       : 0 0 5px #AAB2BD;
+    background-color : #F5F7FA;
+    box-shadow       : 0 0 5px #E6E9ED;
 }
 #iron-router-progress.spinner:before {
-    border-color : #CCD1D9;
+    border-color : #F5F7FA;
 }
 .none_style{text-decoration: none !important; color: inherit}
 .none_style:hover{color: inherit}
