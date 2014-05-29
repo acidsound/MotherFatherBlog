@@ -109,7 +109,10 @@ hr.dashed_gubun {
     position: fixed;
     z-index: 1040;
 }
-
+#notifications .alert-photo{
+    width: 44px;
+    height: 44px;
+}
 #errors{
     position: fixed;
     z-index: 1030;

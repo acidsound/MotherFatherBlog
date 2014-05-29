@@ -1,16 +1,25 @@
 Meteor.startup(function () {
   Accounts.loginServiceConfiguration.remove({
+    service: 'google'
+  });
+  Accounts.loginServiceConfiguration.insert({
+    service: 'google',
+    clientId: '1005551858522-0vf53n3fd22k6jfdjtj978upa265m5n4.apps.googleusercontent.com',
+    secret: 'vvmZ5OPOjkgvSCyRh6NYbNjD'
+  });
+
+  Accounts.loginServiceConfiguration.remove({
     service: "facebook"
   });
 
   Accounts.loginServiceConfiguration.insert({
     service: "facebook",
-    appId: "155622374644188",
-    secret: "f3e7649e2dc8160fea31d7fc4180fdab"
+    //appId: "155622374644188",
+    //secret: "f3e7649e2dc8160fea31d7fc4180fdab"
 
     //로칼용
-    //appId: "325816224210306",
-    //secret: "c11fa1488d2feefe6c2035304f25c419"
+    appId: "325816224210306",
+    secret: "c11fa1488d2feefe6c2035304f25c419"
   });
 });
 

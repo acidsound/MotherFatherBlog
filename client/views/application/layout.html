@@ -1,27 +1,19 @@
 <template name="layout">
 
   {{>header}}
-  {{> errors}}
-  {{> notifications}}
+
+
   <div class="container">
-
-
-   <!-- <div class="row">
-      <div class="col-md-offset-8 col-md-4">
-        {{> notifications}}
-      </div>
-    </div>-->
-
-
     <div id="main" class="row">
       <div class="col-lg-8 col-md-8 col-sm-8">
         {{> yield}}
+
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4">
-
+        {{> notifications}}
+        {{> errors}}
         <div class="well">
           <h4>Blog Search</h4>
-
           <div class="input-group">
             <input type="text" class="form-control">
                         <span class="input-group-btn">
@@ -30,9 +22,7 @@
                             </button>
                         </span>
           </div>
-          <!-- /input-group -->
         </div>
-
         <div class="well">
           <h4>Popular Posts</h4>
           {{> popularPosts}}
