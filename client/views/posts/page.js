@@ -31,7 +31,7 @@ Template.postItem.helpers({
 Template.postItem.events({
   'click .goList': function(e) {
     e.preventDefault();
-    Router.go('postsList');
+    Router.go('home');
   },
   'click .goComment': function(e) {
     e.preventDefault();
