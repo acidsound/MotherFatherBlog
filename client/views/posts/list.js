@@ -1,4 +1,15 @@
-
+Template.postsList.helpers({
+  posts: function() {
+    this.posts.rewind();
+    return this.posts;
+  }
+});
+Template.postsList.events({
+  'click .loadMore': function (e) {
+    e.preventDefault();
+    Router.go(this.nextPath);
+  }
+});
 Template.postStrip.helpers({
   submittedMoment : function(){
     return moment(this.submitted).format('LLLL');
@@ -20,12 +31,7 @@ Template.postStrip.helpers({
     return stripTag;
   }
 });
-Template.postsList.events({
-  'click .loadMore': function (e) {
-    e.preventDefault();
-    Router.go(this.nextPath);
-  }
-});
+
 Template.postStrip.rendered = function() {
   $(this.find('.content-title')).dotdotdot({
     watch:true

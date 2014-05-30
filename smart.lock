@@ -14,7 +14,9 @@
       "isotope-repackaged": {},
       "bootboxjs": {},
       "masonrify": {},
-      "medium-editor": {}
+      "medium-editor": {},
+      "method-pagination": {},
+      "pages": {}
     },
     "packages": {
       "iron-router": {
@@ -81,6 +83,16 @@
         "git": "https://github.com/DenisGorbachev/medium-editor.git",
         "tag": "v1.1.2",
         "commit": "46bc982ba7824b4ecdb67b13ff6c54f9e96963cd"
+      },
+      "method-pagination": {
+        "git": "https://github.com/Zaku-eu/meteor-method-pagination.git",
+        "tag": "v0.6.0",
+        "commit": "1e58509e893beb2b568b90d63896d4cbeb0ee11b"
+      },
+      "pages": {
+        "git": "https://github.com/alethes/meteor-pages.git",
+        "tag": "v1.0.20",
+        "commit": "717cbac89f02d2f1bb160b24c997050ce2dee45e"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

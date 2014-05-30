@@ -31,6 +31,7 @@
         <hr class="">
         <p>
           <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
+        &nbsp; <span class="glyphicon glyphicon-thumbs-up"></span> {{votes}}
         <div class="pull-right">
           <span class="text-muted pointer"><i class="glyphicon glyphicon-chevron-down goComment"></i></span>
           {{#if ownPost}}
@@ -43,6 +44,7 @@
         <div class="content-wrapper">{{{content}}}</div>
         <br>
         <button type="button" class="btn btn-primary goList">List <span class="glyphicon glyphicon-chevron-left"></span></button>
+        <a href="#" class="upvote btn {{upvotedClass}}"><i class="glyphicon glyphicon-thumbs-up"></i></a>
       </div>
     </div>
   </div>

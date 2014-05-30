@@ -109,7 +109,7 @@ Template.postEdit.events({
         Categories.update(currentPost.category._id,{"$pull":{postIds:currentPostId}});
 
         Posts.remove(currentPostId);
-        Router.go('postsList');
+        Router.go('home');
       } else {
       }
     });

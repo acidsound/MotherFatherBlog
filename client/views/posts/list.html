@@ -1,9 +1,9 @@
 <template name="postsList">
   <div id="postsList">
+
     {{#each posts}}
         {{> postStrip}}
     {{/each}}
-
     {{#if nextPath}}
         <a class="btn btn-block btn-info loadMore">Load more</a>
         <br>
@@ -24,6 +24,7 @@
       <p>
 
         <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
+        &nbsp;<span class="glyphicon glyphicon-thumbs-up"></span> {{votes}}
       </p>
       <hr class="">
       {{#if stripTag.img}}
