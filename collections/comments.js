@@ -29,6 +29,7 @@ Meteor.methods({
     comment._id = Comments.insert(comment);
     // now create a notification, informing the user that there's been a comment
     createCommentNotification(comment);
+    createSomethingNotificationForAll("newComment", Posts.find({_id:comment.postId}).fetch()[0]);
     return comment._id;
   }
 });

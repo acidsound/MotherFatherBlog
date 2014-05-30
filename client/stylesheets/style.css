@@ -106,16 +106,16 @@ hr.dashed_gubun {
 }
 
 #notifications{
-    position: fixed;
-    z-index: 1040;
+    /*position: fixed;
+    z-index: 1040;*/
 }
 #notifications .alert-photo{
     width: 44px;
     height: 44px;
 }
 #errors{
-    position: fixed;
-    z-index: 1030;
+    /*position: fixed;
+    z-index: 1030;*/
 }
 
 #postPage .media-list .media .media-object{

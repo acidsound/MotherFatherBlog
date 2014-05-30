@@ -11,8 +11,8 @@
 <template name="notification">
   <div class="alert alert-success alert-dismissable">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-    <p><img class="img-rounded alert-photo" src="{{commenter.photo}}"></p>
-    <p><strong>{{commenter.name}}</strong> commented on your post</p>
+    <p><img class="img-rounded alert-photo" src="{{causer.photo}}"></p>
+    <p><strong>{{causer.name}}</strong> {{message}}</p>
     <p><a class="btn btn-success btn-sm btn-block" href="{{notificationPostPath}}">Go!!</a></p>
   </div>
 </template>

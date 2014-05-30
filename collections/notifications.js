@@ -16,9 +16,25 @@ createCommentNotification = function(comment) {
     Notifications.insert({
       userId: post.userId,
       postId: post._id,
-      commentId: comment._id,
-      commenter: comment.author,
+      causeId: comment._id,
+      causer: comment.author,
+      message:"commented on your post",
       read: false
     });
   }
+};
+createSomethingNotificationForAll = function(type, post){
+  var loggedInUsers = Meteor.users.find().fetch();
+  var msg = type ==="newPost"?"님의 새로운 포스팅":"님의 새로운 댓글";
+  _.forEach(loggedInUsers, function(user){
+    Notifications.insert({
+      userId: user._id,
+      postId: post._id,
+      causeId: post._id,
+      causer: post.author,
+      message:msg,
+      read: false
+    });
+  });
+
 };
