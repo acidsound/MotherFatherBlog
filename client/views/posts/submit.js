@@ -88,10 +88,6 @@ Template.postSubmit.events({
 Template.postSubmit.rendered = function(){
   if (!this.rendered){
     // run my code
-    console.log("rendered");
-    /*var txtArea = $('#content').wysihtml5({
-      "html": true
-    });*/
     initEditor();
   }
 };
