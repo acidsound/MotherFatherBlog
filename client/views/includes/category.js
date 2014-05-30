@@ -1,11 +1,11 @@
 /**
  * Created with JetBrains PhpStorm.
  * User: hoho
- * Date: 2014. 5. 29.
- * Time: 오전 10:00
+ * Date: 2014. 5. 30.
+ * Time: 오후 3:08
  * To change this template use File | Settings | File Templates.
  */
-Template.popularCategories.helpers({
+Template.category.helpers({
   popularList: function() {
     //-_- 뭐냐 category.postIds.length 로 sort해야 하는데
     //aggregate는 안되는거 같고
@@ -16,5 +16,17 @@ Template.popularCategories.helpers({
       return [];
     }
 
+  },
+  currentCategory : function(){
+    if(Router.current() && Router.current().path){
+      var urlParams = Router.current().path.split("/");
+      if(urlParams[1]=="category"){
+        return Categories.find({_id:urlParams[2]||""}).fetch()[0].body||"전체보기";
+      }else{
+        return "전체보기";
+      }
+    }else{
+      return "전체보기";
+    }
   }
 });

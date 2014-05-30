@@ -2,8 +2,8 @@
   <div id = "popularPosts">
     {{#each popularList}}
     <p class="post-item">
-      <a href="{{pathFor 'postPage'}}"><span class="glyphicon glyphicon-chevron-right"></span></a>
-      {{title}}
+      <a href="{{pathFor 'postPage'}}"><span class="glyphicon glyphicon-chevron-right"></span> <span class="none_style">{{title}}</span></a>
+
     </p>
     {{/each}}
   </div>
