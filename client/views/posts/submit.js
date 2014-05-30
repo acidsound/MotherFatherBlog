@@ -67,9 +67,6 @@ Template.postSubmit.events({
   },
   'submit form': function(event) {
     event.preventDefault();
-
-    console.log(this);
-    console.log(Categories);
     var post = {
       title: $(event.target).find('[name=title]').val(),
       content: $(event.target).find('#content').html(),

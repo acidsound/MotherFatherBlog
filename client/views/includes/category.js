@@ -21,7 +21,7 @@ Template.category.helpers({
     if(Router.current() && Router.current().path){
       var urlParams = Router.current().path.split("/");
       if(urlParams[1]=="category"){
-        return Categories.find({_id:urlParams[2]||""}).fetch()[0].body||"전체보기";
+        return Categories.findOne(urlParams[2]).body||"전체보기";
       }else{
         return "전체보기";
       }

@@ -10,31 +10,49 @@ Notifications = new Meteor.Collection('notifications');
 Notifications.allow({
   update: ownsDocument
 });
+sendNotification = function(options){
+  Notifications.insert(options);
+};
 createCommentNotification = function(comment) {
   var post = Posts.findOne(comment.postId);
   if (comment.userId !== post.userId) {
-    Notifications.insert({
+    var opt = {
+      class : "warning",
       userId: post.userId,
       postId: post._id,
-      causeId: comment._id,
-      causer: comment.author,
+      creator: comment.author,
+      submitted: new Date().getTime(),
       message:"commented on your post",
       read: false
-    });
+    }
+    sendNotification(opt);
   }
+
 };
-createSomethingNotificationForAll = function(type, post){
+somethingNotificationForAll = function(type, postId, creatorId){
   var loggedInUsers = Meteor.users.find().fetch();
-  var msg = type ==="newPost"?"님의 새로운 포스팅":"님의 새로운 댓글";
+  var creator = Meteor.users.findOne(creatorId);
+  var msg = "";
+  if(type ==="newPost"){
+    msg = "님의 새로운 포스팅.";
+  }else if(type ==="newComment"){
+    msg = "님의 새로운 댓글.";
+  }else if(type ==="newThumb"){
+    msg = "님의 엄지.";
+  }
+  var opt = {
+    class : "success",
+    postId: postId,
+    creator: {name:creator.profile.name, photo:creator.profile.photo},
+    submitted: new Date().getTime(),
+    message:msg,
+    read: false
+  };
   _.forEach(loggedInUsers, function(user){
-    Notifications.insert({
-      userId: user._id,
-      postId: post._id,
-      causeId: post._id,
-      causer: post.author,
-      message:msg,
-      read: false
-    });
+    if(creator._id != user._id){
+      opt.userId =  user._id;
+      sendNotification(opt);
+    }
   });
 
 };

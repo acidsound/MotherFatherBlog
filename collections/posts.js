@@ -29,7 +29,6 @@ Meteor.methods({
     if (!postAttributes.title)
       throw new Meteor.Error(422, 'Please fill in a headline');
 
-    console.log(postAttributes);
     if (!postAttributes.category)
       throw new Meteor.Error(423, 'Please choose a category');
 
@@ -56,8 +55,8 @@ Meteor.methods({
     var postId = Posts.insert(post);
 
     Categories.update(postAttributes.category._id,{"$push":{postIds:postId}});
-    post._id = postId;
-    createSomethingNotificationForAll("newPost", post);
+
+    somethingNotificationForAll("newPost", postId, user._id);
 
     return postId;
   },
@@ -79,6 +78,8 @@ Meteor.methods({
       $addToSet: {upvoters: user._id},
       $inc: {votes: 1}
     });
+
+    somethingNotificationForAll("newThumb", postId, user._id);
   }
 });/*
 Meteor.methods({

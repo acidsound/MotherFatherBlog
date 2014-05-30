@@ -9,10 +9,11 @@
 </template>
 
 <template name="notification">
-  <div class="alert alert-success alert-dismissable">
+  <div class="alert alert-{{class}} alert-dismissable">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-    <p><img class="img-rounded alert-photo" src="{{causer.photo}}"></p>
-    <p><strong>{{causer.name}}</strong> {{message}}</p>
-    <p><a class="btn btn-success btn-sm btn-block" href="{{notificationPostPath}}">Go!!</a></p>
+    <!--<p><img class="img-rounded alert-photo" src="{{causer.photo}}"></p>-->
+    <p>{{submittedMoment}}</p>
+    <p><strong>{{creator.name}}</strong> {{message}}</p>
+    <p><a class="btn btn-{{class}} btn-sm" href="{{notificationPostPath}}">Go!!</a></p>
   </div>
 </template>

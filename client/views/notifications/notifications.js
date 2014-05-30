@@ -17,6 +17,9 @@ Template.notifications.helpers({
 Template.notification.helpers({
   notificationPostPath: function() {
     return Router.routes.postPage.path({_id: this.postId});
+  },
+  submittedMoment : function(){
+    return moment(this.submitted).fromNow();
   }
 })
 
