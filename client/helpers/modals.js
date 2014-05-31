@@ -12,8 +12,8 @@ throwModal = function(modalOpt) {
   Modals.insert(modalOpt)
 }
 clearModal = function(modalId) {
-  Modals.remove({_id:modalId});
-  if(Modals.find().count() < 1){
+  if(Modals.find().count() == 1){
     $('body').removeClass('modal-open');
   }
+  Modals.remove({_id:modalId});
 }
