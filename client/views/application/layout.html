@@ -6,8 +6,8 @@
   <div class="container">
 
     <div id="main" class="row">
-      {{>modals}}
       <div class="col-lg-8 col-md-8 col-sm-8">
+        {{>modals}}
         {{> yield}}
 
       </div>
@@ -15,11 +15,10 @@
         {{> notifications}}
         {{> errors}}
         {{> navigation}}
-        <!--{{> popularPosts}}-->
+        {{> users}}
         {{> chats}}
 
       </div>
-
     </div>
   </div>
   {{>footer}}

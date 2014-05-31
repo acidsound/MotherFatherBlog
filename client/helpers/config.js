@@ -9,3 +9,12 @@
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_ONLY'
 });*/
+Deps.autorun(function() {
+  try {
+    UserStatus.startMonitor({
+      threshold: 30000,
+      idleOnBlur: true
+    });
+    return this.stop();
+  } catch (_error) {}
+});

@@ -24,7 +24,22 @@ Meteor.publish('notifications', function() {
 Meteor.publish('categories', function() {
   return Categories.find();
 });
-
 Meteor.publish("chats", function() {
   return Chats.find();
+});
+//Meteor.publish("userStatus", function() {
+//  return Meteor.users.find({ "status.online": true });
+//});
+//"status.online": true
+Meteor.publish(null, function() {
+  return [
+    Meteor.users.find({
+
+    }, {
+      fields: {
+        status: 1,
+        profile: 1
+      }
+    }), UserStatus.connections.find()
+  ];
 });

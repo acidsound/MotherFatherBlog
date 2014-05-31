@@ -33,6 +33,14 @@ hr.dashed_gubun {
     position:relative;
     transition:all 300ms 0ms ease-in;
 }
+.alert{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    z-index: 9999;
+}
 #iron-router-progress {
     background-color : #F5F7FA;
     box-shadow       : 0 0 5px #E6E9ED;
