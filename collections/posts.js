@@ -53,8 +53,7 @@ Meteor.methods({
     });
 
     var postId = Posts.insert(post);
-
-    Categories.update(postAttributes.category._id,{"$push":{postIds:postId}});
+    Categories.update({_id:post.category._id,postIds:{$ne:postId}},{"$addToSet":{postIds:postId}});
 
     somethingNotificationForAll("newPost", postId, user._id);
 
