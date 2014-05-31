@@ -13,7 +13,6 @@ Template.postPage.helpers({
 
 Template.postItem.helpers({
   submittedMoment : function(){
-    console.log(this.hitCount);
     return moment(this.submitted).format('LLLL');
   },
   ownPost: function() {
