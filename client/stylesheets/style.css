@@ -29,6 +29,10 @@ hr.dashed_gubun {
 .content-wrapper blockquote{
     margin-left: 25px;
 }
+.anim_item{
+    position:relative;
+    transition:all 300ms 0ms ease-in;
+}
 #iron-router-progress {
     background-color : #F5F7FA;
     box-shadow       : 0 0 5px #E6E9ED;
