@@ -55,16 +55,6 @@ Meteor.methods({
 
     somethingNotificationForAll("newPost", postId, user._id);
 
-    //로컬에선 괜찮은데 서버에만 올라가면 여기서 빠그라짐
-    //Uncaught Error: Inconsistent operator
-    //왜죠??
-    Categories.update({
-      _id: postAttributes.category._id,
-      postIds: {$ne: postId}
-    }, {
-      $addToSet: {postIds: postId}
-    });
-
     return postId;
   },
   upvote: function(postId) {

@@ -72,6 +72,7 @@ Template.postSubmit.events({
       content: $(event.target).find('#content').html(),
       category : Categories.find().fetch().filter(function(category){return $("#selectedCategory").val() === category._id})[0] || null
     }
+    var categoryId = post.category._id;
     Meteor.call('post', post, function(error, id) {
       if (error) {
         // display the error to the user
@@ -79,6 +80,8 @@ Template.postSubmit.events({
         if (error.error === 302)
           Router.go('postPage', {_id: error.details});
       } else {
+
+        Meteor.call('addCategory',{categoryId:categoryId,postId:id}, function(err){if(err){console.log(err)}});
         Router.go('postPage', {_id: id});
       }
     });
