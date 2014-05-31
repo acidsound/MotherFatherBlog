@@ -157,6 +157,9 @@ hr.dashed_gubun {
 #modals {}
 #modals .modal{display: block;}
 
+#users{}
+#users .nametag{margin-bottom: 8px;}
+
 /*wysywic editor modal*/
 .bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}
 
