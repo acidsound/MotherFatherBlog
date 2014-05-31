@@ -31,5 +31,20 @@ Template.chats.events({
       }
     });
 
+  },
+  'keypress input.message': function (evt, template) {
+    if (evt.which === 13) {
+      var body = $(".message").val()||"";
+      Meteor.call('chat', {body:body}, function(error, newChat) {
+        if (error) {
+          // display the error to the user
+          throwError(error.reason);
+          if (error.error === 302)
+            Router.go('postPage', {_id: error.details})
+        } else {
+          $(".message").val("");
+        }
+      });
+    }
   }
 });
