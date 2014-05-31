@@ -55,14 +55,19 @@ Template.postEdit.events({
   },
   'click .showImageModal':function(event){
     event.preventDefault();
-    bootbox.prompt("Insert Image From URL", function(result) {
-      if (result === null) {
-
-      } else {
-        var imgTag = "<div><img src="+result +"></img></div><div>&nbsp;</div>";
+    var callback = function(data, modalId){
+      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
+      clearModal(modalId);
+      if(data.result === "ok"){
+        var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
         $('#content').html($('#content').html()+imgTag);
       }
+    };
+    throwModal({
+      type:"image_url",
+      callback : callback
     });
+
   },
 
   'submit form': function(e) {
@@ -102,16 +107,25 @@ Template.postEdit.events({
   'click .delete': function(e) {
     e.preventDefault();
     var currentPost = this;
-    bootbox.confirm("Delete this post? 레알?", function(result) {
-      if (result) {
+    var callback = function(data, modalId){
+      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
+      clearModal(modalId);
+      if(data.result === "ok"){
         var currentPostId = currentPost._id;
-
         Categories.update(currentPost.category._id,{"$pull":{postIds:currentPostId}});
-
         Posts.remove(currentPostId);
         Router.go('home');
-      } else {
       }
+    };
+    throwModal({
+      type:"message",
+      title : "알림",
+      message : "포스팅을 삭제할까요?",
+      callback : callback,
+      buttons:[
+        {label: '취소', cssClass: 'btn closeBtn'},
+        {label: '확인', cssClass: 'btn-success okBtn'}
+      ]
     });
   }
 });
@@ -129,6 +143,8 @@ Template.postEdit.rendered = function(){
     if(this.data.content){
       $('#content').html(this.data.content);
     }
+
+
 
   }
 };

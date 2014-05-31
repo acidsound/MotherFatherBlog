@@ -44,4 +44,6 @@ Template.postStrip.rendered = function() {
     watch:true
   });
   console.log("Item rendered");
+
+
 }

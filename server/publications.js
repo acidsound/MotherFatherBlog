@@ -26,5 +26,5 @@ Meteor.publish('categories', function() {
 });
 
 Meteor.publish("chats", function() {
-  return Chats.find({},{limit:5,sort: {submitted: -1, _id: -1}});
+  return Chats.find();
 });

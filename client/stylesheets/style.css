@@ -139,6 +139,8 @@ hr.dashed_gubun {
 #navigation{}
 #navigation .btn-group{width: 100%}
 
+#modals {}
+#modals .modal{display: block;}
 
 /*wysywic editor modal*/
 .bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}

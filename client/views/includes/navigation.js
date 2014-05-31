@@ -36,6 +36,19 @@ Template.navigation.helpers({
     }
   }
 });
+Template.navigation.preserve({
+
+});
+Template.navigation.events({
+  'click .btn1':function(event){
+
+  },
+  'click .btn2':function(event){
+    throwModal({
+      type:"image_url"
+    });
+  }
+});
 /*Template.category.rendered = function(){
   $('#popularList').selectpicker();
 };*/

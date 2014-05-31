@@ -1,0 +1,24 @@
+<template name="message_modal">
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close closeBtn" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">{{title}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{message}}</p>
+        </div>
+        <div class="modal-footer">
+          <!--{{#each buttons}}
+            <button type="button" class="btn {{cssClass}}">{{label}}</button>
+          {{/each}}
+          공통의 메세지 팝업에서는 동적 btn 배열처리를 하고 싶었는데 그렇게 하니 렌더링이 어쩌구 저쩌구 해서 이벤트가 안붙네
+          -->
+          <button type="button" class="btn btn-default closeBtn">닫기</button>
+          <button type="button" class="btn btn-success okBtn">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

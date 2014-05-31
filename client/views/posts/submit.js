@@ -56,13 +56,17 @@ Template.postSubmit.events({
   },
   'click .showImageModal':function(event){
     event.preventDefault();
-    bootbox.prompt("Insert Image From URL", function(result) {
-      if (result === null) {
-
-      } else {
-        var imgTag = "<div><img src="+result +"></img></div><div>&nbsp;</div>";
+    var callback = function(data, modalId){
+      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
+      clearModal(modalId);
+      if(data.result === "ok"){
+        var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
         $('#content').html($('#content').html()+imgTag);
       }
+    };
+    throwModal({
+      type:"image_url",
+      callback : callback
     });
   },
   'submit form': function(event) {
@@ -92,5 +96,7 @@ Template.postSubmit.rendered = function(){
   if (!this.rendered){
     // run my code
     initEditor();
+
+
   }
 };
