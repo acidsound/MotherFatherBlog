@@ -8,8 +8,7 @@
 Categories = new Meteor.Collection('categories');
 Categories.allow({
   update: function(userId, doc) {
-    // only allow posting if you are logged in
-    return !! userId;
+    return true;
   }
 });
 Meteor.methods({
