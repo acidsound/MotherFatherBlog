@@ -136,6 +136,10 @@ hr.dashed_gubun {
 #popularPosts .post-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
+#navigation{}
+#navigation .btn-group{width: 100%}
+
+
 /*wysywic editor modal*/
 .bootstrap-wysihtml5-insert-link-modal label{padding-left:20px}
 

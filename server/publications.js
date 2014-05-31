@@ -5,6 +5,8 @@
  * Time: 오후 2:51
  * To change this template use File | Settings | File Templates.
  */
+
+
 Meteor.publish('posts', function(options) {
   return Posts.find({}, options);
 });
@@ -22,7 +24,7 @@ Meteor.publish('notifications', function() {
 Meteor.publish('categories', function() {
   return Categories.find();
 });
-/*
- Meteor.publish('comments', function() {
- return Comments.find();
- });*/
+
+Meteor.publish("chats", function() {
+  return Chats.find({},{limit:5,sort: {submitted: -1, _id: -1}});
+});

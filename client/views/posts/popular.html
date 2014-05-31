@@ -1,5 +1,6 @@
 <template name="popularPosts">
-  <div id = "popularPosts">
+  <div id = "popularPosts" class="well">
+    <h4>Popular Posts</h4>
     {{#each popularList}}
     <p class="post-item">
       <a href="{{pathFor 'postPage'}}"><span class="glyphicon glyphicon-chevron-right"></span> <span class="none_style">{{title}}</span></a>

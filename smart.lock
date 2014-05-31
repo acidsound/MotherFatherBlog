@@ -16,7 +16,10 @@
       "masonrify": {},
       "medium-editor": {},
       "method-pagination": {},
-      "pages": {}
+      "pages": {},
+      "bootstrap-select": {},
+      "select2": {},
+      "select2-bootstrap3-css": {}
     },
     "packages": {
       "iron-router": {
@@ -93,6 +96,21 @@
         "git": "https://github.com/alethes/meteor-pages.git",
         "tag": "v1.0.20",
         "commit": "717cbac89f02d2f1bb160b24c997050ce2dee45e"
+      },
+      "bootstrap-select": {
+        "git": "https://github.com/amrali/bootstrap-select-meteor.git",
+        "tag": "v1.5.2",
+        "commit": "61588ec8326987ded204724d85843eb6997cfcfb"
+      },
+      "select2": {
+        "git": "https://github.com/nate-strauser/meteor-select2.git",
+        "tag": "v3.4.5",
+        "commit": "4a8d05582b949a14f0ee217c185166abbf112822"
+      },
+      "select2-bootstrap3-css": {
+        "git": "https://github.com/esperadomedia/meteor-select2-bootstrap3-css.git",
+        "tag": "v0.0.5",
+        "commit": "ac0c74d4b110c4c5149f17bb33c3e9bb4f77eb88"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

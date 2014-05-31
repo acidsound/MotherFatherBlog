@@ -1,0 +1,33 @@
+<template name="chats">
+  <div class="well">
+    <div class="input-group">
+      <input type="text" class="form-control message">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default writeBtn" type="button">
+                              <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                        </span>
+    </div>
+    <br>
+
+    <div>
+      <ul class="media-list">
+        {{#each chatList}}
+        {{> chat}}
+        {{/each}}
+      </ul>
+      <div class="text-center"><a class="btn btn-link btn-xs">&#183;&#183;&#183;</a></div>
+
+    </div>
+
+  </div>
+</template>
+<template name="chat">
+  <li class="media">
+    <!--<a class="pull-left" href="#"><img class="media-object img-rounded" src="img/photo-1.jpg"></a>-->
+    <div class="media-body">
+      <h4 class="media-heading">{{author.name}} <small>{{submittedMoment}}</small></h4>
+      <div>{{body}}</div>
+    </div>
+  </li>
+</template>

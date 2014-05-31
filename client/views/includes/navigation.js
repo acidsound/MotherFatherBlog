@@ -5,7 +5,7 @@
  * Time: 오후 3:08
  * To change this template use File | Settings | File Templates.
  */
-Template.category.helpers({
+Template.navigation.helpers({
   popularList: function() {
     //-_- 뭐냐 category.postIds.length 로 sort해야 하는데
     //aggregate는 안되는거 같고
@@ -30,3 +30,11 @@ Template.category.helpers({
     }
   }
 });
+/*Template.category.rendered = function(){
+  $('#popularList').selectpicker();
+};*/
+/*
+var renderTimeout = false;
+Template.category.rendered = function(){
+  $('#popularSelect').select2();
+};*/
