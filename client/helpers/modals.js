@@ -8,7 +8,10 @@
 Modals = new Meteor.Collection(null);
 
 throwModal = function(modalOpt) {
-  $('body').addClass('modal-open');
+  if(!$('body').hasClass('modal-open')){
+    $('body').addClass('modal-open');
+  }
+
   Modals.insert(modalOpt)
 }
 clearModal = function(modalId) {
