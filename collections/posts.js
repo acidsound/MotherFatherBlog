@@ -55,7 +55,15 @@ Meteor.methods({
 
     somethingNotificationForAll("newPost", postId, user._id);
 
-    Categories.update({_id:postAttributes.category._id, postIds:{$ne:postId}},{"$addToSet":{postIds:postId}});
+    //로컬에선 괜찮은데 서버에만 올라가면 여기서 빠그라짐
+    var try_man = function(){
+      try{
+        Categories.update({_id:postAttributes.category._id, postIds:{$ne:postId}},{"$addToSet":{postIds:postId}});
+      }catch(e){
+        console.log(e.name +":"+ e.message);
+      }
+    };
+    try_man();
 
     return postId;
   },
