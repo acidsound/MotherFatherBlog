@@ -8,15 +8,12 @@
 Modals = new Meteor.Collection(null);
 
 throwModal = function(modalOpt) {
-  /*var opt = {
-    message : "",
-    title : "",
-    buttons:[
-      {result: 'ok', label: '확인', cssClass: 'btn-success'}
-    ]
-  };*/
+  $('body').addClass('modal-open');
   Modals.insert(modalOpt)
 }
 clearModal = function(modalId) {
   Modals.remove({_id:modalId});
+  if(Modals.find().count() < 1){
+    $('body').removeClass('modal-open');
+  }
 }

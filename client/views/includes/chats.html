@@ -2,6 +2,8 @@
 
   <div class="well">
     <h4>Talkkkkkk</h4>
+
+    {{#if currentUser}}
     <div class="input-group">
       <input type="text" class="form-control message">
                         <span class="input-group-btn">
@@ -10,6 +12,11 @@
                             </button>
                         </span>
     </div>
+    {{else}}
+      <p>로그인이 필요합니다.</p>
+    {{/if}}
+
+
     <br>
 
     <div>
@@ -18,7 +25,7 @@
         {{> chat}}
         {{/each}}
       </ul>
-      <div class="text-center"><a class="btn btn-link btn-xs">&#183;&#183;&#183;</a></div>
+      <div class="text-center"><a class="btn btn-link btn-xs showDetail">&#183;&#183;&#183;</a></div>
 
     </div>
 

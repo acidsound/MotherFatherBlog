@@ -1,22 +1,32 @@
 /**
  * Created with JetBrains PhpStorm.
  * User: hoho
- * Date: 2014. 5. 30.
- * Time: 오후 3:08
+ * Date: 2014. 5. 31.
+ * Time: 오후 10:05
  * To change this template use File | Settings | File Templates.
  */
-Template.chats.helpers({
+
+//모달 버튼 콜백을 어케 전달하지????????
+
+Template.chat_detail_modal.helpers({
   chatList: function(){
-    return Chats.find({},{limit:5,sort: {submitted: -1, _id: -1}}).fetch();
+    return Chats.find({},{sort: {submitted: -1, _id: -1}}).fetch();
   }
 });
-
-Template.chat.helpers({
+Template.chat_item.helpers({
   submittedMoment : function(){
     return moment(this.submitted).fromNow();
   }
 });
-Template.chats.events({
+Template.chat_detail_modal.events({
+  'click .closeBtn':function(event){
+    event.preventDefault();
+    this.callback({result:"cancel"}, this._id);
+  },
+  'click .okBtn':function(event){
+    event.preventDefault();
+    this.callback({result:"ok"}, this._id);
+  },
   'click .writeBtn':function(event){
     console.log("chatMat");
     var body = $(".message").val()||"";
@@ -46,19 +56,6 @@ Template.chats.events({
         }
       });
     }
-  },
-  'click .showDetail':function(event){
-    event.preventDefault();
-    var callback = function(data, modalId){
-      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
-      clearModal(modalId);
-      if(data.result === "ok"){
-      }
-    };
-    throwModal({
-      type:"chat_detail",
-      callback : callback
-    });
-
   }
 });
+
