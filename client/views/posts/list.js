@@ -1,7 +1,11 @@
 Template.postsList.helpers({
   posts: function() {
-    this.posts.rewind();
-    return this.posts;
+    if(!!this.posts){
+      this.posts.rewind();
+      return this.posts;
+    }else{
+      return [];
+    }
   }
 });
 Template.postsList.events({
