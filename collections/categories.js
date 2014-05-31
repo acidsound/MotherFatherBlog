@@ -38,7 +38,7 @@ Meteor.methods({
 
     return category;
   },
-  addCategory:function(categoryId, postId){
+  addCategory:function(postAttributes){
     //원래 posts.js Method post()안에 있었으나 망할 서버에만 올라가면 에러가 발생한다.
     //Uncaught Error: Inconsistent operator: {"_id":"hiaGq6oBSJgi6J9Gv","$addToSet":{"postIds":"9ZQLZdihm7Bz68Kbj"}} helpers.js:33
     //로컬에선 이상 없었음. 그렇다면 몽고 버전 문젠가.. 아무튼 이렇게 별도의 콜렉션 파일에서 처리하자.
@@ -47,17 +47,17 @@ Meteor.methods({
     // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to upvote");
-    var category = Category.findOne(categoryId);
+    var category = Categories.findOne(postAttributes.categoryId);
     if (!category)
       throw new Meteor.Error(422, 'Post not found');
-    if (_.include(category.postIds, postId))
+    if (_.include(category.postIds, postAttributes.postId))
       throw new Meteor.Error(422, 'Already upvoted this post');
 
     Categories.update({
-      _id: categoryId,
-      postIds: {$ne: postId}
+      _id: postAttributes.categoryId,
+      postIds: {$ne: postAttributes.postId}
     }, {
-      $addToSet: {postIds: postId}
+      $addToSet: {postIds: postAttributes.postId}
     });
 
   }
