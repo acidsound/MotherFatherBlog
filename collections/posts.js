@@ -38,7 +38,7 @@ Meteor.methods({
         'This link has already been posted',
         postWithSameLink._id);
     }
-
+    var commentId = postAttributes.category._id;
     // pick out the whitelisted keys
     var post = _.extend(_.pick(postAttributes, 'title', 'content'), {
       userId: user._id,
@@ -53,7 +53,10 @@ Meteor.methods({
     });
 
     var postId = Posts.insert(post);
-    //Categories.update({_id:post.category._id,postIds:{$ne:postId}},{"$addToSet":{postIds:postId}});
+    Categories.update(
+      {_id:commentId,
+        postIds:{$ne:postId}
+      },{"$addToSet":{postIds:postId}});
 
     somethingNotificationForAll("newPost", postId, user._id);
 
