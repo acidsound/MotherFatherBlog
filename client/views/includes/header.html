@@ -1,4 +1,5 @@
 <template name="header">
+
   <nav class="navbar navbar-default navbar-custom" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -13,21 +14,13 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-
-        <ul class="nav navbar-nav">
-          {{#if currentUser}} <a href="{{pathFor 'postSubmit'}}" class="btn btn-warning navbar-btn">글쓰기 </a>{{/if}}
-        </ul>
-
-
         <form class="navbar-form navbar-right" role="search">
           <div class="form-search search-only">
             <i class="search-icon glyphicon glyphicon-search"></i>
             <input type="text" class="form-control search-query">
           </div>
         </form>
-        <ul class="nav navbar-nav navbar-right">
-          {{> loginButtons}}
-        </ul>
+
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentCategory}} <b class="caret"></b></a>
@@ -39,7 +32,10 @@
               {{/each}}
             </ul>
           </li>
+          {{> loginButtons}}
         </ul>
+
+        {{#if currentUser}} <a href="{{pathFor 'postSubmit'}}" class="btn btn-warning navbar-btn">글쓰기 </a>{{/if}}
       </div>
     </div>
   </nav>

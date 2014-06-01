@@ -20,7 +20,8 @@
       "bootstrap-select": {},
       "select2": {},
       "select2-bootstrap3-css": {},
-      "user-status": {}
+      "user-status": {},
+      "ms-seo": {}
     },
     "packages": {
       "iron-router": {
@@ -117,6 +118,11 @@
         "git": "https://github.com/mizzao/meteor-user-status.git",
         "tag": "v0.4.0",
         "commit": "e2a1c7a4075f28b87b361387688e083a4b047a08"
+      },
+      "ms-seo": {
+        "git": "https://github.com/DerMambo/ms-seo",
+        "tag": "v0.2.6",
+        "commit": "1a4ba31a1f6f29009d3941e9dd883829ff4e4b8b"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
