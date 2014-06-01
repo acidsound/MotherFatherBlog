@@ -8,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}">공사 즁..</a>
+        <a class="navbar-brand" href="{{pathFor 'home'}}"><span class="fa fa-bug"></span>UnderDoggg</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
@@ -18,11 +18,32 @@
           {{#if currentUser}} <a href="{{pathFor 'postSubmit'}}" class="btn btn-warning navbar-btn">글쓰기 </a>{{/if}}
         </ul>
 
+
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-search search-only">
+            <i class="search-icon glyphicon glyphicon-search"></i>
+            <input type="text" class="form-control search-query">
+          </div>
+        </form>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}
-
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentCategory}} <b class="caret"></b></a>
+            <ul class="dropdown-menu"  role="menu">
+              <li class="{{activeClass}}"><a href="{{pathFor 'home'}}">전체</a></li>
+              <li class="divider"></li>
+              {{#each categoryList}}
+              {{> categoryRow}}
+              {{/each}}
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+</template>
+<template name="categoryRow">
+  <li class="{{activeClass}}"><a href="/category/{{_id}}" class="setCategory">{{body}} <small>{{postIds.length}}</small></a></li>
 </template>

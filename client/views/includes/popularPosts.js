@@ -7,6 +7,11 @@
  */
 Template.popularPosts.helpers({
   popularList: function() {
-    return Posts.find({},{sort: {hitCount: -1}, limit: 5});
+    var list = Posts.find({},{sort: {hitCount: -1}, limit: 5}).fetch();
+    _.forEach(list, function(item, index){
+      item.index = index +1;
+    });
+
+    return list;
   }
 });

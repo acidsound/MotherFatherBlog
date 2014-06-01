@@ -7,7 +7,7 @@
  */
 Template.chats.helpers({
   chatList: function(){
-    return Chats.find({},{limit:5,sort: {submitted: -1, _id: -1}}).fetch();
+    return Chats.find({},{limit:4,sort: {submitted: -1, _id: -1}}).fetch();
   }
 });
 

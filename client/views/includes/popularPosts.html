@@ -1,0 +1,10 @@
+<template name="popularPosts">
+  <div id = "popularPosts" class="well">
+    <h4><i class="fa fa-bomb"></i> Popular Posts</h4>
+    {{#each popularList}}
+    <p class="post-item">
+      {{index}}. <a href="{{pathFor 'postPage'}}"> <span class="none_style">{{title}}</span></a>
+    </p>
+    {{/each}}
+  </div>
+</template>

@@ -18,37 +18,26 @@ Template.navigation.helpers({
 
   },
   currentCategory : function(){
+    var defaultName = "Category";
     if(Router.current() && Router.current().path){
       var urlParams = Router.current().path.split("/");
       if(urlParams[1]=="category" && urlParams[2]){
         var category = Categories.findOne(urlParams[2]);
         if(category && category.body){
-          return category.body||"전체보기";
+          return category.body||defaultName;
         }else{
-          return "전체보기";
+          return defaultName;
         }
 
       }else{
-        return "전체보기";
+        return defaultName;
       }
     }else{
-      return "전체보기";
+      return defaultName;
     }
   }
 });
-Template.navigation.preserve({
 
-});
-Template.navigation.events({
-  'click .btn1':function(event){
-
-  },
-  'click .btn2':function(event){
-    throwModal({
-      type:"image_url"
-    });
-  }
-});
 /*Template.category.rendered = function(){
   $('#popularList').selectpicker();
 };*/
