@@ -53,7 +53,9 @@ Template.postItem.rendered = function(){
     var youtubeElems = $('.content-wrapper').find("img[alt='youtube']");
     _.forEach(youtubeElems, function(elem){
       var youtubeId =  $(elem).attr("name");
-      $(elem).replaceWith('<iframe width=\"400\" height=\"225\" src=\"http://www.youtube.com/embed/'+youtubeId+ '\" frameborder=\"0\"></iframe>');
+      //width=\"400\" height=\"225\"
+      //
+      $(elem).replaceWith("<iframe style\"max-width:100%; \" src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
 
     });
   }
