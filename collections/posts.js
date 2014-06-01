@@ -7,15 +7,14 @@
  */
 Posts = new Meteor.Collection('posts');
 Posts.allow({
-  update: ownsDocument,
+  update: ownsDocument,   //댓글 삭제 시 해당 comment Count 정보도 수정되어야 한단 말이지.
   remove: ownsDocument
 });
-/*Posts.deny({
+Posts.deny({
   update: function(userId, post, fieldNames) {
-    // may only edit the following two fields:
-    return (_.without(fieldNames, 'url', 'title').length > 0);//url과 title만 수정 가능
+    return (_.without(fieldNames, 'commentsCount', 'hitCount').length > 0);
   }
-});*/
+});
 Meteor.methods({
   post: function(postAttributes) {
     var user = Meteor.user(),
