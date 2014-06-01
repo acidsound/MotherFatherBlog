@@ -30,7 +30,7 @@ createCommentNotification = function(comment) {
 
 };
 somethingNotificationForAll = function(type, postId, creatorId){
-  var loggedInUsers = Meteor.users.find().fetch();
+  var loggedInUsers = Meteor.users.find().fetch().filter(function(user){return user.status && user.status.online});
   var creator = Meteor.users.findOne(creatorId);
   var msg = "";
   if(type ==="newPost"){
