@@ -1,5 +1,8 @@
 <template name="comment">
   <li class="media anim_item">
+    {{#if ownComment}}
+    <button type="button" class="close removeBtn" aria-hidden="true">&times;</button>
+    {{/if}}
     <a class="pull-left" href="#"><img class="media-object img-rounded" src="{{author.photo}}"></a>
     <div class="media-body">
       <h4 class="media-heading">{{author.name}}</h4>

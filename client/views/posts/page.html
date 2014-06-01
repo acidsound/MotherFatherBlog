@@ -2,7 +2,7 @@
   <div id="postPage">
 
   {{> postItem}}
-    <h2 class="menu-title comment-area">댓글</h2>
+    <h2 class="menu-title comment-area"> Comments <span class="glyphicon glyphicon-comment"></span></h2>
     <ul class="media-list content-wrapper">
       {{#each comments}}
       {{> comment}}
@@ -31,7 +31,7 @@
         <hr class="">
         <p>
           <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
-          &nbsp;<span class="glyphicon glyphicon-thumbs-up"></span> {{votes}}
+          &nbsp;<span class="fa fa-thumbs-o-up"></span> {{votes}}
         <div class="pull-right">
           <button class="btn btn-default btn-xs goComment" type="button"><span class="glyphicon glyphicon-chevron-down "></span></button>
           {{#if ownPost}}
@@ -43,8 +43,8 @@
         <hr class="">
         <div class="content-wrapper">{{{content}}}</div>
         <br>
-        <button type="button" class="btn btn-primary goList">목록으로 <span class="glyphicon glyphicon-chevron-left"></span></button>
-        <a href="#" class="upvote btn {{upvotedClass}}"><i class="glyphicon glyphicon-thumbs-up"></i></a>
+        <button type="button" class="btn btn-primary goList">목록 <span class="glyphicon glyphicon-chevron-left"></span></button>
+        <a href="#" class="upvote btn {{upvotedClass}}"><i class="glyphicon fa fa-thumbs-o-up"></i> 엠지</a>
       </div>
     </div>
   </div>
