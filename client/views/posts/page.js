@@ -51,8 +51,9 @@ Template.postItem.events({
 Template.postItem.rendered = function(){
   if (!this.rendered){
     var youtubeElem = $('.content-wrapper').find("img[alt='youtube']");
+    var youtubeId =  youtubeElem.name;
     if(youtubeElem && youtubeElem.length > 0){
-      $(youtubeElem).replaceWith('<iframe width=\"480\" height=\"300\" src=\"http://www.youtube.com/embed/'+ youtubeElem.name + '\" frameborder=\"0\"></iframe>');
+      $(youtubeElem).replaceWith('<iframe width=\"400\" height=\"225\" src=\"http://www.youtube.com/embed/'+youtubeId+ '\" frameborder=\"0\"></iframe>');
 
     }
   }
