@@ -14,4 +14,13 @@ Meteor.startup(function() {
       Session.set('errorMessage', err.reason || 'Unknown error');
     }
   });
+  return SEO.config({
+    title: '공사중',
+    meta: {
+      'description': '공사중입니다. 하루 빨리 인터넷을 바꿔야 할낀데...'
+    },
+    og: {
+      'image': 'http://underdogg.iptime.org:3000/images/gaethug.jpg'
+    }
+  });
 });
