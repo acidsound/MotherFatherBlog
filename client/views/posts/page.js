@@ -48,3 +48,12 @@ Template.postItem.events({
     Meteor.call('upvote', this._id);
   }
 });
+Template.postItem.rendered = function(){
+  if (!this.rendered){
+    var youtubeElem = $('.content-wrapper').find("img[alt='youtube']");
+    if(youtubeElem && youtubeElem.length > 0){
+      $(youtubeElem).replaceWith('<iframe width=\"400\" height=\"225\" src=\"http://www.youtube.com/embed/'+ youtubeElem.name + '\" frameborder=\"0\"></iframe>');
+
+    }
+  }
+};

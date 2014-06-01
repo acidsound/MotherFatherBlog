@@ -60,12 +60,18 @@ Template.postSubmit.events({
       //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
       clearModal(modalId);
       if(data.result === "ok"){
-        var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
-        $('#content').html($('#content').html()+imgTag);
+        if(data.type==="ImageUrl"){
+          var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
+          $('#content').html($('#content').html()+imgTag);
+        }else if(data.type==="YoutubeUrl"){
+          var imgTag = '<div><img alt="youtube" width="400px" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/1.jpg"></div><div>&nbsp;</div>';
+          $('#content').html($('#content').html()+imgTag);
+        }
+
       }
     };
     throwModal({
-      type:"image_url",
+      type:"attach",
       callback : callback
     });
   },

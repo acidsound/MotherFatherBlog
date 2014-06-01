@@ -9,13 +9,22 @@
 //모달 버튼 콜백을 어케 전달하지????????
 
 
-Template.image_url_modal.events({
+Template.attach_modal.events({
   'click .closeBtn':function(event){
     event.preventDefault();
     this.callback({result:"cancel"}, this._id);
   },
   'click .okBtn':function(event){
     event.preventDefault();
-    this.callback({result:"ok", url:$("#urlText").val()}, this._id);
+    var data = {};
+    data.result = "ok";
+    if($("#ImageUrl").hasClass("active")){
+      data.url =$("#ImageUrlInput").val();
+      data.type ="ImageUrl";
+    }else if($("#YoutubeUrl").hasClass("active")){
+      data.url =$("#YoutubeUrlInput").val();
+      data.type ="YoutubeUrl";
+    }
+    this.callback(data, this._id);
   }
 });
