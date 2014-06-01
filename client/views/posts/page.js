@@ -50,11 +50,11 @@ Template.postItem.events({
 });
 Template.postItem.rendered = function(){
   if (!this.rendered){
-    var youtubeElem = $('.content-wrapper').find("img[alt='youtube']");
-    var youtubeId =  youtubeElem.attr("name");
-    if(youtubeElem && youtubeElem.length > 0){
-      $(youtubeElem).replaceWith('<iframe width=\"400\" height=\"225\" src=\"http://www.youtube.com/embed/'+youtubeId+ '\" frameborder=\"0\"></iframe>');
+    var youtubeElems = $('.content-wrapper').find("img[alt='youtube']");
+    _.forEach(youtubeElems, function(elem){
+      var youtubeId =  elem.attr("name");
+      $(elem).replaceWith('<iframe width=\"400\" height=\"225\" src=\"http://www.youtube.com/embed/'+youtubeId+ '\" frameborder=\"0\"></iframe>');
 
-    }
+    });
   }
 };
