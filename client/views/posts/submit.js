@@ -90,12 +90,13 @@ Template.postSubmit.rendered = function(){
   if (!this.rendered){
     // run my code
     //initEditor();
-    initMediumEditor($("#content")[0],{
-      anchorInputPlaceholder: 'Type a link',
-      buttons: ['header2', 'quote', 'pre', 'bold', 'italic', 'underline','strikethrough'  ,'unorderedlist' ,'orderedlist', 'anchor'],
-      placeholder:"본문을 작성하세요.",
-      targetBlank: true,
-      cleanPastedHTML : false
-    });
+    initPenEditor( {
+        editor: $("#content")[0], // {DOM Element} [required]
+        class: 'content_pen_editor', // {String} class of the editor,
+        debug: false, // {Boolean} false by default
+        textarea: '<textarea name="content"></textarea>', // fallback for old browsers
+        list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent','bold', 'italic', 'createlink']
+      }
+    );
   }
 };

@@ -5,8 +5,26 @@
  * Time: 오후 3:32
  * To change this template use File | Settings | File Templates.
  */
-mediumEditor = null;
+penEditor = null;
+initPenEditor = function(opts){
+  if(penEditor == null){
+    penEditor = new Pen(opts);
+  }else{
+    destroyPenEditor();
+    initPenEditor(opts);
+  }
+}
+destroyPenEditor = function(){
+  if(penEditor!= null){
+    penEditor.destroy();
+    penEditor = null;
+    $('.content-menu').remove();
 
+  }
+};
+
+
+/*
 initMediumEditor = function(elem, modalOpt) {
   if(mediumEditor == null){
     mediumEditor = new MediumEditor(elem,modalOpt);
@@ -21,4 +39,4 @@ destroyMediumEditor = function(){
     $("#medium-editor-anchor-preview-"+mediumEditor.id).remove();
     mediumEditor = null;
   }
-};
+};*/
