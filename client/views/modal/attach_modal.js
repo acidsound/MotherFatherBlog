@@ -9,10 +9,18 @@
 $.cloudinary.config({
   cloud_name:"www-underdogg-co-kr"
 });
+Template.attach_modal.created = function(){
+  Meteor.call("cloudinary_list_all",function(e,list){
+    Session.set("image_list",list.splice(0,12));
+  });
+}
 Template.attach_modal.helpers({
   "stuff":function(){
     var user = Meteor.user();
     return {name:user.profile.name,_id:user._id}
+  },
+  "image_list":function(){
+    return Session.get("image_list");
   }
 });
 Template.attach_modal.events({
@@ -35,6 +43,10 @@ Template.attach_modal.events({
       data.type ="YoutubeUrl";
     }
     this.callback(data, this._id);
+  },
+  "click .image-item": function (event) {
+    event.preventDefault();
+    $(".previewImage").attr("src",this.url );
   },
   "click .delete":function(){
     Meteor.call("cloudinary_delete",this.public_id,function(e,r){

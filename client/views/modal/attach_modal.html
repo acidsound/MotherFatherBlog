@@ -1,5 +1,5 @@
 <template name="attach_modal">
-  <div class="modal">
+  <div class="modal" id="attach_modal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -10,32 +10,53 @@
           <br>
           <div class="panel">
             <ul id="myTab1" class="nav nav-tabs nav-justified">
-              <li class="active"><a href="#ImageUrl" data-toggle="tab"><i class="fa fa-picture-o"></i> URL Image</a></li>
-              <li ><a href="#ImageUpload" data-toggle="tab"><i class="fa fa-picture-o"></i> Upload Image</a></li>
-
-              <li class=""><a href="#YoutubeUrl" data-toggle="tab"><i class="fa fa-youtube-square"></i> Youtube</a></li>
+              <li class="active"><a href="#ImageUpload" data-toggle="tab"><i class="fa fa-picture-o"></i> Upload Image</a></li>
+              <li ><a href="#ImageUrl" data-toggle="tab"><i class="fa fa-picture-o"></i> URL Image</a></li>
+              <li ><a href="#YoutubeUrl" data-toggle="tab"><i class="fa fa-youtube-square"></i> Youtube</a></li>
             </ul>
-            <div id="myTabContent" class="tab-content">
-              <div class="tab-pane fade active in" id="ImageUpload">
-                {{#with stuff}}
-                {{#cloudinary_upload callback="save_url"}}
-                <input type="file">
 
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane active fade in" id="ImageUpload">
+                <div class="iamge-upload">
+                  <h5><i class="fa fa-upload"></i> 직접 업로드</h5>
+                  {{#with stuff}}
+                    {{#cloudinary_upload callback="save_url"}}
+                    <input type="file">
+
+
+                    {{#if c_upload_failed}}
+                    <div class="text-center">
+                      <p class="text-success">업로드 실패.</p>
+                      <p class="text-success">다시 시도해주세요.</p>
+                    </div>
+
+                    {{/if}}
+                    {{/cloudinary_upload}}
+                  {{/with}}
+                </div>
+                <br>
+                <div class="image-list">
+                  <h5><i class="fa fa-list"></i> 최근 업로드</h5>
+                  <div class="row">
+                    {{#each image_list}}
+                    <div class="col-xs-2 image-wrapper">
+                      <div class="image-item">
+                        <img  src="{{c_url public_id format=format effect='blur:300'}}">
+                      </div>
+                    </div>
+                    {{/each}}
+                  </div>
+                </div>
+
+                <br>
                 {{#if c_upload_successful}}
-                <p>Success</p>
-                <img width="250" class="previewImage" src="{{c_upload_successful.url}}">
+                <img class="previewImage" src="{{url}}">
                 {{/if}}
-                {{c_upload_successful}}
-                {{#if c_upload_failed}}
-                <p>Failed</p>
-                {{/if}}
-                {{/cloudinary_upload}}
-                {{/with}}
               </div>
-              <div class="tab-pane fade active in" id="ImageUrl">
+              <div class="tab-pane  fade in" id="ImageUrl">
                 <input type="url" class="form-control" id="ImageUrlInput" placeholder="이미지 URL">
               </div>
-              <div class="tab-pane fade" id="YoutubeUrl">
+              <div class="tab-pane fade in" id="YoutubeUrl">
                 <div role="form">
                   <div class="input-group">
                     <span class="input-group-addon">http://www.youtube.com/watch?v=</span>

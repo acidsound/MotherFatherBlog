@@ -60,10 +60,7 @@ Template.postSubmit.events({
       //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
       clearModal(modalId);
       if(data.result === "ok"){
-        if(data.type==="ImageUrl"){
-          var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
-          $('#content').html($('#content').html()+imgTag);
-        }else if(data.type==="ImageUpload"){
+        if(data.type==="ImageUrl" || data.type==="ImageUpload"){
           var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
           $('#content').html($('#content').html()+imgTag);
         }else if(data.type==="YoutubeUrl"){
