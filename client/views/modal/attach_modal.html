@@ -22,14 +22,11 @@
                   {{#with stuff}}
                     {{#cloudinary_upload callback="save_url"}}
                     <input type="file">
-
-
                     {{#if c_upload_failed}}
                     <div class="text-center">
-                      <p class="text-success">업로드 실패.</p>
-                      <p class="text-success">다시 시도해주세요.</p>
+                      <p class="text-danger">업로드 실패.</p>
+                      <p class="text-danger">다시 시도해주세요.</p>
                     </div>
-
                     {{/if}}
                     {{/cloudinary_upload}}
                   {{/with}}
@@ -50,7 +47,7 @@
 
                 <br>
                 {{#if c_upload_successful}}
-                <img class="previewImage" src="{{url}}">
+                <img class="previewImage" src="{{c_upload_successful.url}}">
                 {{/if}}
               </div>
               <div class="tab-pane  fade in" id="ImageUrl">
