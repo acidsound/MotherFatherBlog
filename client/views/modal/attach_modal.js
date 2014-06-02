@@ -42,6 +42,7 @@ Template.attach_modal.events({
       data.url =$("#YoutubeUrlInput").val();
       data.type ="YoutubeUrl";
     }
+    $(".previewImage").attr("src","");
     this.callback(data, this._id);
   },
   "click .image-item": function (event) {
