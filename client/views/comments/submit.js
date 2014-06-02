@@ -5,29 +5,15 @@
  * Time: 오후 4:51
  * To change this template use File | Settings | File Templates.
  */
-var editor = null;
-function initEditor(){
-  //에디터가 필요한 모든 페이지에서 끄응... 재사용 방법 없나???
-  var options = {
-    editor: $("#content")[0], // {DOM Element} [required]
-    class: 'content_pen_editor', // {String} class of the editor,
-    debug: false, // {Boolean} false by default
-    textarea: '<textarea name="content"></textarea>', // fallback for old browsers
-    list: [ 'pre' , 'bold', 'italic', 'createlink'],
-    stay:false
-  }
-  var create = function(){
-    editor = new Pen(options);
-  };
-  if(editor == null){
-    create();
-  }else{
-    editor.destroy();
-    editor = null;
-    $('.content-menu').remove();
-    create();
-  }
-}
+var initEditor = function(){
+  initMediumEditor($("#content")[0],{
+    anchorInputPlaceholder: 'Type a link',
+    buttons: ['pre', 'bold', 'italic', 'underline','strikethrough', 'anchor'],
+    placeholder:"댓글을 작성하세요.",
+    targetBlank: true,
+    cleanPastedHTML : false
+  });
+};
 Template.commentSubmit.events({
   'click .focusPlz' : function(event){
     event.preventDefault();
@@ -68,14 +54,14 @@ Template.commentSubmit.events({
         throwError(error.reason);
       } else {
         imsiEditor.body.html("");
-        initEditor ();
+        initEditor();
       }
     });
   }
 });
 Template.commentSubmit.rendered = function(){
   if (!this.rendered){
-    initEditor ();
+    initEditor();
   }
 
 };
