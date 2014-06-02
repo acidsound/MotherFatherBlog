@@ -33,15 +33,25 @@ Template.commentSubmit.events({
     event.preventDefault();
     $('#content').focus();
   },
-  'click .showModal':function(event){
+  'click .showImageModal':function(event){
     event.preventDefault();
-    bootbox.prompt("Insert Image From URL", function(result) {
-      if (result === null) {
+    var callback = function(data, modalId){
+      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
+      clearModal(modalId);
+      if(data.result === "ok"){
+        if(data.type==="ImageUrl" || data.type==="ImageUpload"){
+          var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
+          $('#content').html($('#content').html()+imgTag);
+        }else if(data.type==="YoutubeUrl"){
+          var imgTag = '<div><img alt="youtube" width="400px" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/1.jpg"></div><div>&nbsp;</div>';
+          $('#content').html($('#content').html()+imgTag);
+        }
 
-      } else {
-        var imgTag = "<div><img src="+result +"></img></div>";
-        $('#content').html($('#content').html()+imgTag);
       }
+    };
+    throwModal({
+      type:"attach",
+      callback : callback
     });
   },
   'submit form': function(e, template) {

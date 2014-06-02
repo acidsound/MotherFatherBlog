@@ -25,3 +25,17 @@ Template.comment.events({
 
   }
 });
+
+Template.comment.rendered = function(){
+  if (!this.rendered){
+    console.log(this);
+    var youtubeElems = $(this.firstNode).find("img[alt='youtube']");
+    _.forEach(youtubeElems, function(elem){
+      var youtubeId =  $(elem).attr("name");
+      //width=\"400\" height=\"225\"
+      //
+      $(elem).replaceWith("<iframe style\"max-width:100%; \" src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
+
+    });
+  }
+};
