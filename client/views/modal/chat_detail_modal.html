@@ -1,5 +1,5 @@
 <template name="chat_detail_modal">
-  <div class="modal">
+  <div class="modal" id="chat_detail_modal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -20,7 +20,7 @@
           <p>로그인이 필요합니다.</p>
           {{/if}}
           <br>
-          <div>
+          <div class="chat-wrapper">
             <ul class="media-list">
               {{#each chatList}}
               {{> chat_item}}
