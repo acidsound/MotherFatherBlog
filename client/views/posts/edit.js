@@ -87,7 +87,10 @@ Template.postEdit.events({
       }
     });
   },
-
+  'click .focusPlz' : function(event){
+    event.preventDefault();
+    $('#content').focus();
+  },
   'click .delete': function(e) {
     e.preventDefault();
     var currentPost = this;

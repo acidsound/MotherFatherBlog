@@ -176,10 +176,32 @@
     };
 
     // toggle toolbar on mouse select
-    editor.addEventListener('mouseup', toggle);
+    $(editor).parent()[0].addEventListener('mouseup', toggle); // a 태그 작성시 메뉴 사라짐
+    //editor.addEventListener('mouseup', toggle);
+
+    /*function onCompositionStart ( event ) {
+      console.log('compositionstart');
+      composing = true;
+      toggle()
+    }
+
+    function onCompositionEnd (event) {
+      console.log('compositionend');
+      composing = false;
+      toggle()
+    }
+    document.addEventListener( 'compositionstart', onCompositionStart );
+    document.addEventListener( 'compositionend', onCompositionEnd );*/
 
     // toggle toolbar on key select
     editor.addEventListener('keyup', toggle);
+    editor.addEventListener('keydown', function(e){
+      if(e.which === 13){
+        console.log("fuckin enter");
+
+        //document.execCommand('formatBlock', false, 'p');
+      }
+    });
 
     // toggle toolbar on key select
     menu.addEventListener('click', function(e) {
@@ -283,6 +305,8 @@
     };
 
     overall = function(cmd, val) {
+      console.log(cmd);
+      console.log(val);
       var message = ' to exec 「' + cmd + '」 command' + (val ? (' with value: ' + val) : '');
       if(document.execCommand(cmd, false, val) && that.config.debug) {
         utils.log('success' + message);
