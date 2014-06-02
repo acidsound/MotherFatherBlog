@@ -11,9 +11,27 @@
           <div class="panel">
             <ul id="myTab1" class="nav nav-tabs nav-justified">
               <li class="active"><a href="#ImageUrl" data-toggle="tab"><i class="fa fa-picture-o"></i> URL Image</a></li>
+              <li ><a href="#ImageUpload" data-toggle="tab"><i class="fa fa-picture-o"></i> Upload Image</a></li>
+
               <li class=""><a href="#YoutubeUrl" data-toggle="tab"><i class="fa fa-youtube-square"></i> Youtube</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="ImageUpload">
+                {{#with stuff}}
+                {{#cloudinary_upload callback="save_url"}}
+                <input type="file">
+
+                {{#if c_upload_successful}}
+                <p>Success</p>
+                <img width="250" class="previewImage" src="{{c_upload_successful.url}}">
+                {{/if}}
+                {{c_upload_successful}}
+                {{#if c_upload_failed}}
+                <p>Failed</p>
+                {{/if}}
+                {{/cloudinary_upload}}
+                {{/with}}
+              </div>
               <div class="tab-pane fade active in" id="ImageUrl">
                 <input type="url" class="form-control" id="ImageUrlInput" placeholder="이미지 URL">
               </div>

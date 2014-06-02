@@ -7,6 +7,8 @@
  */
 
 Meteor.startup(function() {
+
+
   Meteor.loginWithFacebook({
     requestPermissions: ['publish_actions']
   }, function (err) {

@@ -6,9 +6,15 @@
  * To change this template use File | Settings | File Templates.
  */
 
-//모달 버튼 콜백을 어케 전달하지????????
-
-
+$.cloudinary.config({
+  cloud_name:"www-underdogg-co-kr"
+});
+Template.attach_modal.helpers({
+  "stuff":function(){
+    var user = Meteor.user();
+    return {name:user.profile.name,_id:user._id}
+  }
+});
 Template.attach_modal.events({
   'click .closeBtn':function(event){
     event.preventDefault();
@@ -21,10 +27,20 @@ Template.attach_modal.events({
     if($("#ImageUrl").hasClass("active")){
       data.url =$("#ImageUrlInput").val();
       data.type ="ImageUrl";
+    }else if($("#ImageUpload").hasClass("active")){
+      data.url =$(".previewImage").attr("src");
+      data.type ="ImageUpload";
     }else if($("#YoutubeUrl").hasClass("active")){
       data.url =$("#YoutubeUrlInput").val();
       data.type ="YoutubeUrl";
     }
     this.callback(data, this._id);
+  },
+  "click .delete":function(){
+    Meteor.call("cloudinary_delete",this.public_id,function(e,r){
+      if(!e){
+        console.log(r);
+      }
+    });
   }
 });

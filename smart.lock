@@ -21,7 +21,8 @@
       "select2": {},
       "select2-bootstrap3-css": {},
       "user-status": {},
-      "ms-seo": {}
+      "ms-seo": {},
+      "cloudinary": {}
     },
     "packages": {
       "iron-router": {
@@ -123,6 +124,11 @@
         "git": "https://github.com/DerMambo/ms-seo",
         "tag": "v0.2.6",
         "commit": "1a4ba31a1f6f29009d3941e9dd883829ff4e4b8b"
+      },
+      "cloudinary": {
+        "git": "https://github.com/Lepozepo/cloudinary.git",
+        "tag": "v1.0.3",
+        "commit": "9b86d14947b936133cdf82f5ce065af406284236"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
