@@ -51,10 +51,11 @@ Template.attach_modal.events({
   },
   "click .image-item": function (event) {
     event.preventDefault();
-    $(".previewImage").attr("src",this.url );
-    //어쩔수가 없다. 리스트에서 아이템 클릭 시 바로 팝업 닫히면서 전달되도록 해야하는게 ㅠㅠ
 
-    this.callback({result:"ok",url: $(".previewImage").attr("src"), type: "ImageUpload"}, this._id);
+    //어쩔수가 없다. 리스트에서 아이템 클릭 시 바로 팝업 닫히면서 전달되도록 해야하는게 ㅠㅠ
+    //헐 여기서 this 는 Modal 객체가 아니라 이미지 객체이다. ㅎㄷ ㄷ
+    //어케 땡겨오지 ;; 일단 Modals.findOne()이걸로...
+    this.callback({result:"ok",url: this.url, type: "ImageUpload"}, Modals.findOne()._id);
   },
   "click .delete":function(){
     Meteor.call("cloudinary_delete",this.public_id,function(e,r){
