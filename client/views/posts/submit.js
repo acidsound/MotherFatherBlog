@@ -95,7 +95,7 @@ Template.postSubmit.rendered = function(){
         class: 'content_pen_editor', // {String} class of the editor,
         debug: false, // {Boolean} false by default
         textarea: '<textarea name="content"></textarea>', // fallback for old browsers
-        list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent','bold', 'italic', 'createlink']
+        list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'bold', 'italic', 'createlink']
       }
     );
   }

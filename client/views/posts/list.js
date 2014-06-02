@@ -40,7 +40,6 @@ Template.postStrip.rendered = function() {
   $(this.find('.content-preview')).dotdotdot({
     watch:true
   });
-  console.log("Item rendered");
 
 
 }
