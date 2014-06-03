@@ -9,6 +9,7 @@
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_ONLY'
 });*/
+
 Deps.autorun(function() {
   try {
     UserStatus.startMonitor({

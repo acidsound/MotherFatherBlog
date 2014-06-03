@@ -58,5 +58,13 @@ Template.postItem.rendered = function(){
       $(elem).replaceWith("<iframe style\"max-width:100%; \" src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
 
     });
+
+    //수동 메타태그 설정
+    var img = $("<div></div>").html(this.data.content).find('img').attr("src")||"";
+    var text = $($("<div></div>").html(this.data.content)).text()||"";
+    $('html').find('meta[name=description]').attr('content', text.slice(0,60));
+    $('html').find('meta[name=title]').attr('content', this.data.title);
+    $('html').find('meta[name=url]').attr('content', "http://underdogg.iptime.ort:3000"+Router.current().path);
+    $('html').find('meta[name=image]').attr('content',img);
   }
 };
