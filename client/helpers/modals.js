@@ -10,13 +10,19 @@ Modals = new Meteor.Collection(null);
 throwModal = function(modalOpt) {
   if(!$('body').hasClass('modal-open')){
     $('body').addClass('modal-open');
+    var backFrop = $('<div class="modal-backdrop"></div>')
+    $('body').append(backFrop);
+    backFrop.fadeIn('slow');
   }
-
   Modals.insert(modalOpt)
 }
 clearModal = function(modalId) {
   if(Modals.find().count() == 1){
     $('body').removeClass('modal-open');
+    $('.modal-backdrop').fadeOut("slow", function(){
+      $(this).remove();
+    });
+    //$('.modal-backdrop').remove();
   }
   Modals.remove({_id:modalId});
 }

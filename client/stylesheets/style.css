@@ -55,7 +55,7 @@ hr.dashed_gubun {
     left: 50%;
     margin-left: -150px;
     width: 300px;
-    z-index: 9999;
+    z-index: 1020;
 }
 #iron-router-progress {
     background-color : #F5F7FA;
@@ -73,7 +73,7 @@ hr.dashed_gubun {
     border: none;
     border-radius: 0;
     width: 100%;
-    z-index: 1045;
+    z-index: 1010;
 }
 
 .label {
@@ -172,7 +172,7 @@ hr.dashed_gubun {
 
 #modals {}
 #modals .modal{display: block;}
-
+.modal-backdrop{display: none;}
 #users{}
 #users .nametag{margin-bottom: 8px;}
 #users .nametag img{width: 14px; height: 14px;}
@@ -207,4 +207,30 @@ hr.dashed_gubun {
     content: attr(data-placeholder);
     color:#434a54;
     font-style: normal;
+}
+
+/*input-file fake btn*/
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+    .fileinput-button input {
+        filter: alpha(opacity=0);
+        font-size: 100%;
+        height: 100%;
+    }
 }

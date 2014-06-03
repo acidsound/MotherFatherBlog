@@ -21,7 +21,11 @@
                   <h5><i class="fa fa-upload"></i> 직접 업로드</h5>
                   {{#with stuff}}
                     {{#cloudinary_upload callback="save_url"}}
-                    <input type="file">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="fa fa-picture-o"></i>
+                        <span>이미지 선택</span>
+                        <input type="file">
+                    </span>
                       <br>
                       {{#if c_upload_successful}}
                           <img class="previewImage" src="{{c_upload_successful.url}}">
@@ -42,7 +46,7 @@
                     {{#each image_list}}
                     <div class="col-xs-2 image-wrapper">
                       <div class="image-item">
-                        <img  src="{{c_url public_id format=format effect='blur:300'}}">
+                        <img  src="{{c_url public_id format=format width='100' height='100' crop='thumb'}}">
                       </div>
                     </div>
                     {{/each}}

@@ -11,7 +11,7 @@ $.cloudinary.config({
 });
 Template.attach_modal.created = function(){
   Meteor.call("cloudinary_list_all",function(e,list){
-    Session.set("image_list",list.splice(0,12));
+    Session.set("image_list",list);
   });
 
   Session.set('cloudinary_upload.upload_successful');
@@ -65,3 +65,4 @@ Template.attach_modal.events({
     });
   }
 });
+
