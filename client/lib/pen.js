@@ -195,11 +195,19 @@
 
     // toggle toolbar on key select
     editor.addEventListener('keyup', toggle);
-    editor.addEventListener('keydown', function(e){
+    function getSelectionStart() {
+      var node = document.getSelection().anchorNode,
+        startNode = (node && node.nodeType === 3 ? node.parentNode : node);
+      return startNode;
+    }
+    editor.addEventListener('keyup', function(e){
       if(e.which === 13){
         console.log("fuckin enter");
-
-        //document.execCommand('formatBlock', false, 'p');
+        console.log(getSelectionStart());
+        if(getSelectionStart().tagName.toLowerCase() === "pre"){
+          document.execCommand('formatBlock', false, 'p');
+        }
+        //
       }
     });
 
