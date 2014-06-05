@@ -22,7 +22,8 @@
       "select2-bootstrap3-css": {},
       "user-status": {},
       "ms-seo": {},
-      "cloudinary": {}
+      "cloudinary": {},
+      "kadira": {}
     },
     "packages": {
       "iron-router": {
@@ -117,8 +118,8 @@
       },
       "user-status": {
         "git": "https://github.com/mizzao/meteor-user-status.git",
-        "tag": "v0.4.0",
-        "commit": "e2a1c7a4075f28b87b361387688e083a4b047a08"
+        "tag": "v0.4.1",
+        "commit": "ccca026086e3aa6e44df066c9d5fe4bd412219fc"
       },
       "ms-seo": {
         "git": "https://github.com/DerMambo/ms-seo",
@@ -129,6 +130,11 @@
         "git": "https://github.com/Lepozepo/cloudinary.git",
         "tag": "v1.0.3",
         "commit": "9b86d14947b936133cdf82f5ce065af406284236"
+      },
+      "kadira": {
+        "git": "https://github.com/meteorhacks/kadira.git",
+        "tag": "v2.1.3",
+        "commit": "ebf969395e6a834a790b9899cd8538dfc9f665f8"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
