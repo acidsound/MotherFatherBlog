@@ -23,7 +23,8 @@
       "user-status": {},
       "ms-seo": {},
       "cloudinary": {},
-      "kadira": {}
+      "kadira": {},
+      "sitemaps": {}
     },
     "packages": {
       "iron-router": {
@@ -133,8 +134,13 @@
       },
       "kadira": {
         "git": "https://github.com/meteorhacks/kadira.git",
-        "tag": "v2.1.3",
-        "commit": "ebf969395e6a834a790b9899cd8538dfc9f665f8"
+        "tag": "v2.1.4",
+        "commit": "c564bcd390af097af890a18ee4d4df7bdbc659dc"
+      },
+      "sitemaps": {
+        "git": "https://github.com/gadicohen/meteor-sitemaps.git",
+        "tag": "v0.0.16",
+        "commit": "ed4d908c581071d1302b37c6ba77dbce55333dd3"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
@@ -145,6 +151,11 @@
         "git": "https://github.com/mizzao/meteor-timesync.git",
         "tag": "v0.1.6",
         "commit": "83067433f511bc13a11ae8c87e9a4d331256915e"
+      },
+      "robots-txt": {
+        "git": "https://github.com/gadicohen/meteor-robots.txt.git",
+        "tag": "v0.0.8",
+        "commit": "dc1be195b8c0cf7d6263235484218911e1bf27d9"
       }
     }
   }
