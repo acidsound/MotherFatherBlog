@@ -11,7 +11,8 @@ var initEditor = function(){
       class: 'content_pen_editor', // {String} class of the editor,
       debug: false, // {Boolean} false by default
       textarea: '<textarea name="content"></textarea>', // fallback for old browsers
-      list: ['pre' , 'insertorderedlist', 'insertunorderedlist', 'bold', 'italic', 'createlink']
+      list: ['pre' , 'insertorderedlist', 'insertunorderedlist', 'bold', 'italic', 'createlink'],
+      stay : false
     }
   );
 };
