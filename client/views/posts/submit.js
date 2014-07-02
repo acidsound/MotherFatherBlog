@@ -13,14 +13,6 @@ Template.postSubmit.helpers({
 Template.postSubmit.events({
   'click .showCategoryModal':function(event){
     event.preventDefault();
-    bootbox.prompt("새 카테고리를 추가합니다.", function(result) {
-      if (result == null || result == "") {
-      } else {
-
-
-      }
-    });
-
     var callback = function(data, modalId){
       clearModal(modalId);
       if(data.result === "ok"){

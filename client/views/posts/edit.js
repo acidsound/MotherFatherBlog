@@ -14,10 +14,10 @@ Template.postEdit.helpers({
 Template.postEdit.events({
   'click .showCategoryModal':function(event){
     event.preventDefault();
-    bootbox.prompt("새 카테고리를 추가합니다.", function(result) {
-      if (result == null || result == "") {
-      } else {
-        Meteor.call('category', {body:result}, function(error, newCategory) {
+    var callback = function(data, modalId){
+      clearModal(modalId);
+      if(data.result === "ok"){
+        Meteor.call('category', {body:data.body}, function(error, newCategory) {
           if (error) {
             // display the error to the user
             throwError(error.reason);
@@ -27,8 +27,11 @@ Template.postEdit.events({
             $("#selectedCategory").val(newCategory._id);
           }
         });
-
       }
+    };
+    throwModal({
+      type:"category",
+      callback : callback
     });
   },
   'click .showImageModal':function(event){
