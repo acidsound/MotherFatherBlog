@@ -8,9 +8,10 @@
 sitemaps.add('/posts_sitemap.xml', function() {
   var out = [], pages = Posts.find().fetch();
   _.each(pages, function(page) {
-    out.push({
+    out.unshift({
       page: '/posts/'+page._id,
-      lastmod: page.submitted
+      lastmod: page.submitted,
+      changefreq : "daily"
     });
   });
   return out;
