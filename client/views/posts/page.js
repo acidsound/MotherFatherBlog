@@ -56,7 +56,8 @@ Template.postItem.rendered = function(){
       //width=\"400\" height=\"225\"
       //
       var contentWidth = $('#postItem .content-wrapper').width();
-      $(elem).replaceWith("<iframe width='"+contentWidth+"'  style=\"max-width:100%; \" src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
+      var heigth = 9*contentWidth/16;
+      $(elem).replaceWith("<iframe width='"+contentWidth+"' heigth='"+heigth+"' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
 
     });
 
