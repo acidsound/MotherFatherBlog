@@ -56,7 +56,7 @@ Template.postItem.rendered = function(){
       //width=\"400\" height=\"225\"
       //
       var contentWidth = $('#postItem .content-wrapper').width();
-      var heigth = 9*contentWidth/16;
+      var heigth = parseInt(9*contentWidth/16);
       $(elem).replaceWith("<iframe width='"+contentWidth+"' heigth='"+heigth+"' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
 
     });
