@@ -57,7 +57,7 @@ Template.postItem.rendered = function(){
       //
       var contentWidth = $('#postItem .content-wrapper').width();
       var heigth = parseInt(9*contentWidth/16);
-      $(elem).replaceWith("<iframe width='"+contentWidth+"' heigth='"+heigth+"' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
+      $(elem).replaceWith("<iframe width='"+contentWidth+"' heigth='390' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
 
     });
 
