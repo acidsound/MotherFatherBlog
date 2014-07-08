@@ -55,7 +55,8 @@ Template.postItem.rendered = function(){
       var youtubeId =  $(elem).attr("name");
       //width=\"400\" height=\"225\"
       //
-      $(elem).replaceWith("<iframe style\"max-width:100%; \" src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
+      //var contentWidth = $('#postItem .content-wrapper').width();
+      $(elem).replaceWith("<iframe  style=\"max-width:100%; \" src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe>");
 
     });
 
