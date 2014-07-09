@@ -177,6 +177,45 @@ hr.dashed_gubun {
 #users .nametag{margin-bottom: 8px;}
 #users .nametag img{width: 14px; height: 14px;}
 
+#chats {position: relative;}
+#chats .chat-wrapper{padding-bottom: 26px;}
+#chats .bottom-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+    min-height: 4.6rem;
+    text-align: left;
+}
+#chats .bottom-bar .bottom-form__input-wrapper{
+    border: 1px solid #ddd;
+    -webkit-border-radius: .6rem;
+    border-radius: .6rem;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 10px 10px 10px;
+}
+#chats .bottom-bar .bottom-form__input{
+    display: block;
+    width: 100%;
+    resize: none;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: .5rem 5.5rem .5rem .5rem;
+    color: #333;
+    background: 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border: 0;
+    overflow: auto;
+    position: relative;
+    z-index: 7;
+    max-height: 18.3rem;
+    min-height: 3.2rem;
+}
 
 /*MODAL*/
 #attach_modal{}
@@ -199,6 +238,7 @@ hr.dashed_gubun {
     background: #f9f9f9;
     min-height: 4.6rem;
     -webkit-transform: translate3d(0,0,0);
+    text-align: left;
 }
 #chat_detail_modal .bottom-bar .bottom-form__input-wrapper{
     border: 1px solid #ddd;
@@ -207,6 +247,7 @@ hr.dashed_gubun {
     background: #fff;
     position: relative;
     overflow: hidden;
+    margin: 6px 10px 6px 10px;
 }
 #chat_detail_modal .bottom-bar  .bottom-form__input{
     display: block;

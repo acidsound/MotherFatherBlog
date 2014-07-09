@@ -10,7 +10,7 @@
 
 Template.chat_detail_modal.helpers({
   chatList: function(){
-    return Chats.find({},{sort: {submitted: -1, _id: -1}}).fetch();
+    return Chats.find({},{sort: {submitted: 1, _id: 1}}).fetch();
   }
 });
 Template.chat_item.helpers({
@@ -18,6 +18,22 @@ Template.chat_item.helpers({
     return moment(this.submitted).fromNow();
   }
 });
+
+
+var chat_scrollBottom = function(){
+  $('.chat-wrapper').animate({
+    scrollTop: $('.chat-wrapper')[0].scrollHeight
+  }, 500);
+};
+Template.chat_detail_modal.rendered = function(){
+  if (!this.rendered){
+    /*var neeeedHeight = document.body.clientHeight- $("#chat_detail_modal .modal-header").outerHeight() - $("#chat_detail_modal .modal-footer").outerHeight();
+    $("#chat_detail_modal .chat-wrapper").css("max-height", neeeedHeight);*/
+    $(".bottom-form__input").focus();
+    chat_scrollBottom();
+  }
+};
+
 Template.chat_detail_modal.events({
   'click .closeBtn':function(event){
     event.preventDefault();
@@ -68,6 +84,7 @@ Template.chat_detail_modal.events({
             Router.go('postPage', {_id: error.details})
         } else {
           $(".bottom-form__input").text("");
+          chat_scrollBottom();
         }
       });
     }

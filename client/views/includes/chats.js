@@ -7,10 +7,16 @@
  */
 Template.chats.helpers({
   chatList: function(){
-    return Chats.find({},{limit:4,sort: {submitted: -1, _id: -1}}).fetch();
+    //좀 병신같긴한데...
+    var item = Chats.find({},{sort: {submitted: -1, _id: -1}, limit:5}).fetch();
+    return item.reverse();
   }
 });
-
+var chat_scrollBottom = function(){
+  $('.chat-wrapper').animate({
+    scrollTop: $('.chat-wrapper')[0].scrollHeight
+  }, 500);
+};
 Template.chat.helpers({
   submittedMoment : function(){
     return moment(this.submitted).fromNow();
@@ -43,6 +49,21 @@ Template.chats.events({
             Router.go('postPage', {_id: error.details})
         } else {
           $(".message").val("");
+        }
+      });
+    }
+  },
+  'keypress .bottom-form__input': function (evt, template) {
+    if (evt.which === 13) {
+      var body = $(".bottom-form__input").text()||"";
+      Meteor.call('chat', {body:body}, function(error, newChat) {
+        if (error) {
+          // display the error to the user
+          throwError(error.reason);
+          if (error.error === 302)
+            Router.go('postPage', {_id: error.details})
+        } else {
+          $(".bottom-form__input").text("");
         }
       });
     }

@@ -8,18 +8,17 @@
         </div>
         <div class="modal-body">
           {{#if currentUser}}
-          <div class="input-group">
+          <!--<div class="input-group">
             <input type="text" class="form-control message">
                         <span class="input-group-btn">
                             <button class="btn btn-default writeBtn" type="button">
                               <span class="glyphicon glyphicon-pencil"></span>
                             </button>
                         </span>
-          </div>
+          </div>-->
           {{else}}
           <p>로그인이 필요합니다.</p>
           {{/if}}
-          <br>
           <div class="chat-wrapper">
             <ul class="media-list">
               {{#each chatList}}
@@ -29,6 +28,10 @@
 
           </div>
 
+
+
+        </div>
+        <div class="modal-footer">
           <div class="bottom-bar">
             <form class="bottom-form message-form">
 
@@ -37,10 +40,7 @@
               </div>
             </form>
           </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default closeBtn">닫기</button>
+          <!--<button type="button" class="btn btn-default closeBtn">닫기</button>-->
         </div>
       </div>
     </div>
