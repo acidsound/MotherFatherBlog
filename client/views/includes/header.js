@@ -38,7 +38,13 @@ Template.header.helpers({
     }
   }
 });
-
+Template.header.events({
+  'keypress .search-query': function (evt, template) {
+    if (evt.which === 13) {
+      Router.go('searchPosts', {searchText: $(".search-query").val()});
+    }
+  }
+});
 Template.categoryRow.helpers({
   activeClass : function(){
     var urlParams = Router.current().path.split("/");
