@@ -43,7 +43,11 @@ getUserName = function(user){
     || getProperty(user, 'services.facebook.name')
     || getProperty(user, 'services.google.name');
 };
-
+getprofileUrl = function(user){
+  return user.link
+    || getProperty(user, 'services.facebook.link')
+    || getProperty(user, 'services.google.link');
+};
 getSignupMethod = function(user){
   if(user.services && user.services.twitter) {
     return 'twitter';
@@ -93,7 +97,8 @@ Accounts.onCreateUser(function(options, user) {
   return _.extend(user, {
     profile: {
       name: getUserName(user),
-      photo: getAvatarUrl(user)
+      photo: getAvatarUrl(user),
+      profileUrl : getprofileUrl(user)
     }
   });
 });

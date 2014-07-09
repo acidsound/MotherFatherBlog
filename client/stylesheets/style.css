@@ -178,7 +178,7 @@ hr.dashed_gubun {
 #users .nametag img{width: 14px; height: 14px;}
 
 #chats {position: relative;}
-#chats .chat-wrapper{padding-bottom: 26px;}
+#chats .chat-wrapper{padding-bottom: 32px;}
 #chats .bottom-bar{
     position: absolute;
     bottom: 0;

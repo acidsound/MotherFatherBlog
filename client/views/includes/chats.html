@@ -1,6 +1,11 @@
 <template name="chats">
   <div class="well" id="chats">
     <h4><i class="fa fa-comments-o"></i> mini Message</h4>
+
+
+
+
+
     <div class="chat-wrapper">
       <ul class="media-list">
         {{#each chatList}}
@@ -31,7 +36,7 @@
 </template>
 <template name="chat">
   <li class="media anim_item">
-    <!--<a class="pull-left" href="#"><img class="media-object img-rounded" src="img/photo-1.jpg"></a>-->
+    <a class="pull-left" href="#"><img class="media-object img-rounded" src="{{author.photo}}"></a>
     <div class="media-body">
       <h4 class="media-heading">{{author.name}} <small>{{submittedMoment}}</small></h4>
       <div>{{body}}</div>
