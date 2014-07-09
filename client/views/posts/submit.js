@@ -57,6 +57,18 @@ Template.postSubmit.events({
   },
   'submit form': function(event) {
     event.preventDefault();
+    if($("#selectedCategory").val() == null || $("#selectedCategory").val() == ""){
+      var callback = function(data, modalId){
+        clearModal(modalId);
+      };
+      throwModal({
+        type:"message",
+        title : "알림",
+        message : "카테고리를 선택하세요.",
+        callback : callback
+      });
+      return false;
+    }
     var post = {
       title: $(event.target).find('[name=title]').val(),
       content: $(event.target).find('#content').html(),

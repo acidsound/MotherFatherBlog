@@ -28,8 +28,8 @@ Meteor.methods({
     if (!postAttributes.title)
       throw new Meteor.Error(422, 'Please fill in a headline');
 
-    if (!postAttributes.category)
-      throw new Meteor.Error(423, 'Please choose a category');
+    if (!postAttributes.category && !postAttributes.category._id)
+      throw new Meteor.Error(422, 'Please choose a category');
 
     // check that there are no previous posts with the same link
     if (postAttributes.url && postWithSameLink) {
