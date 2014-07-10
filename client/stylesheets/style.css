@@ -32,7 +32,7 @@ body {
 span.glyphicon{top:3px;}
 i.glyphicon{top:1px;}
 .pointer {cursor: pointer}
-hr{border-top: 1px solid #CCD1D9;}
+hr{border-top: 1px solid #e6e9ed;}
 hr.dashed {
     border-top: 1px dashed #656D78;
 }
