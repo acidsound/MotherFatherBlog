@@ -29,7 +29,25 @@
         </h1>
         <p class="lead">by {{author.name}}</p>
         <hr class="">
-        <p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}}
+          </div>
+          <div class="col-md-6">
+            <span class="glyphicon glyphicon-comment"></span> {{pluralize commentsCount 'comment'}}  &nbsp;
+            <span class="fa fa-thumbs-o-up"></span> {{pluralize votes 'like'}}
+            <div class="pull-right">
+              <button class="btn btn-default btn-xs goComment" type="button"><span class="glyphicon glyphicon-chevron-down "></span></button>
+              {{#if ownPost}}
+              <button class="btn btn-default btn-xs goEdit" type="button"><span class="glyphicon glyphicon-wrench "></span></button>
+              {{/if}}
+            </div>
+
+          </div>
+        </div>
+
+        <!--<p>
           <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}} &nbsp; <span class="glyphicon glyphicon-comment"></span> {{commentsCount}}
           &nbsp;<span class="fa fa-thumbs-o-up"></span> {{votes}}
         <div class="pull-right">
@@ -39,7 +57,7 @@
           {{/if}}
 
         </div>
-        </p>
+        </p>-->
         <hr class="">
         <div class="content-wrapper">{{{content}}}</div>
         <hr class="">
