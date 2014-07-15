@@ -167,6 +167,9 @@ hr.dashed_gubun {
 #popularPosts .post-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
+#popularPosts .badge {
+   float:right;
+}
 #navigation{}
 #navigation .btn-group{width: 100%}
 

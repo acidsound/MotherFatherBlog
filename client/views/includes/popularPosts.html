@@ -1,20 +1,17 @@
 <template name="popularPosts">
   <div id = "popularPosts" class="well">
     <h4><i class="fa fa-bomb"></i> Popular Posts</h4>
-    <div class="row">
-    {{#each popularList}}
 
-        <div class="col-xs-9">
-          <p class="post-item {{textClass}}">
-            {{index}}.<a  href="{{pathFor 'postPage'}}" class="none_style"> <span class="none_style">{{title}}</span></a>
-          </p>
-        </div>
-      {{#if showingHit}}
-        <div class="col-xs-3 text-right">
-          <span class="badge badge-info">{{hitCount}}</span>
-        </div>
-      {{/if}}
-    {{/each}}
-    </div>
+      {{#each popularList}}
+      {{>popularItem}}
+      {{/each}}
+
+
   </div>
+</template>
+<template name="popularItem">
+  <span class="badge {{hitsClass}}">{{hitCount}}</span>
+  <p class="post-item">
+    <a  href="{{pathFor 'postPage'}}" class="none_style"><span class="none_style">{{title}}</span></a>
+  </p>
 </template>

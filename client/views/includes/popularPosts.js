@@ -7,16 +7,17 @@
  */
 Template.popularPosts.helpers({
   popularList: function() {
-    //var textClasssss = ["text-primary", "text-primary", "text-primary", "text-primary" ,"text-primary", "text-muted", "text-muted", "text-muted", "text-muted", "text-muted"];
+    var hitsClass = ["badge-danger", "badge-warning", "badge-success", "badge-info" ,"badge-primary", "badge-muted", "badge-muted", "badge-muted", "badge-muted", "badge-muted"];
     var list = Posts.find({},{sort: {hitCount: -1}, limit: 10}).fetch();
     _.forEach(list, function(item, index){
       item.index = index +1;
-      //item.textClass = textClasssss[index];
-      item.showingHit = index < 5 ? true:false;
+      item.hitsClass = hitsClass[index];
+      //item.showingHit = index < 5 ? true:false;
     });
     return list;
   }
 });
+
 /*Template.popularPosts.events({
   'click .post-item': function (e) {
     e.preventDefault();
