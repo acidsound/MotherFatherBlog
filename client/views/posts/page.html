@@ -1,7 +1,7 @@
 <template name="postPage">
   <div id="postPage">
-
   {{> postItem}}
+    
     <h2 class="menu-title comment-area"> Comments <span class="glyphicon glyphicon-comment"></span></h2>
     <ul class="media-list content-wrapper">
       {{#each comments}}
@@ -18,6 +18,7 @@
 
   </div>
 </template>
+
 <template name="postItem">
   <div class="post" id="postItem">
     <div class="jumbotron">

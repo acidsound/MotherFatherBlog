@@ -49,27 +49,26 @@ Template.postItem.events({
   }
 });
 Template.postItem.rendered = function(){
-  if (!this.rendered){
+  //if (!this.rendered){
+  console.log(this.rendered);
+    var youtubeElems = $('.content-wrapper').find("img[alt='youtube']");
+    _.forEach(youtubeElems, function(elem){
+      var youtubeId =  $(elem).attr("name");
+      //width=\"400\" height=\"225\"
+      //
+      //var contentWidth = $('#postItem .content-wrapper').width();
+      //var heigth = parseInt(9*contentWidth/16);
 
+      $(elem).replaceWith("<div><small>youtube 동영상입니다. 안나오면 <bold>새로고침</bold></small></div><div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe></div>");
 
-  }
-  var youtubeElems = $('.content-wrapper').find("img[alt='youtube']");
-  _.forEach(youtubeElems, function(elem){
-    var youtubeId =  $(elem).attr("name");
-    //width=\"400\" height=\"225\"
-    //
-    //var contentWidth = $('#postItem .content-wrapper').width();
-    //var heigth = parseInt(9*contentWidth/16);
+    });
 
-    $(elem).replaceWith("<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe></div>");
-
-  });
-
-  //수동 메타태그 설정
-  var img = $("<div></div>").html(this.data.content).find('img').attr("src")||"";
-  var text = $($("<div></div>").html(this.data.content)).text()||"";
-  $('html').find('meta[name=description]').attr('content', text.slice(0,60));
-  $('html').find('meta[name=title]').attr('content', this.data.title);
-  $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
-  $('html').find('meta[name=image]').attr('content',img);
+    //수동 메타태그 설정
+    var img = $("<div></div>").html(this.data.content).find('img').attr("src")||"";
+    var text = $($("<div></div>").html(this.data.content)).text()||"";
+    $('html').find('meta[name=description]').attr('content', text.slice(0,60));
+    $('html').find('meta[name=title]').attr('content', this.data.title);
+    $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
+    $('html').find('meta[name=image]').attr('content',img);
+  //}
 };
