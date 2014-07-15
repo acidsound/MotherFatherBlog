@@ -68,8 +68,13 @@ Template.postItem.events({
     Meteor.call('upvote', this._id);
   }
 });
-/*Template.postItem.rendered = function(){
-  if(!this._rendered) {
+Template.postItem.rendered = function(){
+  /*var elems = $('.content-wrapper').find("img");
+
+  _.forEach(elems, function(elem){
+    elem.boxer({mobile:true});
+  });*/
+  /*if(!this._rendered) {
     this._rendered = false;
     console.log('Template onLoad');
 
@@ -85,5 +90,5 @@ Template.postItem.events({
 
     });
 
-  }
-};*/
+  }*/
+};
