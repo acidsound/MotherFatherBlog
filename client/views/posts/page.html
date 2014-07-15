@@ -1,7 +1,7 @@
 <template name="postPage">
   <div id="postPage">
   {{> postItem}}
-    
+
     <h2 class="menu-title comment-area"> Comments <span class="glyphicon glyphicon-comment"></span></h2>
     <ul class="media-list content-wrapper">
       {{#each comments}}
@@ -60,7 +60,10 @@
         </div>
         </p>-->
         <hr class="">
-        <div class="content-wrapper">{{{content}}}</div>
+
+        <div class="content-wrapper">
+          {{{dynamicConent}}}
+        </div>
         <hr class="">
         <button type="button" class="btn btn-primary goList">목록 <span class="glyphicon glyphicon-chevron-left"></span></button>
         &nbsp;

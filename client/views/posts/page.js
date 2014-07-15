@@ -10,7 +10,6 @@ Template.postPage.helpers({
     return Comments.find({postId: this._id});
   }
 });
-
 Template.postItem.helpers({
   submittedMoment : function(){
     return moment(this.submitted).format('LLLL');
@@ -25,6 +24,27 @@ Template.postItem.helpers({
     } else {
       return 'disabled';
     }
+  },
+  //이런 개시발 스러운 렌더링 문제
+  //posts/_id1 에서 posts/_id2로 이동 시 render callback이 호출되지 않는다. 한참을 고민하다가 결국 미친짓을 하게 되었는데.
+  //원하는 대로 동작은 하지만... 아...쫌....
+  dynamicConent : function(){
+    //console.log( (this.content.match(/<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>/g)||[]));
+    var elements = $('<div>').html(this.content);
+    _.forEach(elements.find("img[alt='youtube']"), function(elem){
+      var youtubeId =  $(elem).attr("name");
+      $(elem).replaceWith("<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe></div>");
+    });
+
+    //수동 메타태그 설정
+    var img = $("<div></div>").html(this.content).find('img').attr("src")||"";
+    var text = $($("<div></div>").html(this.content)).text()||"";
+    $('html').find('meta[name=description]').attr('content', text.slice(0,60));
+    $('html').find('meta[name=title]').attr('content', this.title);
+    $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
+    $('html').find('meta[name=image]').attr('content',img);
+
+    return elements.html();
   }
 });
 Template.postItem.events({
@@ -48,9 +68,11 @@ Template.postItem.events({
     Meteor.call('upvote', this._id);
   }
 });
-Template.postItem.rendered = function(){
-  //if (!this.rendered){
-  console.log(this.rendered);
+/*Template.postItem.rendered = function(){
+  if(!this._rendered) {
+    this._rendered = false;
+    console.log('Template onLoad');
+
     var youtubeElems = $('.content-wrapper').find("img[alt='youtube']");
     _.forEach(youtubeElems, function(elem){
       var youtubeId =  $(elem).attr("name");
@@ -59,16 +81,9 @@ Template.postItem.rendered = function(){
       //var contentWidth = $('#postItem .content-wrapper').width();
       //var heigth = parseInt(9*contentWidth/16);
 
-      $(elem).replaceWith("<div><small>youtube 동영상입니다. 안나오면 <bold>새로고침</bold></small></div><div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe></div>");
+      $(elem).replaceWith("<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe></div>");
 
     });
 
-    //수동 메타태그 설정
-    var img = $("<div></div>").html(this.data.content).find('img').attr("src")||"";
-    var text = $($("<div></div>").html(this.data.content)).text()||"";
-    $('html').find('meta[name=description]').attr('content', text.slice(0,60));
-    $('html').find('meta[name=title]').attr('content', this.data.title);
-    $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
-    $('html').find('meta[name=image]').attr('content',img);
-  //}
-};
+  }
+};*/

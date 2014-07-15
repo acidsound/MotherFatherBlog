@@ -12,6 +12,7 @@ Template.popularPosts.helpers({
     _.forEach(list, function(item, index){
       item.index = index +1;
       //item.textClass = textClasssss[index];
+      item.showingHit = index < 5 ? true:false;
     });
     return list;
   }

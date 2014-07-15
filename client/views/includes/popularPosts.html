@@ -9,9 +9,11 @@
             {{index}}.<a  href="{{pathFor 'postPage'}}" class="none_style"> <span class="none_style">{{title}}</span></a>
           </p>
         </div>
+      {{#if showingHit}}
         <div class="col-xs-3 text-right">
           <span class="badge badge-info">{{hitCount}}</span>
         </div>
+      {{/if}}
     {{/each}}
     </div>
   </div>
