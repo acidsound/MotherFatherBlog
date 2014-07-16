@@ -204,7 +204,7 @@
       if(e.which === 13){
         console.log("fuckin enter");
         console.log(getSelectionStart());
-        if(getSelectionStart().tagName.toLowerCase() === "pre"){
+        if(getSelectionStart().tagName.toLowerCase() === "pre"||getSelectionStart().tagName.toLowerCase() === "blockquote"||getSelectionStart().tagName.toLowerCase() === "h2"){
           document.execCommand('formatBlock', false, 'p');
         }
         //
@@ -313,8 +313,8 @@
     };
 
     overall = function(cmd, val) {
-      console.log(cmd);
-      console.log(val);
+      //console.log(cmd);
+      //console.log(val);
       var message = ' to exec 「' + cmd + '」 command' + (val ? (' with value: ' + val) : '');
       if(document.execCommand(cmd, false, val) && that.config.debug) {
         utils.log('success' + message);

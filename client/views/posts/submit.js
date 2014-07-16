@@ -44,9 +44,9 @@ Template.postSubmit.events({
           var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
           $('#content').html($('#content').html()+imgTag);
         }else if(data.type==="YoutubeUrl"){
-          //var imgTag = '<div><img alt="youtube" width="400px" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/1.jpg"></div><div>&nbsp;</div>';
-          var youtubeTag = "<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+data.url+ "\" frameborder=0></iframe></div>";
-          $('#content').html($('#content').html()+youtubeTag);
+          var imgTag = '<div><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></div><div>&nbsp;</div>';
+          //var youtubeTag = "<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+data.url+ "\" frameborder=0></iframe></div>";
+          $('#content').html($('#content').html()+imgTag);
         }
 
       }

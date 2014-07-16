@@ -28,10 +28,10 @@ Template.comment.events({
 
 Template.comment.rendered = function(){
   if (!this.rendered){
-    /*var youtubeElems = $(this.firstNode).find("img[alt='youtube']");
+    var youtubeElems = $(this.firstNode).find("img[alt='youtube']");
     _.forEach(youtubeElems, function(elem){
       var youtubeId =  $(elem).attr("name");
       $(elem).replaceWith("<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe></div>");
-    });*/
+    });
   }
 };
