@@ -44,6 +44,8 @@ Template.postItem.helpers({
     $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
     $('html').find('meta[name=image]').attr('content',img);
 
+    $('title').text(this.title);
+
     return elements.html();
   }
 });

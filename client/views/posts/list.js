@@ -34,6 +34,14 @@ Template.postStrip.helpers({
 });
 
 Template.postStrip.rendered = function() {
+
+  $('html').find('meta[name=description]').attr('content', "나의 수제 블로그...");
+  $('html').find('meta[name=title]').attr('content', "UnderDoggg");
+  $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr");
+  $('html').find('meta[name=image]').attr('content',"http://www.underdogg.co.kr/images/logo.png");
+
+  $('title').text("UnderDogggg");
+
   $(this.find('.content-title')).dotdotdot({
     watch:true
   });
