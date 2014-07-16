@@ -35,10 +35,10 @@ Template.postStrip.helpers({
 
 Template.postStrip.rendered = function() {
 
-  $('html').find('meta[name=description]').attr('content', "나의 수제 블로그...");
+  $('html').find('meta[name=description]').attr('content', "arm 보드 위에 meteorJS로 만들어진 나의 수제 블로그...");
   $('html').find('meta[name=title]').attr('content', "UnderDoggg");
   $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr");
-  $('html').find('meta[name=image]').attr('content',"http://www.underdogg.co.kr/images/logo.png");
+  $('html').find('meta[name=image]').attr('content',"http://www.underdogg.co.kr/images/icon.png");
 
   $('title').text("UnderDogggg");
 
