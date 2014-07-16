@@ -39,6 +39,8 @@ Template.postStrip.rendered = function() {
   $('html').find('meta[name=title]').attr('content', "UnderDoggg");
   $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr");
   $('html').find('meta[name=image]').attr('content',"http://www.underdogg.co.kr/images/icon.png");
+  $('html').find('meta[name=author]').attr('content',"UnderDoggg");
+  $('html').find('meta[name=keywords]').attr('content',"UnderDoggg");
 
   $('title').text("UnderDogggg");
 

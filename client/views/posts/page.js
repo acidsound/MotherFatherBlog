@@ -43,6 +43,8 @@ Template.postItem.helpers({
     $('html').find('meta[name=title]').attr('content', this.title);
     $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
     $('html').find('meta[name=image]').attr('content',img);
+    $('html').find('meta[name=author]').attr('content',this.author.name);
+    $('html').find('meta[name=keywords]').attr('content',this.category.body);
 
     $('title').text(this.title);
 
