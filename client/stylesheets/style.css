@@ -222,6 +222,11 @@ hr.dashed_gubun {
 }
 
 /*MODAL*/
+#category_modal{}
+#category_modal .no-line{border:none; box-shadow:none; -webkit-box-shadow:none;}
+#category_modal .no-line .list-group-item{border:none;}
+
+
 #attach_modal{}
 #attach_modal .previewImage{width: 100%;}
 #attach_modal .image-list .row{margin-left:-5px; margin-right: -5px;}

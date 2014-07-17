@@ -9,7 +9,8 @@ Categories = new Meteor.Collection('categories');
 Categories.allow({
   update: function(userId, doc) {
     return true;
-  }
+  },
+  remove:function(){return true;}
 });
 Meteor.methods({
   category: function(categoryAttributes) {

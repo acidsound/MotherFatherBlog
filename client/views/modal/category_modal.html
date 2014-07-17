@@ -1,19 +1,56 @@
 <template name="category_modal">
-  <div class="modal">
+  <div class="modal" id="category_modal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close closeBtn" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4><i class="fa fa-comments-o"></i> 카테고리 추가하기</h4>
+          <h4><i class="glyphicon glyphicon-cog"></i> 카테고리 관리</h4>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control" id="categoryText" placeholder="카테고리 이름">
+          <div class="input-group">
+            <input type="text" class="form-control" id="categoryText" placeholder="새로운 카테고리">
+            <span class="input-group-btn">
+              <button class="btn btn-default add-category-btn" type="button">추가 </button>
+            </span>
+          </div>
+          <br>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>카테고리</th>
+              <th>포스트</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each categories}}
+              {{> category_modal_category}}
+            {{/each}}
+            </tbody>
+          </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default closeBtn">닫기</button>
+          <!--<button type="button" class="btn btn-default closeBtn">닫기</button>-->
           <button type="button" class="btn btn-success okBtn">확인</button>
         </div>
       </div>
     </div>
   </div>
+</template>
+<template name="category_modal_category">
+  <tr>
+    <td>{{body}}</td>
+    <td>{{pluralize postIds.length 'post'}}</td>
+    <td>
+      {{#if enableDelete}}
+        <button type="button" class="btn btn-danger btn-xs delete-category">
+          <i class="glyphicon glyphicon-trash"></i>
+        </button>
+      {{else}}
+      <button type="button" class="btn btn-danger btn-xs delete-category" disabled>
+        <i class="glyphicon glyphicon-trash"></i>
+      </button>
+      {{/if}}
+    </td>
+  </tr>
 </template>
