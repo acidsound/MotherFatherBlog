@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /surveyList
+
+User-agent: *
+Disallow: /auth/facebook
+
+User-agent: *
+Disallow: /auth/google
+
+User-agent: *
+Disallow: /logout

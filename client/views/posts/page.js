@@ -39,7 +39,7 @@ Template.postItem.helpers({
     //수동 메타태그 설정
     var img = $("<div></div>").html(this.content).find('img').attr("src")||"";
     var text = $($("<div></div>").html(this.content)).text()||"";
-    $('html').find('meta[name=description]').attr('content', text.slice(0,60));
+    $('html').find('meta[name=description]').attr('content', text.slice(0,100));
     $('html').find('meta[name=title]').attr('content', this.title);
     $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
     $('html').find('meta[name=image]').attr('content',img);
