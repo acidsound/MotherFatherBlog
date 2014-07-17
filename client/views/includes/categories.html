@@ -1,0 +1,14 @@
+<template name="categories">
+  <div id = "categories" class="well">
+    <h4><i class="fa fa-tasks"></i> 카테고리</h4>
+      {{#each categoryList}}
+      {{>category}}
+      {{/each}}
+  </div>
+</template>
+<template name="category">
+  <p class="post-item">
+    <span class="badge badge-default pull-right">{{pluralize postIds.length 'post'}}</span>
+    <a  href="/category/{{_id}}" class="none_style"> {{body}} </a>
+  </p>
+</template>
