@@ -38,7 +38,7 @@ Meteor.methods({
         postWithSameLink._id);
     }
     // pick out the whitelisted keys
-    var post = _.extend(_.pick(postAttributes, 'title', 'content'), {
+    var post = _.extend(_.pick(postAttributes, 'title', 'content', 'keywords'), {
       userId: user._id,
       author: {name:user.profile.name,photo:user.profile.photo},
       submitted: new Date().getTime(),

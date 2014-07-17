@@ -64,6 +64,7 @@ Template.postSubmit.events({
     var post = {
       title: $(event.target).find('[name=title]').val(),
       content: $(event.target).find('#content').html(),
+      keywords:$(event.target).find('.keywordText').val(),
       category : Categories.find().fetch().filter(function(category){return $("#selectedCategory").val() === category._id})[0] || null
     }
     var categoryId = post.category._id;

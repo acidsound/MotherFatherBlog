@@ -68,6 +68,7 @@ Template.postEdit.events({
       title: $(e.target).find('[name=title]').val(),
       //content:  $(e.target).find('#content').data("wysihtml5").editor.getValue()
       content: $(e.target).find('#content').html(),
+      keywords:$(e.target).find('.keywordText').val(),
       category : Categories.find().fetch().filter(function(category){return $("#selectedCategory").val() === category._id})[0]
     }
 
