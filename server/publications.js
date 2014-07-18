@@ -67,7 +67,7 @@ Meteor.publish("rssfeed", function(query) {
   // this.cdata, this.setValue, this.addItem
   self.setValue('title', self.cdata('Underdogg'));
   self.setValue('description', self.cdata('This is a live feed'));
-  self.setValue('link', 'http://www.underdogg.co.kr');
+  self.setValue('link', 'http://underdogg.co.kr');
   self.setValue('lastBuildDate', new Date());
   self.setValue('pubDate', new Date());
   self.setValue('ttl', 1);
@@ -77,8 +77,8 @@ Meteor.publish("rssfeed", function(query) {
     self.addItem({
       title: doc.title,
       description: doc.content,
-      url : 'http://www.underdogg.co.kr/posts/'+this._id,
-      link: 'http://www.underdogg.co.kr/posts/'+this._id,
+      url : 'http://underdogg.co.kr/posts/'+this._id,
+      link: 'http://underdogg.co.kr/posts/'+this._id,
       author: this.author.name,
       language: 'ko',
       pubDate: new Date(),
