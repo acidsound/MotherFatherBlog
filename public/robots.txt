@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /surveyList
+Disallow: /category/
 
 User-agent: *
 Disallow: /auth/facebook
