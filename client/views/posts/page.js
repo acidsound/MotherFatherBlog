@@ -36,7 +36,7 @@ Template.postItem.helpers({
       $(elem).replaceWith("<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+youtubeId+ "\" frameborder=0></iframe></div>");
     });
 
-    //수동 메타태그 설정
+   /* //수동 메타태그 설정
     var img = $("<div></div>").html(this.content).find('img').attr("src")||"";
     var text = $($("<div></div>").html(this.content)).text()||"";
     $('html').find('meta[name=description]').attr('content', text.slice(0,100));
@@ -46,7 +46,7 @@ Template.postItem.helpers({
     $('html').find('meta[name=author]').attr('content',this.author.name);
     $('html').find('meta[name=keywords]').attr('content',this.category.body + ","+this.keywords);
 
-    $('title').text(this.title);
+    $('title').text(this.title);*/
 
     return elements.html();
   }

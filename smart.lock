@@ -17,14 +17,14 @@
       "medium-editor": {},
       "method-pagination": {},
       "pages": {},
-      "bootstrap-select": {},
-      "select2": {},
       "select2-bootstrap3-css": {},
       "user-status": {},
       "ms-seo": {},
       "cloudinary": {},
       "kadira": {},
-      "sitemaps": {}
+      "sitemaps": {},
+      "rssfeed": {},
+      "select2": {}
     },
     "packages": {
       "iron-router": {
@@ -44,13 +44,13 @@
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v3.1.1-1",
-        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
+        "tag": "v3.2.0-1",
+        "commit": "17a63902fc6cf1096c5289d963c66cf28b474727"
       },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.3.0-1",
-        "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
+        "tag": "v0.3.3",
+        "commit": "2e50b605d8d5ed68e48c4529a65f13552d8af3f9"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
@@ -59,8 +59,8 @@
       },
       "iron-router-progress": {
         "git": "https://github.com/Multiply/iron-router-progress.git",
-        "tag": "v0.4.0",
-        "commit": "02f78bdaca4c13d59f548d5a0ce83408c34b56d1"
+        "tag": "v0.4.1",
+        "commit": "496fcda9a6ec352b4733725f60c6f280250c3541"
       },
       "medium-editor-updated": {
         "git": "https://github.com/donflopez/meteor-medium-editor.git",
@@ -102,16 +102,6 @@
         "tag": "v1.0.20",
         "commit": "717cbac89f02d2f1bb160b24c997050ce2dee45e"
       },
-      "bootstrap-select": {
-        "git": "https://github.com/amrali/bootstrap-select-meteor.git",
-        "tag": "v1.5.2",
-        "commit": "61588ec8326987ded204724d85843eb6997cfcfb"
-      },
-      "select2": {
-        "git": "https://github.com/nate-strauser/meteor-select2.git",
-        "tag": "v3.4.5",
-        "commit": "4a8d05582b949a14f0ee217c185166abbf112822"
-      },
       "select2-bootstrap3-css": {
         "git": "https://github.com/esperadomedia/meteor-select2-bootstrap3-css.git",
         "tag": "v0.0.5",
@@ -119,8 +109,8 @@
       },
       "user-status": {
         "git": "https://github.com/mizzao/meteor-user-status.git",
-        "tag": "v0.4.1",
-        "commit": "ccca026086e3aa6e44df066c9d5fe4bd412219fc"
+        "tag": "v0.6.0",
+        "commit": "dba80d742522ac104f2155f1db852922e4249f96"
       },
       "ms-seo": {
         "git": "https://github.com/DerMambo/ms-seo",
@@ -129,18 +119,28 @@
       },
       "cloudinary": {
         "git": "https://github.com/Lepozepo/cloudinary.git",
-        "tag": "v1.0.3",
-        "commit": "9b86d14947b936133cdf82f5ce065af406284236"
+        "tag": "v2.0.0",
+        "commit": "b415d480afd8af90c52bd1b6b7d594d1196abc0d"
       },
       "kadira": {
         "git": "https://github.com/meteorhacks/kadira.git",
-        "tag": "v2.1.4",
-        "commit": "c564bcd390af097af890a18ee4d4df7bdbc659dc"
+        "tag": "v2.4.8",
+        "commit": "5f4437af113537def34484c7b7a2a5e4d60847a9"
       },
       "sitemaps": {
         "git": "https://github.com/gadicohen/meteor-sitemaps.git",
         "tag": "v0.0.16",
         "commit": "ed4d908c581071d1302b37c6ba77dbce55333dd3"
+      },
+      "rssfeed": {
+        "git": "https://github.com/raix/Meteor-rssfeed.git",
+        "tag": "v0.0.4",
+        "commit": "e592cda10c553209491aa08c74096fc4ddefe3d7"
+      },
+      "select2": {
+        "git": "https://github.com/nate-strauser/meteor-select2.git",
+        "tag": "v3.4.5",
+        "commit": "4a8d05582b949a14f0ee217c185166abbf112822"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
@@ -149,8 +149,13 @@
       },
       "timesync": {
         "git": "https://github.com/mizzao/meteor-timesync.git",
-        "tag": "v0.1.6",
-        "commit": "83067433f511bc13a11ae8c87e9a4d331256915e"
+        "tag": "v0.2.1",
+        "commit": "fa4abd511f4e32a3c5d22795ce2c1e8369428fac"
+      },
+      "streams": {
+        "git": "https://github.com/arunoda/meteor-streams.git",
+        "tag": "v0.1.17",
+        "commit": "9fcbbc9b7bf542827babc92089c19e730892a22f"
       },
       "robots-txt": {
         "git": "https://github.com/gadicohen/meteor-robots.txt.git",
