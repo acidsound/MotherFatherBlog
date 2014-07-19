@@ -28,67 +28,6 @@ Meteor.publish("chats", function() {
   return Chats.find();
 });
 
-Meteor.publish("rssfeed", function(query) {
-  var self = this;
-  // We got 3 helpers:
-  // 1. self.setValue
-  // 2. self.addItem
-  // 3. self.cdata
-
-
-  // query is the parsed querystring as an object
-  // eg. foo=latest would be query.foo === 'latest'
-
-  // feed handler helpers
-  // this.cdata, this.setValue, this.addItem
-  /*self.setValue('title', self.cdata('My news'));
-  self.setValue('description', self.cdata('This is a live feed'));
-  self.setValue('link', 'http://mysite.meteor.com');
-  self.setValue('lastBuildDate', new Date());
-  self.setValue('pubDate', new Date());
-  self.setValue('ttl', 1);*/
-  // managingEditor, webMaster, language, docs, generator
-
- /* Posts.find({}).forEach(function(doc) {
-    self.addItem({
-      title: doc.title,
-      description: doc.content,
-      url : 'http://www.underdogg.co.kr/posts/'+this._id,
-      link: 'http://www.underdogg.co.kr/posts/'+this._id,
-      author: this.author.name,
-      language: 'ko',
-      pubDate: new Date(),
-      date: doc.submitted,
-      ttl: '1'
-    });
-  });*/
-
-  // feed handler helpers
-  // this.cdata, this.setValue, this.addItem
-  self.setValue('title', self.cdata('Underdogg'));
-  self.setValue('description', self.cdata('This is a live feed'));
-  self.setValue('link', 'http://underdogg.co.kr');
-  self.setValue('lastBuildDate', new Date());
-  self.setValue('pubDate', new Date());
-  self.setValue('ttl', 1);
-  // managingEditor, webMaster, language, docs, generator
-
-  newsCollection.find({}).forEach(function(doc) {
-    self.addItem({
-      title: doc.title,
-      description: doc.content,
-      url : 'http://underdogg.co.kr/posts/'+this._id,
-      link: 'http://underdogg.co.kr/posts/'+this._id,
-      author: this.author.name,
-      language: 'ko',
-      pubDate: new Date(),
-      date: doc.submitted,
-      ttl: '1'
-    });
-  });
-
-});
-
 //Meteor.publish("userStatus", function() {
 //  return Meteor.users.find({ "status.online": true });
 //});

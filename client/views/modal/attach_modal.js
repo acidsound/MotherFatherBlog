@@ -6,9 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-$.cloudinary.config({
-  cloud_name:"www-underdogg-co-kr"
-});
+
 Template.attach_modal.created = function(){
   Meteor.call("cloudinary_list_all",function(e,list){
     Session.set("image_list",list);
