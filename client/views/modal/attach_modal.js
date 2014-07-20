@@ -5,20 +5,26 @@
  * Time: 오후 10:05
  * To change this template use File | Settings | File Templates.
  */
+$.cloudinary.config({
+  cloud_name:"www-underdogg-co-kr"
+});
 
 
 Template.attach_modal.created = function(){
   Meteor.call("cloudinary_list_all",function(e,list){
     Session.set("image_list",list);
   });
-
-  Session.set('cloudinary_upload.upload_successful');
-  Session.set('cloudinary_upload.upload_failed');
+  /*
+  Session.set('c_upload.upload_successful');
+  Session.set('c_upload.upload_failed');*/
 }
 Template.attach_modal.helpers({
   "stuff":function(){
     var user = Meteor.user();
-    return {name:user.profile.name,_id:user._id}
+    return {name:user.profile.name, _id:user._id}
+  },
+  "saved_images":function(){
+    return CloudImages.find({},{sort:{"created_at":-1}});
   },
   "image_list":function(){
     return Session.get("image_list");
@@ -56,6 +62,7 @@ Template.attach_modal.events({
     Modals.findOne().callback({result:"ok",url: this.url, type: "ImageUpload"}, Modals.findOne()._id);
   },
   "click .delete":function(){
+    CloudImages.remove(this._id);
     Meteor.call("cloudinary_delete",this.public_id,function(e,r){
       if(!e){
         console.log(r);

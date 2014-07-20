@@ -7,7 +7,8 @@
  */
 Meteor.methods({
   save_url:function(response){
-    console.log('Add '+response.upload_data+' to the id of '+response.context);
+    CloudImages.insert(response.upload_data);
+    console.log('Add '+response.upload_data.url+' to the id of '+response.context);
     //return response;
   }
 });

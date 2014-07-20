@@ -20,11 +20,11 @@
       "select2-bootstrap3-css": {},
       "user-status": {},
       "ms-seo": {},
-      "cloudinary": {},
       "kadira": {},
       "sitemaps": {},
       "rssfeed": {},
-      "select2": {}
+      "select2": {},
+      "cloudinary": {}
     },
     "packages": {
       "iron-router": {
@@ -79,8 +79,8 @@
       },
       "bootboxjs": {
         "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
-        "tag": "v4.2.0",
-        "commit": "2b7d18ad028d9e7b37238ecf2a8a7970735cebd1"
+        "tag": "v4.2.1-master.1",
+        "commit": "c125969c1f3aef30e2a2ff20252bd3b2e4014b2f"
       },
       "masonrify": {
         "git": "https://github.com/voodoohop/meteor-masonrify.git",
@@ -117,15 +117,10 @@
         "tag": "v0.2.6",
         "commit": "1a4ba31a1f6f29009d3941e9dd883829ff4e4b8b"
       },
-      "cloudinary": {
-        "git": "https://github.com/Lepozepo/cloudinary.git",
-        "tag": "v2.0.0",
-        "commit": "b415d480afd8af90c52bd1b6b7d594d1196abc0d"
-      },
       "kadira": {
         "git": "https://github.com/meteorhacks/kadira.git",
-        "tag": "v2.4.8",
-        "commit": "5f4437af113537def34484c7b7a2a5e4d60847a9"
+        "tag": "v2.4.9",
+        "commit": "8bb902989917522822a0897117672ae858c23427"
       },
       "sitemaps": {
         "git": "https://github.com/gadicohen/meteor-sitemaps.git",
@@ -142,6 +137,11 @@
         "tag": "v3.4.5",
         "commit": "4a8d05582b949a14f0ee217c185166abbf112822"
       },
+      "cloudinary": {
+        "git": "https://github.com/Lepozepo/cloudinary.git",
+        "tag": "v2.0.0",
+        "commit": "b415d480afd8af90c52bd1b6b7d594d1196abc0d"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
@@ -152,15 +152,15 @@
         "tag": "v0.2.1",
         "commit": "fa4abd511f4e32a3c5d22795ce2c1e8369428fac"
       },
-      "streams": {
-        "git": "https://github.com/arunoda/meteor-streams.git",
-        "tag": "v0.1.17",
-        "commit": "9fcbbc9b7bf542827babc92089c19e730892a22f"
-      },
       "robots-txt": {
         "git": "https://github.com/gadicohen/meteor-robots.txt.git",
         "tag": "v0.0.8",
         "commit": "dc1be195b8c0cf7d6263235484218911e1bf27d9"
+      },
+      "streams": {
+        "git": "https://github.com/arunoda/meteor-streams.git",
+        "tag": "v0.1.17",
+        "commit": "9fcbbc9b7bf542827babc92089c19e730892a22f"
       }
     }
   }

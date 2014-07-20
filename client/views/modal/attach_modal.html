@@ -10,43 +10,68 @@
           <br>
           <div class="panel">
             <ul id="myTab1" class="nav nav-tabs nav-justified">
-              <!--<li class="active"><a href="#ImageUpload" data-toggle="tab"><i class="fa fa-picture-o"></i> Upload Image</a></li>-->
+              <li class="active"><a href="#ImageUpload" data-toggle="tab"><i class="fa fa-picture-o"></i> Upload Image</a></li>
               <li ><a href="#ImageUrl" data-toggle="tab"><i class="fa fa-picture-o"></i> URL Image</a></li>
               <li ><a href="#YoutubeUrl" data-toggle="tab"><i class="fa fa-youtube-square"></i> Youtube</a></li>
             </ul>
 
             <div id="myTabContent" class="tab-content">
-              <!--<div class="tab-pane active fade in" id="ImageUpload">
+              <div class="tab-pane active fade in" id="ImageUpload">
+
                 <div class="iamge-upload">
                   <h5><i class="fa fa-upload"></i> 직접 업로드</h5>
+
                   {{#with stuff}}
-                    {{#cloudinary_upload callback="save_url"}}
+
+                    {{#c_upload_stream callback="save_url"}}
                     <span class="btn btn-success fileinput-button">
                         <i class="fa fa-picture-o"></i>
                         <span>이미지 선택</span>
                         <input type="file">
                     </span>
-                      <br>
-                      {{#if c_upload_successful}}
+                    <br>
+                      <!--{{#if c_upload_successful}}
                           <img class="previewImage" src="{{c_upload_successful.url}}">
-                      {{/if}}
-                    {{#if c_upload_failed}}
+                      {{/if}}-->
+
+                    <!--{{#if c_upload_failed}}
                     <div class="text-center">
                       <p class="text-danger">업로드 실패.</p>
                       <p class="text-danger">다시 시도해주세요.</p>
                     </div>
-                    {{/if}}
-                    {{/cloudinary_upload}}
+                    {{/if}}-->
+                    <!--<img class="previewImage" src="{{secure_url}}">-->
+                    {{/c_upload_stream}}
                   {{/with}}
+                  {{#each c.uploading_images}}
+                  <p>{{percent_uploaded}}</p>
+                  {{/each}}
+
+                  <!--<h3>Saved images</h3>
+                  {{#each saved_images}}
+                  <br>
+                  <img class="previewImage" src="{{c.url}}">
+                  <img class="previewImage" src="{{secure_url}}">
+                  <img class="previewImage" src="{{c.url public_id format=format effect='blur:300' angle=10}}">
+                  <button class="delete">Delete</button>
+                  {{/each}}-->
+
+
                 </div>
                 <br>
+
+                <!--{{#each c.uploading_images}}
+                <p>{{percent_uploaded}}</p>
+                <p>{{total_uploaded}}</p>
+                {{/each}}-->
+
                 <div class="image-list">
-                  <h5><i class="fa fa-list"></i> 최근 업로드</h5>
+                  <h5><i class="fa fa-list"></i> 최근 저장</h5>
                   <div class="row">
-                    {{#each image_list}}
+                    {{#each saved_images}}
                     <div class="col-xs-2 image-wrapper">
                       <div class="image-item">
-                        <img  src="{{c_url public_id format=format width='100' height='100' crop='thumb'}}">
+                        <img  src="{{c.url public_id format=format width='100' height='100' crop='thumb'}}">
                       </div>
                     </div>
                     {{/each}}
@@ -54,8 +79,8 @@
                 </div>
 
 
-              </div>-->
-              <div class="tab-pane active fade in" id="ImageUrl">
+              </div>
+              <div class="tab-pane  fade in" id="ImageUrl">
                 <input type="url" class="form-control" id="ImageUrlInput" placeholder="이미지 URL">
               </div>
               <div class="tab-pane fade in" id="YoutubeUrl">

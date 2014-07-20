@@ -27,7 +27,9 @@ Meteor.publish('categories', function() {
 Meteor.publish("chats", function() {
   return Chats.find();
 });
-
+Meteor.publish("cloudImages", function() {
+  return CloudImages.find();
+});
 //Meteor.publish("userStatus", function() {
 //  return Meteor.users.find({ "status.online": true });
 //});
