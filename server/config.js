@@ -26,12 +26,13 @@ WebApp.connectHandlers.use(function(req, res, next) {
    });
    res.end();*/
   console.log(req.headers.host);
-  if (req.headers.host.indexOf('http://underdogg.co.kr').length > 0) {
+  if (req.headers.host.indexOf('www.underdogg.co.kr').length > 0) {
+    next();
+  }else{
     res.writeHead(307, {
       'Location': 'http://www.underdogg.co.kr' +req.url
     });
     res.end();
-  }else{
-    next();
+
   }
 });
