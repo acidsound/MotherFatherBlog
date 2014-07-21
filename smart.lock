@@ -9,14 +9,6 @@
       "accounts-ui-bootstrap-3": {},
       "moment": {},
       "iron-router-progress": {},
-      "medium-editor-updated": {},
-      "jquery-masonry": {},
-      "isotope-repackaged": {},
-      "bootboxjs": {},
-      "masonrify": {},
-      "medium-editor": {},
-      "method-pagination": {},
-      "pages": {},
       "select2-bootstrap3-css": {},
       "user-status": {},
       "ms-seo": {},
@@ -61,46 +53,6 @@
         "git": "https://github.com/Multiply/iron-router-progress.git",
         "tag": "v0.4.1",
         "commit": "496fcda9a6ec352b4733725f60c6f280250c3541"
-      },
-      "medium-editor-updated": {
-        "git": "https://github.com/donflopez/meteor-medium-editor.git",
-        "tag": "v1.2.0",
-        "commit": "6d2f34b560b2682341aae23fc78251ccea504cd8"
-      },
-      "jquery-masonry": {
-        "git": "https://github.com/waltyuyu/meteor-jquery-masonry.git",
-        "tag": "v0.1.0",
-        "commit": "ec514fa4440f3cd77f5f567f25be27dc38ab57fa"
-      },
-      "isotope-repackaged": {
-        "git": "https://github.com/mangasocial/meteor-isotope-repackaged.git",
-        "tag": "v0.0.2",
-        "commit": "b94e1f6b12237f46ef59a0f0477453e96adcd42f"
-      },
-      "bootboxjs": {
-        "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
-        "tag": "v4.2.1-master.1",
-        "commit": "c125969c1f3aef30e2a2ff20252bd3b2e4014b2f"
-      },
-      "masonrify": {
-        "git": "https://github.com/voodoohop/meteor-masonrify.git",
-        "tag": "v0.0.3",
-        "commit": "e7a5e71a4193bd68a7bae4c250931147659b5dcb"
-      },
-      "medium-editor": {
-        "git": "https://github.com/DenisGorbachev/medium-editor.git",
-        "tag": "v1.1.2",
-        "commit": "46bc982ba7824b4ecdb67b13ff6c54f9e96963cd"
-      },
-      "method-pagination": {
-        "git": "https://github.com/Zaku-eu/meteor-method-pagination.git",
-        "tag": "v0.6.0",
-        "commit": "1e58509e893beb2b568b90d63896d4cbeb0ee11b"
-      },
-      "pages": {
-        "git": "https://github.com/alethes/meteor-pages.git",
-        "tag": "v1.0.20",
-        "commit": "717cbac89f02d2f1bb160b24c997050ce2dee45e"
       },
       "select2-bootstrap3-css": {
         "git": "https://github.com/esperadomedia/meteor-select2-bootstrap3-css.git",
