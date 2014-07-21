@@ -20,21 +20,20 @@
 </template>
 
 <template name="postItem">
-  <div class="post" id="postItem">
+  <div class="post" id="postItem" >
     <div class="jumbotron">
-      <div class="jumbotron-contents">
+      <div class="jumbotron-contents" itemscope itemtype="http://schema.org/BlogPosting">
         <span class="badge badge-default">{{category.body}}</span>
-        <h1 class="content-title">
-
-          <a class="none_style" href="http://www.underdogg.co.kr/posts/{{_id}}">{{title}}</a>
+        <h1 class="content-title" itemprop="name">
+          <a class="none_style" rel="bookmark" itemprop="url" href="http://www.underdogg.co.kr/posts/{{_id}}">{{title}}</a>
         </h1>
 
-        <p class="lead">by {{author.name}}</p>
+        <p class="lead" rel="author" itemprop="author">by {{author.name}}</p>
         <hr class="">
 
         <div class="row">
           <div class="col-md-6">
-            <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}}
+            <span class="glyphicon glyphicon-time" title="{{submittedMoment}}" itemprop="datePublished"></span> Posted on {{submittedMoment}}
           </div>
           <div class="col-md-6">
             <span class="glyphicon glyphicon-comment"></span> {{pluralize commentsCount 'comment'}}  &nbsp;
@@ -62,7 +61,7 @@
         </p>-->
         <hr class="">
 
-        <div class="content-wrapper">
+        <div class="content-wrapper" itemprop="articleBody">
           {{{dynamicConent}}}
         </div>
         <hr class="">
