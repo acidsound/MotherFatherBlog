@@ -6,12 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 sitemaps.add('/posts_sitemap.xml', function() {
-  var out = [], pages = Posts.find().fetch();
+  var out = [], pages = Posts.find({},{sort:{submitted:-1}}).fetch();
   _.each(pages, function(page) {
-    out.unshift({
+    out.push({
       page: '/posts/'+page._id,
       lastmod: page.submitted,
-      changefreq : "daily"
+      changefreq : "always"
     });
   });
   return out;
