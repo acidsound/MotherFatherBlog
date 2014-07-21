@@ -10,6 +10,8 @@ Cloudinary.config({
   api_key: '237359571816186',
   api_secret: 'GQmXkfyMXEK5x0b0g3gfgeb8EUU'
 });
+
+
 // Redirect to a random URL, better handled client-side
 //underdogg.co.kr => www.underdogg.co.kr로 리다이렉팅
 WebApp.connectHandlers.use(function(req, res, next) {
@@ -23,7 +25,7 @@ WebApp.connectHandlers.use(function(req, res, next) {
    'Location': 'http://underdogg.co.kr' +req.originalUrl
    });
    res.end();*/
-
+  console.log(req.headers.host);
   if (req.headers.host.indexOf('http://underdogg.co.kr').length > 0) {
     res.writeHead(307, {
       'Location': 'http://www.underdogg.co.kr' +req.url
