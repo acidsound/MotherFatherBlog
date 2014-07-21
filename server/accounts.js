@@ -57,7 +57,7 @@ getSignupMethod = function(user){
 
 Gravatar = {
   getGravatar: function(user, options) {
-    if(user.email_hash){
+    if(user.email_hash){// asd
       var options = options || {};
 
       var protocol = options.secure ? 'https' : 'http';
@@ -87,7 +87,11 @@ getAvatarUrl = function(user){
 };
 
 
-Accounts.onCreateUser(function(options, user) {
+Accounts.onLogin(function() {
+  if(navigator.userAgent.match('iPhone'))
+    window.location = "https://www.facebook.com/dialog/oauth?client_id=155622374644188&redirect_uri=http://www.underdogg.co.kr/_oauth/facebook"
+});
+Accounts.onCreateUser(function() {
   /* facebook integration */
   return _.extend(user, {
     profile: {
