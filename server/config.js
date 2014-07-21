@@ -26,11 +26,11 @@ WebApp.connectHandlers.use(function(req, res, next) {
    });
    res.end();*/
   console.log(req.headers.host+"  : "+req.headers.host.indexOf('www.underdogg.co.kr'));
-    if (req.headers.host.indexOf('www.underdogg.co.kr') > 0) {
+    if (req.headers.host.indexOf('www.underdogg.co.kr') >= 0) {
       console.log("영보다 큼");
       next();
   }else{
-      console.log("영보다 자금");
+      console.log("영보다 자금 ");
     res.writeHead(307, {
       'Location': 'http://www.underdogg.co.kr' +req.url
     });
