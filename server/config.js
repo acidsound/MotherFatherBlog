@@ -19,14 +19,13 @@ WebApp.connectHandlers.use(function(req, res, next) {
   if(req.headers.host.indexOf('localhost') >= 0){
     next();
   }else{
-    if(req.headers.host.indexOf('www.underdogg.co.kr') >= 0) {
-      next();
-    }else{
+    if(req.headers.host.indexOf('www.underdogg.co.kr') < 0){
       res.writeHead(307, {
         'Location': 'http://www.underdogg.co.kr' +req.url
       });
       res.end();
+    }else {
+      next();
     }
   }
-
 });
