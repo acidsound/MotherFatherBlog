@@ -25,10 +25,12 @@ WebApp.connectHandlers.use(function(req, res, next) {
    'Location': 'http://underdogg.co.kr' +req.originalUrl
    });
    res.end();*/
-  console.log(req.headers.host);
-  if (req.headers.host.indexOf('www.underdogg.co.kr') > 0) {
+  console.log(req.headers.host+"  : "+req.headers.host.indexOf('www.underdogg.co.kr'));
+    if (req.headers.host.indexOf('www.underdogg.co.kr') > 0) {
+      console.log("영보다 큼");
       next();
   }else{
+      console.log("영보다 자금");
     res.writeHead(307, {
       'Location': 'http://www.underdogg.co.kr' +req.url
     });
