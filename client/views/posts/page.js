@@ -41,7 +41,7 @@ Template.postItem.helpers({
     var text = $($("<div></div>").html(this.content)).text()||"";
     $('html').find('meta[name=description]').attr('content', text.slice(0,100));
     $('html').find('meta[name=title]').attr('content', this.title);
-    $('html').find('meta[name=url]').attr('content', "http://underdogg.co.kr"+Router.current().path);
+    $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr"+Router.current().path);
     $('html').find('meta[name=image]').attr('content',img);
     $('html').find('meta[name=author]').attr('content',this.author.name);
     $('html').find('meta[name=keywords]').attr('content',this.category.body + ","+this.keywords);
