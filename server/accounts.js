@@ -87,10 +87,10 @@ getAvatarUrl = function(user){
 };
 
 
-Accounts.onLogin(function() {
+/*Accounts.onLogin(function() {
   if(navigator.userAgent.match('iPhone'))
     window.location = "https://www.facebook.com/dialog/oauth?client_id=155622374644188&redirect_uri=http://www.underdogg.co.kr/_oauth/facebook"
-});
+});*/
 Accounts.onCreateUser(function() {
   /* facebook integration */
   return _.extend(user, {
