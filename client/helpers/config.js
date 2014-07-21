@@ -19,5 +19,3 @@ Deps.autorun(function() {
     return this.stop();
   } catch (_error) {}
 });
-
-
