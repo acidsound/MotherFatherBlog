@@ -10,7 +10,7 @@ RssFeed.publish('rssfeed_posts', function(query) {
   var self = this;
 
   self.setValue('title', self.cdata('UnderDogggggggg'));
-  self.setValue('description', self.cdata('요리사가 자기 저녁밥 만들어 먹고 목수가 자기 집 신발장 짜고 치과 의사가 자기 이빨 신경치료 하듯 저도 제 홈페이지는 방구석에다 직접 구축을...목표'));
+  self.setValue('description', self.cdata('요리사가 자기 저녁밥 만들어 먹고 목수가 자기 집 신발장 짜고 치과 의사가 자기 이빨 신경치료 하듯 나도 내 홈페이지는 방구석에다 직접 구축을...목표로...'));
   self.setValue('feed_url', 'http://www.underdogg.co.kr/rss/rssfeed_posts');
   self.setValue('site_url', 'http://www.underdogg.co.kr');
   self.setValue('link', 'http://www.underdogg.co.kr');
