@@ -27,7 +27,7 @@ RssFeed.publish('rssfeed_posts', function(query) {
   Posts.find({}).forEach(function(doc) {
     self.addItem({
       title: doc.title,
-     // description: doc.content,
+      description: doc.content,
       url: "http://www.underdogg.co.kr/posts/" +doc._id,
       link: "http://www.underdogg.co.kr/posts/" +doc._id,
       guid: doc._id, // optional - defaults to url
