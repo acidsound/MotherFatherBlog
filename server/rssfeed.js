@@ -5,7 +5,8 @@
  * Time: 오후 2:11
  * To change this template use File | Settings | File Templates.
  */
-RssFeed.publish('rssfeed_posts', function(query) {
+
+RssFeed.publish('rssfeed_posts.xml', function(query) {
   var self = this;
 
   self.setValue('title', self.cdata('UnderDogggggggg'));
