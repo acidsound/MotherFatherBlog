@@ -23,11 +23,15 @@ RssFeed.publish('rssfeed_posts', function(query) {
   self.setValue('pubDate', new Date());
   self.setValue('ttl', 60);
   // managingEditor, webMaster, language, docs, generator
-
+  function stripHTMLtag(string) {
+    var objStrip = new RegExp();
+    objStrip = /[<][^>]*[>]/gi;
+    return string.replace(objStrip, "");
+  }
   Posts.find({}).forEach(function(doc) {
     self.addItem({
       title: doc.title,
-      description: doc.content,
+      description: stripHTMLtag(doc.content||"").slice(0,130) ,
       url: "http://www.underdogg.co.kr/posts/" +doc._id,
       link: "http://www.underdogg.co.kr/posts/" +doc._id,
       guid: doc._id, // optional - defaults to url
