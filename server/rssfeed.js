@@ -28,7 +28,7 @@ RssFeed.publish('rssfeed_posts', function(query) {
     objStrip = /[<][^>]*[>]/gi;
     return string.replace(objStrip, "");
   }
-  Posts.find({}).forEach(function(doc) {
+  Posts.find({},{sort:{submitted:-1}}).forEach(function(doc) {
     self.addItem({
       title: doc.title,
       description: self.cdata(doc.content),
