@@ -5,169 +5,378 @@
         <description>
             <![CDATA[요리사가 자기 저녁밥 만들어 먹고 목수가 자기 집 신발장 짜고 치과 의사가 자기 이빨 신경치료 하듯 저도 제 홈페이지는 방구석에다 직접 구축을...목표]]></description>
         <link>http://www.underdogg.co.kr</link>
-        <lastBuildDate>Tue, 22 Jul 2014 06:08:32 GMT</lastBuildDate>
-        <pubDate>Tue, 22 Jul 2014 06:08:32 GMT</pubDate>
+        <lastBuildDate>Tue, 22 Jul 2014 06:18:55 GMT</lastBuildDate>
+        <pubDate>Tue, 22 Jul 2014 06:18:55 GMT</pubDate>
         <ttl>60</ttl>
         <generator>Meteor RSS Feed</generator>
         <item>
-            <title>세번째</title>
-            <url>http://www.underdogg.co.kr/posts/mGqpGLqRvDuxc7Xqn</url>
-            <link>http://www.underdogg.co.kr/posts/mGqpGLqRvDuxc7Xqn</link>
-            <guid>mGqpGLqRvDuxc7Xqn</guid>
+            <title>armv7l mongodb(2.1.1) cross-compile</title>
+            <description>좀 더 최신버전으로 설치하고 싶긴한데&nbsp;딱히 필요를 못느끼고 있음 -_ -$sudo apt-get install build-essential
+                libboost-filesystem-dev libboost-program-option
+            </description>
+            <url>http://www.underdogg.co.kr/posts/JKS3xJ5mP4sjJ779v</url>
+            <link>http://www.underdogg.co.kr/posts/JKS3xJ5mP4sjJ779v</link>
+            <guid>JKS3xJ5mP4sjJ779v</guid>
             <author>HoSung Lee</author>
-            <date>1401333525102</date>
+            <date>1401436141234</date>
         </item>
         <item>
-            <title>첫번째 싸무리망니마입지다민아ㅣㅏㅂㅈㄷ입지다민아ㅣㅏㅂㅈㄷ입지다민아ㅣㅏㅂㅈㄷ</title>
-            <url>http://www.underdogg.co.kr/posts/Q3BXswL8MxWb9Ntzi</url>
-            <link>http://www.underdogg.co.kr/posts/Q3BXswL8MxWb9Ntzi</link>
-            <guid>Q3BXswL8MxWb9Ntzi</guid>
+            <title>armv7l meteorjs(v0.8) cross-compile</title>
+            <description>DB를 하도 날려 먹어서 계속 작성하는게 짜증이 나지만&nbsp;(점점 간결해지고 있다-_ -)다시 정리해보자면$vim ./meteor$git clone
+                https://github.com/meteor/meteor.git빌드 전 문서
+            </description>
+            <url>http://www.underdogg.co.kr/posts/P4emCw4X6wuxLtcRb</url>
+            <link>http://www.underdogg.co.kr/posts/P4emCw4X6wuxLtcRb</link>
+            <guid>P4emCw4X6wuxLtcRb</guid>
             <author>HoSung Lee</author>
-            <date>1401333488457</date>
+            <date>1401292478034</date>
         </item>
         <item>
-            <title>testtest</title>
-            <url>http://www.underdogg.co.kr/posts/gxqSLYhxpeCWnWAzj</url>
-            <link>http://www.underdogg.co.kr/posts/gxqSLYhxpeCWnWAzj</link>
-            <guid>gxqSLYhxpeCWnWAzj</guid>
-            <author>HoSung Lee</author>
-            <date>1401340433546</date>
-        </item>
-        <item>
-            <title>tqweqweqwe</title>
-            <url>http://www.underdogg.co.kr/posts/9WZor3F7PKB75SJYz</url>
-            <link>http://www.underdogg.co.kr/posts/9WZor3F7PKB75SJYz</link>
-            <guid>9WZor3F7PKB75SJYz</guid>
-            <author>HoSung Lee</author>
-            <date>1401340446710</date>
-        </item>
-        <item>
-            <title>test</title>
-            <url>http://www.underdogg.co.kr/posts/EomDYRETBygGpvxHp</url>
-            <link>http://www.underdogg.co.kr/posts/EomDYRETBygGpvxHp</link>
-            <guid>EomDYRETBygGpvxHp</guid>
-            <author>HoSung Lee</author>
-            <date>1401414440611</date>
-        </item>
-        <item>
-            <title>test</title>
-            <url>http://www.underdogg.co.kr/posts/QNcv3ngFrBXSBnYi2</url>
-            <link>http://www.underdogg.co.kr/posts/QNcv3ngFrBXSBnYi2</link>
-            <guid>QNcv3ngFrBXSBnYi2</guid>
-            <author>HoSung Lee</author>
-            <date>1401414527248</date>
-        </item>
-        <item>
-            <title>qweqwetesttesxt</title>
-            <url>http://www.underdogg.co.kr/posts/HzXHX6iKY7QAuPyYc</url>
-            <link>http://www.underdogg.co.kr/posts/HzXHX6iKY7QAuPyYc</link>
-            <guid>HzXHX6iKY7QAuPyYc</guid>
-            <author>HoSung Lee</author>
-            <date>1401414575661</date>
-        </item>
-        <item>
-            <title>qweqweqweqwetest</title>
-            <url>http://www.underdogg.co.kr/posts/FfJSmwsjk4E4mSewZ</url>
-            <link>http://www.underdogg.co.kr/posts/FfJSmwsjk4E4mSewZ</link>
-            <guid>FfJSmwsjk4E4mSewZ</guid>
-            <author>HoSung Lee</author>
-            <date>1401414655563</date>
-        </item>
-        <item>
-            <title>tqweqweqwe</title>
-            <url>http://www.underdogg.co.kr/posts/KrhXM5PXewLj2HT5R</url>
-            <link>http://www.underdogg.co.kr/posts/KrhXM5PXewLj2HT5R</link>
-            <guid>KrhXM5PXewLj2HT5R</guid>
-            <author>HoSung Lee</author>
-            <date>1401414714939</date>
-        </item>
-        <item>
-            <title>ㅂㅈㄷㅂㅈㄷㅂㅈㄷ</title>
-            <url>http://www.underdogg.co.kr/posts/WvhTe7RMnJELWjE27</url>
-            <link>http://www.underdogg.co.kr/posts/WvhTe7RMnJELWjE27</link>
-            <guid>WvhTe7RMnJELWjE27</guid>
-            <author>HoSung Lee</author>
-            <date>1401415057811</date>
-        </item>
-        <item>
-            <title>test</title>
-            <url>http://www.underdogg.co.kr/posts/gnkhtCbgxx4ky6pPx</url>
-            <link>http://www.underdogg.co.kr/posts/gnkhtCbgxx4ky6pPx</link>
-            <guid>gnkhtCbgxx4ky6pPx</guid>
-            <author>HoSung Lee</author>
-            <date>1401437274818</date>
-        </item>
-        <item>
-            <title>test</title>
-            <url>http://www.underdogg.co.kr/posts/HwRCWK74Qq5Y2NkKv</url>
-            <link>http://www.underdogg.co.kr/posts/HwRCWK74Qq5Y2NkKv</link>
-            <guid>HwRCWK74Qq5Y2NkKv</guid>
+            <title>meteor에서 모달 팝업 구현하기</title>
+            <description>어제 썼다가 날려 먹었지만 한가하니까 다시 정리를 하자.single page application에서 자주 사용되는 ui인데기존 진땡 팝업(window.alert)과는
+                다르게 페이지 내 div에 z-index 이빠이 주는 방법으로 구
+            </description>
+            <url>http://www.underdogg.co.kr/posts/SrNoFdvXKRoDiiKHf</url>
+            <link>http://www.underdogg.co.kr/posts/SrNoFdvXKRoDiiKHf</link>
+            <guid>SrNoFdvXKRoDiiKHf</guid>
             <author>이호성</author>
-            <date>1401439252371</date>
+            <date>1401609495861</date>
         </item>
         <item>
-            <title>ㅗ허ㅗ허허ㅗ허ㅗ허ㅗ허ㅗ</title>
-            <url>http://www.underdogg.co.kr/posts/2fHSTdAz9ZDezpRRy</url>
-            <link>http://www.underdogg.co.kr/posts/2fHSTdAz9ZDezpRRy</link>
-            <guid>2fHSTdAz9ZDezpRRy</guid>
+            <title>armv7l nodejs(v0.11.14) cross-compile</title>
+            <description>$git clone&nbsp;https://github.com/joyent/node$cd node$&nbsp;./configure --without-snapshot
+                --dest-cpu=arm --dest-os=linux$make -j
+            </description>
+            <url>http://www.underdogg.co.kr/posts/TSTB8sC4iaM46bA7G</url>
+            <link>http://www.underdogg.co.kr/posts/TSTB8sC4iaM46bA7G</link>
+            <guid>TSTB8sC4iaM46bA7G</guid>
             <author>HoSung Lee</author>
-            <date>1401504518421</date>
+            <date>1401440268207</date>
         </item>
         <item>
-            <title>ffffdddd</title>
-            <url>http://www.underdogg.co.kr/posts/WNNzeJLYo2HSosCTo</url>
-            <link>http://www.underdogg.co.kr/posts/WNNzeJLYo2HSosCTo</link>
-            <guid>WNNzeJLYo2HSosCTo</guid>
+            <title>이미지 업로드 기능이 추가되었다.</title>
+            <description>이미지는 arm 서버가 아니라&nbsp;cloudinary로 대체한다.8G 내장 메모리에 대한 용량걱정은 줄겠지...첨부 &gt; 이미지 업로드 &gt; 직접 업로드 or
+                최근 이미지 선택 &gt; 확인&nbsp;&nbsp;아...아
+            </description>
+            <url>http://www.underdogg.co.kr/posts/WnbWexfNsCiMRR9Sx</url>
+            <link>http://www.underdogg.co.kr/posts/WnbWexfNsCiMRR9Sx</link>
+            <guid>WnbWexfNsCiMRR9Sx</guid>
             <author>HoSung Lee</author>
-            <date>1401507077573</date>
+            <date>1401682522281</date>
         </item>
         <item>
-            <title>ㅅㄷㄴㅁㅅ</title>
-            <url>http://www.underdogg.co.kr/posts/ophRDBx2v5W4dSyd8</url>
-            <link>http://www.underdogg.co.kr/posts/ophRDBx2v5W4dSyd8</link>
-            <guid>ophRDBx2v5W4dSyd8</guid>
-            <author>HoSung Lee</author>
-            <date>1401691932284</date>
+            <title>최고의 에디터를 찾아서...</title>
+            <description>Medium의 에디터를 (내 기준에서) 현존 최강의 에디터라고 생각했는데...&nbsp;이런 inline 에디터들은 예전부터 쭉 있어왔던거 같다.&nbsp;Hallo,
+                Aloha 등등.&nbsp;그런데 이 둘은 너무 못생겼다.Medi
+            </description>
+            <url>http://www.underdogg.co.kr/posts/Y2wKXE5iE6LJsRcNj</url>
+            <link>http://www.underdogg.co.kr/posts/Y2wKXE5iE6LJsRcNj</link>
+            <guid>Y2wKXE5iE6LJsRcNj</guid>
+            <author>이호성</author>
+            <date>1401756428956</date>
         </item>
         <item>
-            <title>asd</title>
-            <url>http://www.underdogg.co.kr/posts/7ANrthkJQu2eS3HBK</url>
-            <link>http://www.underdogg.co.kr/posts/7ANrthkJQu2eS3HBK</link>
-            <guid>7ANrthkJQu2eS3HBK</guid>
+            <title>todo</title>
+            <description>요 블로그에서 처리해야 할 것들검색카테고리 혹은 태그인기순구글, 트위터 연동&nbsp;로컬 이미지 업로드에디터는 아직 42%정도 부족하다.페이지 변환 시 이전 페이지에서
+                보던 위치값이 그대로 적용되는 문제. 더 큰 문제는 scroll
+            </description>
+            <url>http://www.underdogg.co.kr/posts/a9CdcTmYNPKABn9hd</url>
+            <link>http://www.underdogg.co.kr/posts/a9CdcTmYNPKABn9hd</link>
+            <guid>a9CdcTmYNPKABn9hd</guid>
             <author>HoSung Lee</author>
-            <date>1401692020336</date>
+            <date>1401293922994</date>
         </item>
         <item>
-            <title>qweqwe3</title>
-            <url>http://www.underdogg.co.kr/posts/NAD7GPpoBHX8tkTqJ</url>
-            <link>http://www.underdogg.co.kr/posts/NAD7GPpoBHX8tkTqJ</link>
-            <guid>NAD7GPpoBHX8tkTqJ</guid>
+            <title>meteor error - Unexpected mongo exit code 100. Restarting.</title>
+            <description>
+
+
+                Ok, everything's ready. Here comes Meteor!=&gt; Running Meteor from a checkout -- overrides project
+                version (0.8.1.2)[[[[[
+            </description>
+            <url>http://www.underdogg.co.kr/posts/p9pEJDQ5o4SRQfkMs</url>
+            <link>http://www.underdogg.co.kr/posts/p9pEJDQ5o4SRQfkMs</link>
+            <guid>p9pEJDQ5o4SRQfkMs</guid>
             <author>HoSung Lee</author>
-            <date>1401697772253</date>
+            <date>1401275674846</date>
         </item>
         <item>
-            <title>qweqweqwe</title>
-            <url>http://www.underdogg.co.kr/posts/iZ8aYRpQt8Yijj2nf</url>
-            <link>http://www.underdogg.co.kr/posts/iZ8aYRpQt8Yijj2nf</link>
-            <guid>iZ8aYRpQt8Yijj2nf</guid>
+            <title>tmux 가벼운 사용법</title>
+            <description>
+
+
+                nohup 비스므리하게 백그라운드에서 뭔가 돌려줘야 할때&nbsp;tmux의 주된 목적은 그것이 아닌거 같지만 아뭍느 유용하다!!$apt-get install tmux
+                $tmux
+                $ROOT_URL=http://under
+            </description>
+            <url>http://www.underdogg.co.kr/posts/qv7BrdM7zKozL8gZm</url>
+            <link>http://www.underdogg.co.kr/posts/qv7BrdM7zKozL8gZm</link>
+            <guid>qv7BrdM7zKozL8gZm</guid>
             <author>HoSung Lee</author>
-            <date>1405470064097</date>
+            <date>1401275720042</date>
         </item>
         <item>
-            <title>네모론라</title>
-            <url>http://www.underdogg.co.kr/posts/KPhrinjqCoZwLQvEW</url>
-            <link>http://www.underdogg.co.kr/posts/KPhrinjqCoZwLQvEW</link>
-            <guid>KPhrinjqCoZwLQvEW</guid>
-            <author>HoSung Lee</author>
-            <date>1405581228568</date>
+            <title>[건대입구 뒷골목] 동북풍미반점</title>
+            <description>
+                중국어를 잘 모르고 한자도 잘 모르고 번역된 한글을 봐도 잘 모르겠고 "고기 육"이나 "양 양"자가 들어있으면 그냥 시키는거다.씨앗이 덕지덕지 붙어있어 첫인상은 썩 좋지 않았다.무슨
+                바퀴벌레 튀김, 애벌레 구더
+            </description>
+            <url>http://www.underdogg.co.kr/posts/v4HShTJwzxTQpLCQp</url>
+            <link>http://www.underdogg.co.kr/posts/v4HShTJwzxTQpLCQp</link>
+            <guid>v4HShTJwzxTQpLCQp</guid>
+            <author>이호성</author>
+            <date>1401410962298</date>
         </item>
         <item>
-            <title>qweqwe</title>
-            <url>http://www.underdogg.co.kr/posts/mAYYAiuB3YgqGxMTo</url>
-            <link>http://www.underdogg.co.kr/posts/mAYYAiuB3YgqGxMTo</link>
-            <guid>mAYYAiuB3YgqGxMTo</guid>
+            <title>집에서 원두 정도는 갈아마셔 줘야지</title>
+            <description>방에서 뒹굴뒹굴 거리며 음악을 듣다보니 문득 커피가 너무너무 마시고 싶다.찬장 속 커피믹스는 이미 자취를 감춘지 오래되었고 씼고 옷입고 커피숍을 가자니 너무 귀찮다.문득&nbsp;수년전
+                해외여행을 다녀오신 이모님께서 선물로 사오신 원
+            </description>
+            <url>http://www.underdogg.co.kr/posts/xgNPH8oiMADmrPNAf</url>
+            <link>http://www.underdogg.co.kr/posts/xgNPH8oiMADmrPNAf</link>
+            <guid>xgNPH8oiMADmrPNAf</guid>
+            <author>이호성</author>
+            <date>1401606483939</date>
+        </item>
+        <item>
+            <title>Meteor - 프로젝트 내부DB 백업 및 복구</title>
+            <description>먼 여행이 예정되어 있다.여행 전에 어떻게든 radxa 보드에 80포트 제대로 적용해서 www.underdogg.co.kr 도메인을 씌우고 싶었으나...&nbsp;이차저차해서
+                실패로 끝났고&nbsp;무튼 여행기간 동안&nbsp;잠시
+            </description>
+            <url>http://www.underdogg.co.kr/posts/rFbrNkbigB2Wda3n4</url>
+            <link>http://www.underdogg.co.kr/posts/rFbrNkbigB2Wda3n4</link>
+            <guid>rFbrNkbigB2Wda3n4</guid>
+            <author>이호성</author>
+            <date>1401883951736</date>
+        </item>
+        <item>
+            <title>이 블로그는...</title>
+            <description>
+                radxa 보드&nbsp;ARM Cortex-A9 quad core @ 1.6Ghz2GB DDR3 @ 800Mhz8GB Nand Flash, Micro-SD SDXC up to
+                128GBMali400-mp4@5
+            </description>
+            <url>http://www.underdogg.co.kr/posts/NSMuuDkQYQ9QQcpvg</url>
+            <link>http://www.underdogg.co.kr/posts/NSMuuDkQYQ9QQcpvg</link>
+            <guid>NSMuuDkQYQ9QQcpvg</guid>
+            <author>이호성</author>
+            <date>1401891893542</date>
+        </item>
+        <item>
+            <title>발렌타인 21년 시음기</title>
+            <description>
+                얼마전 친구들이랑 한강에서 먹다 남은 발렌타인 21년을 챙겨왔다.술맛도 모르면서 막 먹는게 너무 아까웠다. 21살이면 성인인데...그래서 인터넷을 찾아봤는데 21살 짜리는 물을 약간
+                섞거나 쌩으로 입에 털고 혀
+            </description>
+            <url>http://www.underdogg.co.kr/posts/jw7kwMwnZ92cXmnSh</url>
+            <link>http://www.underdogg.co.kr/posts/jw7kwMwnZ92cXmnSh</link>
+            <guid>jw7kwMwnZ92cXmnSh</guid>
             <author>HoSung Lee</author>
-            <date>1404878875141</date>
+            <date>1401987281745</date>
+        </item>
+        <item>
+            <title>ScrollMenu</title>
+            <description>scrollview에서 menu를 등록할 경우 터치 우선순위 때문에 scroll이 되지 않는다.구글링을 해본 결과 menu의 touch 우선순위를 바꿔주면
+                된다는데....2.2의 내용들은 많으나... 3.0의 내용은 없었다.... 기
+            </description>
+            <url>http://www.underdogg.co.kr/posts/y3Kk9eP487HzCroJ6</url>
+            <link>http://www.underdogg.co.kr/posts/y3Kk9eP487HzCroJ6</link>
+            <guid>y3Kk9eP487HzCroJ6</guid>
+            <author>박정훈</author>
+            <date>1404198010273</date>
+        </item>
+        <item>
+            <title>MenuItemSprite 응용</title>
+            <description>MenuItemSprite을 쓰다보면 하나의 이미지를 가지고 뻘짓을 해보고싶을 때가 있다.아래의 소스는 그 뻘짓 내용이다.&nbsp;하나의 이미지를 가지고 해당 이미지를
+                클릭했을때 그 이미지가 1.1배 만큼 커지게 하고싶었다.하지만
+            </description>
+            <url>http://www.underdogg.co.kr/posts/Fgo7osaeLLHWskfhM</url>
+            <link>http://www.underdogg.co.kr/posts/Fgo7osaeLLHWskfhM</link>
+            <guid>Fgo7osaeLLHWskfhM</guid>
+            <author>박정훈</author>
+            <date>1404198832179</date>
+        </item>
+        <item>
+            <title>[우당탕탕 쿠바여행 1] 여행의 시작.</title>
+            <description>&nbsp;짜증나는 회사일.&nbsp;무료한 일상과 정체됨.&nbsp;세월호 참사 이후 스믈스믈 피어오르는 우울함 등. 복잡한 마음으로 잠을 청했으나 시간이 흐를수록
+                정신이 또렷해지고 심장이 크게 뛰기 시작했다. 월요일 아침,&nbs
+            </description>
+            <url>http://www.underdogg.co.kr/posts/MQTSHdRsqEy2HzBcT</url>
+            <link>http://www.underdogg.co.kr/posts/MQTSHdRsqEy2HzBcT</link>
+            <guid>MQTSHdRsqEy2HzBcT</guid>
+            <author>HoSung Lee</author>
+            <date>1404265476757</date>
+        </item>
+        <item>
+            <title>[우당탕탕 쿠바여행 3] 비냘레스. 시골의 이상</title>
+            <description>
+                비냘레스&nbsp;Viñales&nbsp;비아술 버스(외국인 여행자 전용버스)를 타고 비냘레스에 도착할 때 쯤 장대비가 쏟아지고 있었다.&nbsp;비냘레스는 마을이 작아 정식 버스
+                터미널이 없었다. 때문에 버스
+            </description>
+            <url>http://www.underdogg.co.kr/posts/M4s2kHPtYyGh7nYdH</url>
+            <link>http://www.underdogg.co.kr/posts/M4s2kHPtYyGh7nYdH</link>
+            <guid>M4s2kHPtYyGh7nYdH</guid>
+            <author>HoSung Lee</author>
+            <date>1404434979235</date>
+        </item>
+        <item>
+            <title>[Meteor]iron-router Template rendered callback이 이상하다. 내가 이상한가</title>
+            <description>http://www.underdogg.co.kr/posts/MQTSHdRsqEy2HzBcT&nbsp;이 페이지에서 Popular Posts 메뉴의 다른 링크를
+                클릭하여http://www.underdogg.co.kr/posts/SvQG
+            </description>
+            <url>http://www.underdogg.co.kr/posts/XAeCd79S3ZYAxABgb</url>
+            <link>http://www.underdogg.co.kr/posts/XAeCd79S3ZYAxABgb</link>
+            <guid>XAeCd79S3ZYAxABgb</guid>
+            <author>HoSung Lee</author>
+            <date>1405471545865</date>
+        </item>
+        <item>
+            <title>[meteor] SEO처리</title>
+            <description>
+                http://www.woorank.com&nbsp;들어가서 내 블로그 주소를 적어보면 나름 분석을 막 해준다. 결국엔 더 보려면 돈내라고 하는 서비스니까 너무 깊이 들어가지는 말자.&nbsp;빨간
+                error나
+            </description>
+            <url>http://www.underdogg.co.kr/posts/S8MQJy9hpvntbCrYX</url>
+            <link>http://www.underdogg.co.kr/posts/S8MQJy9hpvntbCrYX</link>
+            <guid>S8MQJy9hpvntbCrYX</guid>
+            <author>HoSung Lee</author>
+            <date>1405489084236</date>
+        </item>
+        <item>
+            <title>I'm just doing my job.</title>
+            <description>
+                BloodStone - Don't Stop (1978)I'm just doing my job.&nbsp;이라니!!I'm just doing my job.&nbsp;이라니!!I'm just
+                doing my job
+            </description>
+            <url>http://www.underdogg.co.kr/posts/FG8qRNi4cQmjKKd54</url>
+            <link>http://www.underdogg.co.kr/posts/FG8qRNi4cQmjKKd54</link>
+            <guid>FG8qRNi4cQmjKKd54</guid>
+            <author>HoSung Lee</author>
+            <date>1405559537548</date>
+        </item>
+        <item>
+            <title>타히티 섬은 어떤 곳일까?</title>
+            <description>
+                Eumir Deodato - Love Island(1978)예전부터 이 앨범을 들으며 투명한 바다, 여유, 칵테일, 독서 등을 꿈꿔왔다.사실 쿠바의 해변이 훌륭하긴 했지만 여유를 느끼기는
+                힘들었다. 숙소와 해변
+            </description>
+            <url>http://www.underdogg.co.kr/posts/uZmpDh8qwSqhhcnWz</url>
+            <link>http://www.underdogg.co.kr/posts/uZmpDh8qwSqhhcnWz</link>
+            <guid>uZmpDh8qwSqhhcnWz</guid>
+            <author>HoSung Lee</author>
+            <date>1405560727609</date>
+        </item>
+        <item>
+            <title>Meteor 모달 팝업 고찰</title>
+            <description>
+                타입 :&nbsp;확인 팝업 - body에 메세지만 보임. "확인" 버튼선택 팝업 - body에 메세지만 보임. "확인", "취소" 버튼커스텀 팝업 - 유저&nbsp;커스텀 layout&nbsp;
+                &nbsp; </description>
+            <url>http://www.underdogg.co.kr/posts/KwnksEyRHPGSFKE9g</url>
+            <link>http://www.underdogg.co.kr/posts/KwnksEyRHPGSFKE9g</link>
+            <guid>KwnksEyRHPGSFKE9g</guid>
+            <author>HoSung Lee</author>
+            <date>1405572993435</date>
+        </item>
+        <item>
+            <title>Orfeu Negro(1959)와 안토니오 까를로스 조빔</title>
+            <description>
+                1959라니!!!&nbsp;1959라니!!!!!!브라질 흑형들 음악과 관련된 영화&nbsp;이 정보 하나로&nbsp;무작정 오래된 영화에 도전해 보았다.장르 혹은 음악가에 대해서 딱히
+                뒷조사나 공부를 하지 않기
+            </description>
+            <url>http://www.underdogg.co.kr/posts/6ahSB6cQTTjGvtxmw</url>
+            <link>http://www.underdogg.co.kr/posts/6ahSB6cQTTjGvtxmw</link>
+            <guid>6ahSB6cQTTjGvtxmw</guid>
+            <author>HoSung Lee</author>
+            <date>1405759894983</date>
+        </item>
+        <item>
+            <title>Meteor. http Redirecting</title>
+            <description>http://underdogg.co.krhttp://www.underdogg.co.kr이 두 주소가 혼용되어 나도 혼란스럽고 구글 크롤러도 혼란스럽고 구글 웹마스터도
+                혼란스러웠다. 그래서 underdogg.co.kr/블라블라뿅이 들어
+            </description>
+            <url>http://www.underdogg.co.kr/posts/Qz2CBKDXFFNXcoRKC</url>
+            <link>http://www.underdogg.co.kr/posts/Qz2CBKDXFFNXcoRKC</link>
+            <guid>Qz2CBKDXFFNXcoRKC</guid>
+            <author>HoSung Lee</author>
+            <date>1405908516650</date>
+        </item>
+        <item>
+            <title>[우당탕탕 쿠바여행 5] 산타클라라. 체게바라를 찾아서.</title>
+            <description>산타클라라&nbsp;Santa Clara&nbsp;빡빡 머리에 알바해서 번 돈으로 힙합 씨디나 사는게 전부였던 시절(나의 흑역사). 말수도 없고 친구도 별로 없고 그냥
+                아무런 생각도 없던 그때 그녀는 나의 몇 안되는 친구였다.&nbs
+            </description>
+            <url>http://www.underdogg.co.kr/posts/7nsYrbQkLfb6BRLWH</url>
+            <link>http://www.underdogg.co.kr/posts/7nsYrbQkLfb6BRLWH</link>
+            <guid>7nsYrbQkLfb6BRLWH</guid>
+            <author>HoSung Lee</author>
+            <date>1404706854017</date>
+        </item>
+        <item>
+            <title>3주간의 쿠바 여행. 음악을 담아보자!(youtube 추가)</title>
+            <description>3주동안 들을 노래를 담아가야 하는데아이폰 용량은 16G 뿐이고... 사진도 찍어야 하니까 음악에 대해 많이 할당할 수가 없다.&nbsp;뒈지는 것만 간츄려보자.Kanda
+                Bongo Man - Amour Fou 1988아프리카 음악.
+            </description>
+            <url>http://www.underdogg.co.kr/posts/HxwEtwgqt4MsC8jea</url>
+            <link>http://www.underdogg.co.kr/posts/HxwEtwgqt4MsC8jea</link>
+            <guid>HxwEtwgqt4MsC8jea</guid>
+            <author>이호성</author>
+            <date>1402025254161</date>
+        </item>
+        <item>
+            <title>[우당탕탕 쿠바여행 4] 그냥 관광의 도시 트리니다드</title>
+            <description>트리니다드&nbsp;Trinidad버스로 10시간. 태어나 처음 버스만 10시간...여행 중 처음으로 쿠바의 음악을 접하게된 도시였다. 밤이되면 이곳 주민, 여행자 할 것
+                없이 음악을 찾아 이 부채꼴 도시의 꼭지점으로 모이게 된다.&</description>
+            <url>http://www.underdogg.co.kr/posts/oY7DBEGp4Lpxomdo8</url>
+            <link>http://www.underdogg.co.kr/posts/oY7DBEGp4Lpxomdo8</link>
+            <guid>oY7DBEGp4Lpxomdo8</guid>
+            <author>HoSung Lee</author>
+            <date>1404550965613</date>
+        </item>
+        <item>
+            <title>[우당탕탕 쿠바여행 6] 마지막으로 다시 아바나.</title>
+            <description>
+                &nbsp;어쨌든 한국으로 복귀하려면 아바나에 머물러야 했다. 체와 산타클라라가 좋긴 했지만 그 정적이고 고요한 곳에서 더 머무르는 것은 무리였다. 숙소가 너무 답답하기도 했다. 그림같은
+                풍경과 자유가 있는 요
+            </description>
+            <url>http://www.underdogg.co.kr/posts/SvQGaPQtuqSbD38Ca</url>
+            <link>http://www.underdogg.co.kr/posts/SvQGaPQtuqSbD38Ca</link>
+            <guid>SvQGaPQtuqSbD38Ca</guid>
+            <author>HoSung Lee</author>
+            <date>1404820711938</date>
+        </item>
+        <item>
+            <title>[우당탕탕 쿠바여행 2] 아바나에서의 털리고 털리고 털리고.</title>
+            <description>아바나 Habana허리 통증과 눈부심 그리고 약간의 취기와 목마름에 눈을 뜨니 창문 밖엔 전혀 다른 세상이 펼쳐져 있었다. 어젯밤 우린 쿠바 San Jose 공항에 도착해
+                무사히 짐을 찾았고 공항 직원의 안내에 따라 "불법" 택시를
+            </description>
+            <url>http://www.underdogg.co.kr/posts/CZ7iWW7TXAJfMejRv</url>
+            <link>http://www.underdogg.co.kr/posts/CZ7iWW7TXAJfMejRv</link>
+            <guid>CZ7iWW7TXAJfMejRv</guid>
+            <author>HoSung Lee</author>
+            <date>1404277705727</date>
+        </item>
+        <item>
+            <title>가짜 시가와 진짜 시가 비교하기</title>
+            <description>
+                COHIBA 짜가와 진짜 비교짜가는 굵기도 굵고 굵기 대비 굉장히 말랑말랑하다.&nbsp;태워서 한모금 빨아보면 알 수 있다. 에세 0.5미리 순을 들이킬때 처럼 빈 빨대를 빠는 느낌이며
+                입이 재떨이가 된 기분
+            </description>
+            <url>http://www.underdogg.co.kr/posts/Kt8nmvCExuRyAXbDC</url>
+            <link>http://www.underdogg.co.kr/posts/Kt8nmvCExuRyAXbDC</link>
+            <guid>Kt8nmvCExuRyAXbDC</guid>
+            <author>HoSung Lee</author>
+            <date>1405502099403</date>
+        </item>
+        <item>
+            <title>친구의 게임 계정에 "프리미엄"을 질러주었다.</title>
+            <description>
+                프리미엄을 질러야만 모든 확장팩을 이용할 수 있다. 치사한거 같으면서도 수..수긍이 간다...어차피 꼼짝없이 집에서만 있어야 할 신세&nbsp;계속 누워있자니 등에 이끼가 자랄 판이라&nbsp;앉아서
+                총이라도
+            </description>
+            <url>http://www.underdogg.co.kr/posts/3yerPBpJJp3XAjkD2</url>
+            <link>http://www.underdogg.co.kr/posts/3yerPBpJJp3XAjkD2</link>
+            <guid>3yerPBpJJp3XAjkD2</guid>
+            <author>HoSung Lee</author>
+            <date>1405845555887</date>
         </item>
         <feed_url>http://www.underdogg.co.kr/rss/rssfeed_posts</feed_url>
         <site_url>http://www.underdogg.co.kr</site_url>
