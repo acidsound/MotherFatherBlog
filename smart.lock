@@ -16,7 +16,8 @@
       "sitemaps": {},
       "select2": {},
       "cloudinary": {},
-      "feedparser": {}
+      "feedparser": {},
+      "rssfeed": {}
     },
     "packages": {
       "iron-router": {
@@ -26,8 +27,8 @@
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
-        "tag": "v0.2.2",
-        "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
+        "tag": "v2.0.3",
+        "commit": "23c1145472a710d5c93fa4beaca4e576caeb2f24"
       },
       "accounts-ui-bootstrap-dropdown": {
         "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
@@ -93,6 +94,11 @@
         "git": "https://github.com/DBeath/meteor-feedparser.git",
         "tag": "v0.16.6",
         "commit": "53c121f56949b6fe022dc8640087e1ad739db7d9"
+      },
+      "rssfeed": {
+        "git": "https://github.com/raix/Meteor-rssfeed.git",
+        "tag": "v0.0.4",
+        "commit": "e592cda10c553209491aa08c74096fc4ddefe3d7"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
