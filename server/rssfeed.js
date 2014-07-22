@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-RssFeed.publish('rssfeed_posts.xml', function(query) {
+RssFeed.publish('rssfeed_posts', function(query) {
   var self = this;
 
   self.setValue('title', self.cdata('UnderDogggggggg'));
@@ -19,7 +19,6 @@ RssFeed.publish('rssfeed_posts.xml', function(query) {
   self.setValue('author', self.cdata('이호성'));
   self.setValue('webMaster', self.cdata('이호성'));
   self.setValue('language', 'ko');
-  self.setValue('categories', ['포스트']);
   self.setValue('lastBuildDate', new Date());
   self.setValue('pubDate', new Date());
   self.setValue('ttl', 60);
@@ -28,7 +27,7 @@ RssFeed.publish('rssfeed_posts.xml', function(query) {
   Posts.find({}).forEach(function(doc) {
     self.addItem({
       title: doc.title,
-      description: doc.content,
+     // description: doc.content,
       url: "http://www.underdogg.co.kr/posts/" +doc._id,
       link: "http://www.underdogg.co.kr/posts/" +doc._id,
       guid: doc._id, // optional - defaults to url
