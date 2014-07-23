@@ -52,8 +52,8 @@ Meteor.methods({
 
     var postId = Posts.insert(post);
 
-    somethingNotificationForAll("newPost", postId, user._id);
-
+    //somethingNotificationForAll("newPost", postId, user._id);
+    createActivity('create_post', postId, user._id);
     return postId;
   },
   upvote: function(postId) {
@@ -75,7 +75,7 @@ Meteor.methods({
       $inc: {votes: 1}
     });
 
-    somethingNotificationForAll("newThumb", postId, user._id);
+    //somethingNotificationForAll("newThumb", postId, user._id);
   }
 });/*
 Meteor.methods({

@@ -224,6 +224,10 @@ hr.dashed_gubun {
     min-height: 3.2rem;
 }
 
+#recently_activities{}
+#recently_activities .activity-item{}
+#recently_activities .activity-item img{width: 18px; height: 18px;}
+
 /*MODAL*/
 #category_modal{}
 #category_modal .no-line{border:none; box-shadow:none; -webkit-box-shadow:none;}

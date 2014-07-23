@@ -27,6 +27,9 @@ Meteor.publish('categories', function() {
 Meteor.publish("chats", function() {
   return Chats.find();
 });
+Meteor.publish("activities", function() {
+  return Activities.find();
+});
 Meteor.publish("cloudImages", function() {
   return CloudImages.find();
 });
