@@ -18,7 +18,7 @@ Template.recently_activity.helpers({
   timeClass: function() {
     //생성일에 하루 더한게 오늘 날짜보다 크면 success
     if(moment(this.submitted).add('d',1) > moment(new Date())){
-      if(this.activity.type == "post"){
+      /*if(this.activity.type == "post"){
         var badgeClass = "badge-warning";
         if(this.activity.method =="create"){
           badgeClass = "badge-warning";
@@ -28,7 +28,8 @@ Template.recently_activity.helpers({
         return badgeClass;
       }else{
         return "badge-success";
-      }
+      }*/
+      return "badge-default";
     }
   }
 });
