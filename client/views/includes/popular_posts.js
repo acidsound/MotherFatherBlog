@@ -5,7 +5,7 @@
  * Time: 오전 10:00
  * To change this template use File | Settings | File Templates.
  */
-Template.popularPosts.helpers({
+Template.popular_posts.helpers({
   popularList: function() {
     var hitsClass = ["badge-danger", "badge-warning", "badge-success", "badge-info" ,"badge-primary", "badge-muted", "badge-muted", "badge-muted", "badge-muted", "badge-muted"];
     var list = Posts.find({},{sort: {hitCount: -1}, limit: 10}).fetch();

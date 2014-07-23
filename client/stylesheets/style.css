@@ -167,11 +167,11 @@ hr.dashed_gubun {
 #popularCategories .category-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
-#popularPosts{}
-#popularPosts .post-item{
+#popular_posts{}
+#popular_posts .post-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
-#popularPosts .badge {
+#popular_posts .badge {
    float:right;
 }
 #navigation{}
@@ -225,7 +225,7 @@ hr.dashed_gubun {
 }
 
 #recently_activities{}
-#recently_activities .activity-item{}
+#recently_activities .activity-item{text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
 #recently_activities .activity-item img{width: 18px; height: 18px;}
 
 /*MODAL*/
