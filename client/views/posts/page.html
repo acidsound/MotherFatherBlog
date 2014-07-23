@@ -28,12 +28,12 @@
           <a class="none_style" rel="bookmark" itemprop="url" href="http://www.underdogg.co.kr/posts/{{_id}}">{{title}}</a>
         </h1>
 
-        <p class="lead" rel="author" itemprop="author">by {{author.name}}</p>
+        <p class="lead author_name" rel="author" itemprop="author"  title="{{author.name}}"><small>by</small> <img class="img-rounded" src="{{author.photo}}"> {{author.name}} </p>
         <hr class="">
 
         <div class="row">
           <div class="col-md-6">
-            <span class="glyphicon glyphicon-time" title="{{submittedMoment}}" itemprop="datePublished"></span> Posted on {{submittedMoment}}
+            <span class="glyphicon glyphicon-time" title="{{submitted}}" itemprop="datePublished"></span> Posted on {{submittedMoment}}
           </div>
           <div class="col-md-6">
             <span class="glyphicon glyphicon-comment"></span> {{pluralize commentsCount 'comment'}}  &nbsp;
