@@ -1,14 +1,19 @@
 <template name="categories">
   <div id = "categories" class="well">
     <h4>카테고리</h4>
+    <div class="row">
       {{#each categoryList}}
       {{>category}}
       {{/each}}
+    </div>
+
   </div>
 </template>
 <template name="category">
-  <p class="post-item">
-    <span class="badge badge-default pull-right">{{postIds.length}}</span>
-    <a  href="/category/{{_id}}" class="none_style"> {{body}} </a>
-  </p>
+  <div class="col-sm-6">
+    <p class="category-item">
+      <span class="badge badge-default pull-right">{{postIds.length}}</span>
+      <a  href="/category/{{_id}}" class="none_style"> {{body}} </a>
+    </p>
+  </div>
 </template>
