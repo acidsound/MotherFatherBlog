@@ -192,9 +192,9 @@ hr.dashed_gubun {
 #modals {}
 #modals .modal{display: block;}
 .modal-backdrop{display: none;}
-#users{}
-#users .nametag{margin-bottom: 8px;}
-#users img{width: 18px; height: 18px;}
+#users .name-item{text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+#users .name-item .nametag{margin-bottom: 8px;}
+#users .name-item img{width: 18px; height: 18px;}
 
 #chats {position: relative;}
 #chats .chat-wrapper{padding-bottom: 32px;}
