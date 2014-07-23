@@ -1,12 +1,14 @@
 <template name="popular_posts">
-  <div id = "popular_posts" class="well">
+  <!--<div id = "popular_posts" class="well">
     <h4>인기있는 글 </h4>
-
       {{#each popularList}}
       {{>popularItem}}
       {{/each}}
-
-
+  </div>-->
+  <div id = "popular_posts">
+    {{#each popularList}}
+    {{>popularItem}}
+    {{/each}}
   </div>
 </template>
 <template name="popularItem">

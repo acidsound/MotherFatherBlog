@@ -1,39 +1,21 @@
 <template name="navigation">
-  <div id="navigation" class="well">
-    <!--<h4>Category</h4>-->
-    <!--<select id="popularSelect">
-      <option class="">전체 보기</option>
-      {{#each popularList}}
-      <option>{{body}}</option>
-      {{/each}}
-    </select>-->
-    <h4>Blog Search</h4>
-    <div class="input-group">
-      <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                              <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
+  <div id="navigation" class="panel">
+    <ul id="myTab1" class="nav nav-tabs nav-justified">
+      <li class="active"><a href="#popular" data-toggle="tab">인기 글</a></li>
+      <li class=""><a href="#recently" data-toggle="tab">새로운 글</a></li>
+      <li class=""><a href="#category" data-toggle="tab">카테고리</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+
+      <div class="tab-pane fade active in" id="popular">
+        {{> popular_posts}}
+      </div>
+      <div class="tab-pane fade" id="recently">
+        {{> recently_posts}}
+      </div>
+      <div class="tab-pane fade" id="category">
+        {{> categories}}
+      </div>
     </div>
-    <br>
-    <div class="btn-group">
-      <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">{{currentCategory}} <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        {{#each popularList}}
-        <li><a href="/category/{{_id}}" class="setCategory">{{body}} <small>{{postIds.length}}</small></a></li>
-        {{/each}}
-      </ul>
-    </div>
-
-
-
-    <!--<div class="btn-group">
-      <button type"button" class="btn btn-default {{activeRouteClass 'categoryList'}}" >{{currentCategory}}</button>
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        <span class="caret"></span>
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-    </div>-->
   </div>
 </template>

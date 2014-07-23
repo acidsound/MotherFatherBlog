@@ -1,12 +1,14 @@
 <template name="recently_posts">
-  <div id = "recently_posts" class="well">
+  <!--<div id = "recently_posts" class="well">
     <h4>새로운 글 </h4>
-
       {{#each recentlyList}}
       {{> recently_post}}
       {{/each}}
-
-
+  </div>-->
+  <div id = "recently_posts">
+    {{#each recentlyList}}
+    {{> recently_post}}
+    {{/each}}
   </div>
 </template>
 <template name="recently_post">

@@ -1,13 +1,18 @@
 <template name="categories">
-  <div id = "categories" class="well">
+  <!--<div id = "categories" class="well">
     <h4>카테고리</h4>
     <div class="row">
       {{#each categoryList}}
         {{> category}}
       {{/each}}
-
     </div>
-
+  </div>-->
+  <div id = "categories">
+    <div class="row">
+      {{#each categoryList}}
+      {{> category}}
+      {{/each}}
+    </div>
   </div>
 </template>
 <template name="category">
