@@ -1,8 +1,12 @@
 <template name="users">
   <div id="users" class="well">
-    <h4><i class="fa fa-child"></i> Online Members</h4>
-    {{#each users}}
-     <span class="badge {{userClass}} nametag"><img class="img-rounded" src="{{profile.photo}}">&nbsp;{{profile.name}}</span>
-    {{/each}}
+    <h4><i class="fa fa-weixin"></i> 양지의 방문객 </h4>
+    <div class="row">
+      {{#each users}}
+        <div class="col-lg-6 col-md-6 col-xs-6" >
+          <small><span class="badge {{userClass}} nametag">&nbsp;</span></small> <img class="img-rounded" src="{{profile.photo}}">&nbsp;{{profile.name}}
+        </div>
+      {{/each}}
+    </div>
   </div>
 </template>
