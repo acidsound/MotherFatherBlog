@@ -225,6 +225,10 @@ hr.dashed_gubun {
 }
 
 #recently_activities{}
+#recently_activities .text-center{
+    font-size: 6px;
+    height: 8px;
+}
 #recently_activities .activity-item{text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
 #recently_activities .activity-item img{width: 18px; height: 18px;}
 
