@@ -1,10 +1,10 @@
 <template name="recently_activities">
   <div id = "recently_activities" class="well">
-    <h4><i class="fa fa-child text-warning"></i><i class="fa fa-child text-success"></i> 최근 활동 </h4>
+    <h4><i class="fa fa-child text-warning"></i><i class="fa fa-child text-success"></i> 새로운 활동 </h4>
       {{#each activityList}}
       {{> recently_activity}}
       {{/each}}
-    <div class="text-center"><i class="fa fa-ellipsis-v"></i></div>
+    <p class="activity-item anim_item">&nbsp;&nbsp;<i class="fa fa-ellipsis-v"></i></p>
   </div>
 </template>
 <template name="recently_activity">

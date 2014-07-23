@@ -1,0 +1,19 @@
+<template name="recently_posts">
+  <div id = "recently_posts" class="well">
+    <h4>새로운 글 </h4>
+
+      {{#each recentlyList}}
+      {{> recently_post}}
+      {{/each}}
+
+
+  </div>
+</template>
+<template name="recently_post">
+  <a  href="{{pathFor 'postPage'}}" class="none_style">
+    <span class="pull-right"><small>{{timeAgo}}</small></span>
+    <p class="post-item">
+      <i class="fa fa-angle-right"></i> {{title}}
+    </p>
+  </a>
+</template>
