@@ -17,8 +17,8 @@ Posts.allow({
 });*/
 Meteor.methods({
   post: function(postAttributes) {
-    var user = Meteor.user(),
-      postWithSameLink = Posts.findOne({url: postAttributes.url});
+    var user = Meteor.user();
+     // ,      postWithSameLink = Posts.findOne({url: postAttributes.url});
 
     // ensure the user is logged in
     if (!user)
@@ -32,11 +32,12 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Please choose a category');
 
     // check that there are no previous posts with the same link
-    if (postAttributes.url && postWithSameLink) {
+    /*if (postAttributes.url && postWithSameLink) {
       throw new Meteor.Error(302,
         'This link has already been posted',
         postWithSameLink._id);
-    }
+    }*/
+
     // pick out the whitelisted keys
     var post = _.extend(_.pick(postAttributes, 'title', 'content', 'keywords'), {
       userId: user._id,
@@ -56,8 +57,34 @@ Meteor.methods({
     createActivity('create_post', postId, user._id);
     return postId;
   },
-  editPost: function(postAttributes){
+  editPost: function(properties){
+    var postId = properties.postId;
+    var postAttributes = properties.postProperties;
+    var userId = properties.userId;
 
+    var user = Meteor.user();
+
+    // ensure the user is logged in
+    if (!user)
+      throw new Meteor.Error(401, "You need to login to post new stories");
+
+    // ensure the post has a title
+    if (!postAttributes.title)
+      throw new Meteor.Error(422, 'Please fill in a headline');
+
+    if (!postAttributes.category && !postAttributes.category._id)
+      throw new Meteor.Error(422, 'Please choose a category');
+
+
+    Posts.update(postId, {$set: postAttributes}, function(error) {
+      if (error) {
+        // display the error to the user
+        alert(error.reason);
+      } else {
+        createActivity('update_post', postId, userId);
+        Router.go('postPage', {_id: postId});
+      }
+    });
   },
   upvote: function(postId) {
     var user = Meteor.user();

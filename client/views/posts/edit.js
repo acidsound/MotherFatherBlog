@@ -84,7 +84,19 @@ Template.postEdit.events({
 
       Categories.update(postProperties.category._id,{"$push":{postIds:currentPostId}});
     }
-    Posts.update(currentPostId, {$set: postProperties}, function(error) {
+    Meteor.call('editPost', {postId:currentPostId, userId: userId, postProperties:postProperties}, function(error, id) {
+      if (error) {
+        // display the error to the user
+        throwError(error.reason);
+        if (error.error === 302)
+          Router.go('postPage', {_id: error.details});
+      } else {
+
+        Meteor.call('addCategory',{categoryId:categoryId,postId:id}, function(err){if(err){console.log(err)}});
+        Router.go('postPage', {_id: id});
+      }
+    });
+    /*Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
         // display the error to the user
         alert(error.reason);
@@ -92,7 +104,9 @@ Template.postEdit.events({
         //createActivity('update_post', currentPostId, userId);
         Router.go('postPage', {_id: currentPostId});
       }
-    });
+    });*/
+
+
   },
   'click .focusPlz' : function(event){
     event.preventDefault();
