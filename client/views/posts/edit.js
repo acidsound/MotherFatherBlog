@@ -27,7 +27,6 @@ Template.postEdit.events({
   'click .showImageModal':function(event){
     event.preventDefault();
     var callback = function(data, modalId){
-      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
       clearModal(modalId);
       if(data.result === "ok"){
         if(data.type==="ImageUrl" || data.type==="ImageUpload"){
@@ -116,7 +115,6 @@ Template.postEdit.events({
     e.preventDefault();
     var currentPost = this;
     var callback = function(data, modalId){
-      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
       clearModal(modalId);
       if(data.result === "ok"){
         var currentPostId = currentPost._id;
@@ -128,7 +126,7 @@ Template.postEdit.events({
     throwModal({
       type:"message",
       title : "알림",
-      message : "포스팅을 삭제할까요?",
+      message : "포스트를 삭제 할까요?",
       callback : callback,
       buttons:[
         {label: '취소', cssClass: 'btn closeBtn'},

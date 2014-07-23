@@ -1,7 +1,7 @@
 <template name="comment">
   <li class="media anim_item">
     {{#if ownComment}}
-    <button type="button" class="close removeBtn" aria-hidden="true">&times;</button>
+    <span class="text-danger pointer removeBtn pull-right"><i class="glyphicon  glyphicon-trash"></i></span>
     {{/if}}
     <a class="pull-left" href="#"><img class="media-object img-rounded" src="{{author.photo}}"></a>
     <div class="media-body">

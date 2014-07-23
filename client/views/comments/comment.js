@@ -20,8 +20,24 @@ Template.comment.events({
 
     var currentComment = this;
     var postId = currentComment.postId;
-    Comments.remove({_id:currentComment._id});
-    Posts.update({_id: postId}, {$inc: {commentsCount: -1}});
+
+    var callback = function(data, modalId){
+      clearModal(modalId);
+      if(data.result === "ok"){
+        Comments.remove({_id:currentComment._id});
+        Posts.update({_id: postId}, {$inc: {commentsCount: -1}});
+      }
+    };
+    throwModal({
+      type:"message",
+      title : "알림",
+      message : "댓글을 삭제 할까요?",
+      callback : callback,
+      buttons:[
+        {label: '취소', cssClass: 'btn closeBtn'},
+        {label: '확인', cssClass: 'btn-success okBtn'}
+      ]
+    });
 
   }
 });
