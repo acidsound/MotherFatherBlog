@@ -10,8 +10,10 @@
   </div>
 </template>
 <template name="popularItem">
+  <a  href="{{pathFor 'postPage'}}" class="none_style">
   <span class="badge {{hitsClass}}">{{hitCount}}</span>
   <p class="post-item">
-    <a  href="{{pathFor 'postPage'}}" class="none_style">{{index}}. <span class="none_style">{{title}}</span></a>
+    {{index}}. <span class="none_style">{{title}}</span>
   </p>
+  </a>
 </template>

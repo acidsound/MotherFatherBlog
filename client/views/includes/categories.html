@@ -11,9 +11,11 @@
 </template>
 <template name="category">
   <div class="col-sm-6">
+    <a  href="/category/{{_id}}" class="none_style">
     <p class="category-item">
-      <span class="badge badge-default pull-right">{{postIds.length}}</span>
-      <a  href="/category/{{_id}}" class="none_style"> {{body}} </a>
+      <span class="pull-right"><strong>{{postIds.length}}</strong></span>
+      {{body}}
     </p>
+    </a>
   </div>
 </template>
