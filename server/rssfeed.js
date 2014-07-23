@@ -21,7 +21,7 @@ RssFeed.publish('rssfeed_posts', function(query) {
   self.setValue('language', 'ko');
   self.setValue('lastBuildDate', new Date());
   self.setValue('pubDate', new Date());
-  self.setValue('ttl', 60);
+  self.setValue('ttl', 1);
   // managingEditor, webMaster, language, docs, generator
   function stripHTMLtag(string) {
     var objStrip = new RegExp();
