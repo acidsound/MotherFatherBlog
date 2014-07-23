@@ -8,8 +8,8 @@
 </template>
 <template name="recently_activity">
   <p class="activity-item">
-    <span class="pull-right"><small><img class="img-rounded" src="{{creator.photo}}"> {{creator.name}}</small></span>
-    <a href="/posts/{{postId}}" class="none_style"> <span class="badge {{timeClass}}"> <span class="{{activity.icon}}"></span> </span> {{activity.message}} <small>{{timeAgo}}</small></a>
+    <span class="pull-right"><small>{{timeAgo}}</small><!--<small><img class="img-rounded" src="{{creator.photo}}"> {{creator.name}}</small>--></span>
+    <a href="/posts/{{postId}}" class="none_style"> <span class="badge {{timeClass}}"><i class="{{activity.icon}}"></i></span> {{activity.message}} <small>by {{creator.name}}</small> </a>
 
   </p>
 </template>

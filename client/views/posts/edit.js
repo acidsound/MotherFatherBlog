@@ -63,6 +63,7 @@ Template.postEdit.events({
     }
 
     var currentPostId = this._id;
+    var userId =  this.userId;
 
     var postProperties = {
       title: $(e.target).find('[name=title]').val(),
@@ -83,12 +84,12 @@ Template.postEdit.events({
 
       Categories.update(postProperties.category._id,{"$push":{postIds:currentPostId}});
     }
-
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
         // display the error to the user
         alert(error.reason);
       } else {
+        //createActivity('update_post', currentPostId, userId);
         Router.go('postPage', {_id: currentPostId});
       }
     });

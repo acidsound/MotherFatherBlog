@@ -19,7 +19,13 @@ Template.recently_activity.helpers({
     //생성일에 하루 더한게 오늘 날짜보다 크면 success
     if(moment(this.submitted).add('d',1) > moment(new Date())){
       if(this.activity.type == "post"){
-        return "badge-warning";
+        var badgeClass = "badge-warning";
+        if(this.activity.method =="create"){
+          badgeClass = "badge-warning";
+        }else {
+          badgeClass = "badge-primary";
+        }
+        return badgeClass;
       }else{
         return "badge-success";
       }

@@ -56,6 +56,9 @@ Meteor.methods({
     createActivity('create_post', postId, user._id);
     return postId;
   },
+  editPost: function(postAttributes){
+
+  },
   upvote: function(postId) {
     var user = Meteor.user();
     // ensure the user is logged in
@@ -74,7 +77,7 @@ Meteor.methods({
       $addToSet: {upvoters: user._id},
       $inc: {votes: 1}
     });
-
+    createActivity('vote_post', postId, user._id);
     //somethingNotificationForAll("newThumb", postId, user._id);
   }
 });/*

@@ -43,6 +43,7 @@ somethingNotificationForAll = function(type, postId, creatorId){
   var opt = {
     class : "success",
     postId: postId,
+    userId: creatorId,
     creator: {name:creator.profile.name, photo:creator.profile.photo},
     submitted: new Date().getTime(),
     message:msg,
