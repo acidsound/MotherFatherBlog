@@ -129,7 +129,7 @@ hr.dashed_gubun {
 #postsList .jumbotron .author_name {}
 #postsList .jumbotron .author_name img{width: 18px; height: 18px;}
 #postsList .content-title {
-    max-height: 112px;
+    max-height: 120px;
     overflow: hidden;
     /*text-overflow: ellipsis; white-space: nowrap; overflow: hidden;*/
 }
