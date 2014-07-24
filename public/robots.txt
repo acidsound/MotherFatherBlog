@@ -1,3 +1,5 @@
+sitemap: http://www.underdogg.co.kr/rss/rssfeed_posts
+
 User-agent: *
 Disallow: /category/
 
