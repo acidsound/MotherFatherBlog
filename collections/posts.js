@@ -54,7 +54,7 @@ Meteor.methods({
     var postId = Posts.insert(post);
 
     //somethingNotificationForAll("newPost", postId, user._id);
-    createActivity('create_post', postId, user._id);
+    createActivity('create_post', postId, user._id, post.title);
     return postId;
   },
   editPost: function(properties){
@@ -81,7 +81,7 @@ Meteor.methods({
         // display the error to the user
         alert(error.reason);
       } else {
-        createActivity('update_post', postId, userId);
+        createActivity('update_post', postId, userId, postAttributes.title);
         Router.go('postPage', {_id: postId});
       }
     });
@@ -104,7 +104,7 @@ Meteor.methods({
       $addToSet: {upvoters: user._id},
       $inc: {votes: 1}
     });
-    createActivity('vote_post', postId, user._id);
+    createActivity('vote_post', postId, user._id, post.title);
     //somethingNotificationForAll("newThumb", postId, user._id);
   }
 });/*

@@ -1,15 +1,15 @@
 <template name="recently_activities">
   <div id = "recently_activities" class="well">
-    <h4><i class="fa fa-child text-warning"></i><i class="fa fa-child text-success"></i> 최근 활동 </h4>
+    <h4><i class="fa fa-child text-warning"></i><i class="fa fa-child text-success"></i> 히스토리 <span class="pull-right pointer showDetail"><i class="fa fa-ellipsis-h"></i></span> </h4>
       {{#each activityList}}
       {{> recently_activity}}
       {{/each}}
-    <p class="activity-item anim_item">&nbsp;&nbsp;<i class="fa fa-ellipsis-v"></i></p>
+    <!--<p class="activity-item anim_item text-center"> <button class="btn btn-xs btn-link"> <i class="fa fa-ellipsis-h"></i> </button> </p>-->
   </div>
 </template>
 <template name="recently_activity">
   <p class="activity-item anim_item">
-    <span class="pull-right"><small>{{timeAgo}}</small><!--<small><img class="img-rounded" src="{{creator.photo}}"> {{creator.name}}</small>--></span>
-    <a href="/posts/{{postId}}" class="none_style"> <span class="badge {{timeClass}}"><i class="{{activity.icon}}"></i></span> {{activity.message}} <small>by {{creator.name}}</small> </a>
+    <span class="pull-right"><small>{{timeAgo}}</small></span>
+    <a href="/posts/{{postId}}" class="none_style"> <span class="badge {{timeClass}}"><i class="{{activity.icon}}"></i></span> {{description}}</a>
   </p>
 </template>

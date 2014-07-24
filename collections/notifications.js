@@ -14,6 +14,7 @@ sendNotification = function(options){
   Notifications.insert(options);
 };
 createCommentNotification = function(comment) {
+  var comment = comment;
   var post = Posts.findOne(comment.postId);
   if (comment.userId !== post.userId) {
     var opt = {
@@ -26,6 +27,7 @@ createCommentNotification = function(comment) {
       read: false
     }
     sendNotification(opt);
+
   }
 
 };

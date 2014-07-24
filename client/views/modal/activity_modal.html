@@ -1,0 +1,33 @@
+<template name="activity_modal">
+  <div class="modal" id="activity_modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close closeBtn" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4>히스토리 </h4>
+        </div>
+        <div class="modal-body">
+          <ul class="media-list content-wrapper">
+            {{#each activityList}}
+            {{> activity_item}}
+
+            {{/each}}
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default closeBtn">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<template name="activity_item">
+  <li class="media anim_item">
+    <a class="pull-left" href="#"><img class="media-object img-rounded" src="{{creator.photo}}"></a>
+    <div class="media-body">
+      <h4 class="media-heading">{{creator.name}}</h4>
+      <p>{{timeAgo}} {{activity.message}}</p>
+      <p>{{{description}}}</p>
+    </div>
+  </li>
+</template>

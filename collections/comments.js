@@ -32,7 +32,7 @@ Meteor.methods({
     comment._id = Comments.insert(comment);
 
     createCommentNotification(comment);
-    createActivity('create_comment', comment.postId, comment.userId);
+    createActivity('create_comment', comment.postId, comment.userId, post.title); //('<div>').html(tempText).text().slice(0,10)
     //somethingNotificationForAll("newComment", comment.postId, comment.userId);
 
     return comment._id;

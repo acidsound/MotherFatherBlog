@@ -29,7 +29,28 @@ Template.recently_activity.helpers({
       }else{
         return "badge-success";
       }*/
-      return "badge-default";
+      if(this.activity.type == "post" && this.activity.method =="create"){
+        return "badge-success";
+      }else{
+        return "badge-default";
+      }
     }
+  }
+});
+
+Template.recently_activities.events({
+  'click .showDetail': function (e) {
+    e.preventDefault();
+
+    var callback = function(data, modalId){
+      clearModal(modalId);
+      if(data.result === "ok"){
+        //do nothing
+      }
+    };
+    throwModal({
+      type:"activity",
+      callback : callback
+    });
   }
 });
