@@ -10,6 +10,6 @@
 <template name="recently_activity">
   <p class="activity-item anim_item">
     <span class="pull-right"><small>{{timeAgo}}</small></span>
-    <a href="/posts/{{postId}}" class="none_style"> <span class="badge {{timeClass}}"><i class="{{activity.icon}}"></i></span> {{description}}</a>
+    <a href="/posts/{{postId}}" class="none_style "> <span class="badge {{timeClass}} " ><i class="{{activity.icon}} tooltipwrapper" data-toggle="tooltip" data-placement="top" title="{{activity.message}}" data-original-title="{{activity.message}}"></i></span> {{description}}</a>
   </p>
 </template>

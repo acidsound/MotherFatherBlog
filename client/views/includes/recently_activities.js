@@ -53,4 +53,9 @@ Template.recently_activities.events({
       callback : callback
     });
   }
-});
+});  //tooltip
+
+Template.recently_activities.rendered = function(){
+  //console.log(this);
+  //$('.tooltipwrapper').tooltip();
+};
