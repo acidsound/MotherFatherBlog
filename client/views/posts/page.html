@@ -28,12 +28,12 @@
           <a class="none_style" rel="bookmark" itemprop="url" href="http://www.underdogg.co.kr/posts/{{_id}}">{{title}}</a>
         </h1>
 
-        <p class="lead author_name" rel="author" itemprop="author"  title="{{author.name}}"><small>by</small> <img class="img-rounded" src="{{author.photo}}"> {{author.name}} </p>
+        <p class="lead author_name" rel="author" itemprop="author"  title="{{author.name}}"><img class="img-rounded" src="{{author.photo}}">  {{author.name}} 작성. </p>
         <hr class="">
 
         <div class="row">
           <div class="col-md-6">
-            <span class="glyphicon glyphicon-time" title="{{submitted}}" itemprop="datePublished"></span> Posted on {{submittedMoment}}
+            <span class="glyphicon glyphicon-time" title="{{submitted}}" itemprop="datePublished"></span> {{submittedMoment}}
           </div>
           <div class="col-md-6">
             <span class="glyphicon glyphicon-comment"></span> {{pluralize commentsCount 'comment'}}  &nbsp;
@@ -44,7 +44,6 @@
               <button class="btn btn-default btn-xs goEdit" type="button"><span class="glyphicon glyphicon-wrench "></span></button>
               {{/if}}
             </div>
-
           </div>
         </div>
 
@@ -56,7 +55,6 @@
           {{#if ownPost}}
           <button class="btn btn-default btn-xs goEdit" type="button"><span class="glyphicon glyphicon-wrench "></span></button>
           {{/if}}
-
         </div>
         </p>-->
         <hr class="">
@@ -66,13 +64,14 @@
         </div>
         <hr class="">
         <button type="button" class="btn btn-primary goList">목록 <span class="glyphicon glyphicon-chevron-left"></span></button>
-        &nbsp;
-        <button type="button" class="upvote btn {{upvotedClass}}"><i class="glyphicon fa fa-thumbs-o-up"></i> 엠지</button>
-        &nbsp;
-        <div class="btn-group">
-          <a class="btn btn-default" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.underdogg.co.kr/posts/{{_id}}"><i class="fa fa-facebook"></i></a>
-          <a class="btn btn-default" target="_blank" href="https://plus.google.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}"><i class="fa fa-google-plus"></i></a>
-          <a class="btn btn-default" target="_blank" href="https://twitter.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}&via=TWITTER_HANDLE&text={{title}}"><i class="fa fa-twitter"></i></a>
+        <div class="pull-right">
+          <button type="button" class="upvote btn {{upvotedClass}}"><i class="glyphicon fa fa-thumbs-o-up"></i> 엠지</button>
+          &nbsp;
+          <div class="btn-group">
+            <a class="btn btn-default" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.underdogg.co.kr/posts/{{_id}}"><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-default" target="_blank" href="https://plus.google.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}"><i class="fa fa-google-plus"></i></a>
+            <a class="btn btn-default" target="_blank" href="https://twitter.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}&via=TWITTER_HANDLE&text={{title}}"><i class="fa fa-twitter"></i></a>
+          </div>
         </div>
       </div>
     </div>

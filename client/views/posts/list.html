@@ -5,7 +5,7 @@
         {{> postStrip}}
     {{/each}}
     {{#if nextPath}}
-        <a class="btn btn-block btn-info loadMore">Load more</a>
+        <a class="btn btn-block btn-default loadMore">더 보기 </a>
         <br>
         <br>
     {{/if}}
@@ -20,11 +20,11 @@
 
       </h1>
 
-      <p class="lead author_name"><small>by</small> <img class="img-rounded" src="{{author.photo}}"> {{author.name}} </p>
+      <p class="lead author_name"><img class="img-rounded" src="{{author.photo}}">  {{author.name}} 작성. </p>
       <hr class="">
       <div class="row">
         <div class="col-md-6">
-          <span class="glyphicon glyphicon-time"></span> Posted on {{submittedMoment}}
+          <span class="glyphicon glyphicon-time"></span> {{submittedMoment}}
         </div>
         <div class="col-md-6">
           <span class="glyphicon glyphicon-comment"></span> {{pluralize commentsCount 'comment'}}  &nbsp;
@@ -43,7 +43,7 @@
       <br>
       {{/if}}
       <p class="content-preview">{{stripTag.text}}</p>
-      <a class="btn btn-primary readMore"  href="{{pathFor 'postPage'}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+      <a class="btn btn-primary readMore"  href="{{pathFor 'postPage'}}">자세히 <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
   </div>
 </template>
