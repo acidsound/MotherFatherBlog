@@ -1,33 +1,38 @@
 <template name="footer">
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h3>이 블로그는... <a href="http://www.underdogg.co.kr/posts/NSMuuDkQYQ9QQcpvg"><i class="glyphicon glyphicon-eye-open"></i></a></h3>
-        <div class="row">
-          <div class="col-xs-4">
-            <img class="img-rounded footer-img" src="http://res.cloudinary.com/www-underdogg-co-kr/image/upload/t_media_lib_thumb/v1401758487/IMG_0523_dwdxbm.jpg">
-          </div>
-          <div class="col-xs-8">
-            <p>작은 <strong>arm </strong>보드에서 동작하고 있습니다.</p>
-            <p class="text-danger">만 지금은 임시로 다른 서버에서 동작하고 있다능 ㅠㅠ</p>
-            <p><strong>Linux linaro-server</strong> 3.0.36+ #2 SMP PREEMPT Mon Jan 27 15:07:00 ICT 2014 armv7l armv7l armv7l GNU/Linux</p>
-            <p>MongoDB v2.1.1 &#183; NodeJS v0.11.14 &#183; MeteorJS v0.8</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <h3>Found a bug?</h3>
-        <p>Open a <a href="https://github.com/gaethug/MotherFatherBlog/issues" target="_blank" rel="external nofollow">new issue</a> on GitHub. Please search for existing issues first and make sure to include all relevant information.</p>
-        <p>You simply have to <b>try it</b>. <a class="btn btn-primary" href="https://github.com/gaethug/MotherFatherBlog">View on GitHub</a></p>
-      </div>
-    </div>
-    <hr class="dashed">
-    <div class="copyright clearfix">
-      <p><b>UNDERDOGGG</b> 2014</p>
+  <div class="footer">
+    <div class="container">
+      <div class="clearfix">
+        <div class="footer-logo"><a class="navbar-brand" href="{{pathFor 'home'}}"><i class="fa fa-child text-warning"></i><i class="fa fa-child text-success"></i> UnderDogg</a></div>
+        <dl class="footer-nav">
+          <dt class="nav-title">Cuba 여행기</dt>
+          <dd class="nav-item"><a href="http://www.underdogg.co.kr/posts/MQTSHdRsqEy2HzBcT">여행의 시작 </a></dd>
+          <dd class="nav-item"><a href="http://www.underdogg.co.kr/posts/CZ7iWW7TXAJfMejRv">아바나에서 털리고 털리고 </a></dd>
+          <dd class="nav-item"><a href="http://www.underdogg.co.kr/posts/M4s2kHPtYyGh7nYdH">비냘레스 시골의 이상 </a></dd>
+          <dd class="nav-item"><a href="http://www.underdogg.co.kr/posts/oY7DBEGp4Lpxomdo8">그냥 관광의 도시 트리니다드  </a></dd>
+          <dd class="nav-item"><a href="http://www.underdogg.co.kr/posts/7nsYrbQkLfb6BRLWH">산타클라라 체를 찾아서</a></dd>
+          <dd class="nav-item"><a href="http://www.underdogg.co.kr/posts/SvQGaPQtuqSbD38Ca">마지막으로 다시 아바나</a></dd>
+        </dl>
 
+        <dl class="footer-nav">
+          <dt class="nav-title">ABOUT</dt>
+          <dd class="nav-item"><a href="http://www.underdogg.co.kr/posts/C2k5yu4ZmhXXbDQn8">History </a></dd>
+          <dd class="nav-item"><a href="https://github.com/gaethug/MotherFatherBlog">View on GitHub</a></dd>
+        </dl>
+        <dl class="footer-nav">
+          <dt class="nav-title">Found a bug?</dt>
+          <dd class="nav-item">
+            <p>Open a <a href="https://github.com/gaethug/MotherFatherBlog/issues" target="_blank" rel="external nofollow">new issue</a> on GitHub. Please search for existing issues first and make sure to include all relevant information.</p>
+          </dd>
+        </dl>
+        <dl class="footer-nav">
+          <dt class="nav-title">Meteor </dt>
+          <dd class="nav-item"><a href="https://www.meteor.com">공식 사이트 </a></dd>
+          <dd class="nav-item"><a href="http://docs.meteor.com">공식 문서 </a></dd>
+          <dd class="nav-item"><a href="https://atmospherejs.com/">라이브러리 사이트 </a></dd>
+          <dd class="nav-item"><a href="http://www.meteorjs.kr/">미티어 코리아  </a></dd>
+        </dl>
+      </div>
+      <div class="footer-copyright text-center"><b>UnderDogg</b> 2014.</div>
     </div>
   </div>
-</div>
-
 </template>

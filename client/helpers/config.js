@@ -41,7 +41,7 @@ Meteor.startup(function() {
         'description': '요리사가 자기 저녁밥 만들어 먹고 목수가 자기 집 신발장 짜고 치과 의사가 자기 이빨 신경치료 하듯 나도 내 홈페이지는 방구석에다 직접 구축을...목표로...'
       },
       og: {
-        'image': 'http://www.underdogg.co.kr/images/icon.png'
+        'image': 'http://www.underdogg.co.kr/images/logo.png'
       }
     };
     if(agt.indexOf("msie") != -1){
