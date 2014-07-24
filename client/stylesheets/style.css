@@ -101,11 +101,17 @@ hr.dashed_gubun {
 #postSubmit .content-wrapper{
     min-height: 400px;
 }
+#postSubmit .content-wrapper h2{
+    font-size: 24px;
+}
 #postSubmit .content-wrapper .content img{
     max-width: 100%;
 }
 #postEdit .content-wrapper{
     min-height: 400px;
+}
+#postEdit .content-wrapper h2{
+    font-size: 24px;
 }
 #postEdit .content-wrapper .content img{
     max-width: 100%;
