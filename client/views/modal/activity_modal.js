@@ -18,3 +18,10 @@ Template.activity_item.helpers({
     return moment(this.submitted).fromNow()
   }
 });
+
+Template.activity_modal.events({
+  'click .closeBtn':function(event){
+    event.preventDefault();
+    this.callback({result:"cancel"}, this._id);
+  }
+});
