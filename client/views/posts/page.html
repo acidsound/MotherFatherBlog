@@ -1,7 +1,6 @@
 <template name="postPage">
   <div id="postPage">
   {{> postItem}}
-
     <h2 class="menu-title comment-area"> Comments <span class="glyphicon glyphicon-comment"></span></h2>
     <ul class="media-list content-wrapper">
       {{#each comments}}
@@ -28,7 +27,7 @@
           <a class="none_style" rel="bookmark" itemprop="url" href="http://www.underdogg.co.kr/posts/{{_id}}">{{title}}</a>
         </h1>
 
-        <p class="lead author_name" rel="author" itemprop="author"  title="{{author.name}}"><img class="img-rounded" src="{{author.photo}}">  {{author.name}} 작성. </p>
+        <p class="lead author_name" rel="author" itemprop="author"  title="{{author.name}}"><img class="img-rounded" src="{{author.photo}}">  {{author.name}} 씀. </p>
         <hr class="">
 
         <div class="row">
@@ -63,14 +62,25 @@
           {{{dynamicConent}}}
         </div>
         <hr class="">
-        <button type="button" class="btn btn-primary goList">목록 <span class="glyphicon glyphicon-chevron-left"></span></button>
-        <div class="pull-right">
-          <button type="button" class="upvote btn {{upvotedClass}}"><i class="glyphicon fa fa-thumbs-o-up"></i> 엠지</button>
-          &nbsp;
-          <div class="btn-group">
-            <a class="btn btn-default" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.underdogg.co.kr/posts/{{_id}}"><i class="fa fa-facebook"></i></a>
-            <a class="btn btn-default" target="_blank" href="https://plus.google.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}"><i class="fa fa-google-plus"></i></a>
-            <a class="btn btn-default" target="_blank" href="https://twitter.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}&via=TWITTER_HANDLE&text={{title}}"><i class="fa fa-twitter"></i></a>
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" class="btn btn-primary goList">목록 <span class="glyphicon glyphicon-chevron-left"></span></button>
+            <button type="button" class="upvote btn {{upvotedClass}}"><i class="glyphicon fa fa-thumbs-o-up"></i></button>
+          </div>
+          <div class="col-sm-6">
+            <div class="pull-right">
+              <div class="btn-group">
+                <a class="btn btn-default" target="_blank"
+                   href="https://www.facebook.com/sharer/sharer.php?u=http://www.underdogg.co.kr/posts/{{_id}}"><i
+                  class="fa fa-facebook"></i></a>
+                <a class="btn btn-default" target="_blank"
+                   href="https://plus.google.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}"><i
+                  class="fa fa-google-plus"></i></a>
+                <a class="btn btn-default" target="_blank"
+                   href="https://twitter.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}&via=TWITTER_HANDLE&text={{title}}"><i
+                  class="fa fa-twitter"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

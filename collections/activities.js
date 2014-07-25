@@ -8,7 +8,7 @@
 Activities = new Meteor.Collection('activities');
 
 ACTIVITY_TYPES={
-  "create_post":{type:"post", method:"create",  message : "새로운 포스트", icon:"fa fa-file-text-o"},
+  "create_post":{type:"post", method:"create",  message : "새로운 포스트", icon:"fa fa-file-image-o"},
   "update_post":{type:"post", method:"update",  message : "포스트 수정", icon:"fa fa-pencil"},
   "vote_post":{type:"post", method:"vote",  message : "엠지!", icon:"fa fa-thumbs-o-up"},
   "create_comment":{type:"comment", method:"create",message : "새로운 댓글", icon:"fa fa-comment-o"}

@@ -1,6 +1,6 @@
 <template name="recently_activities">
   <div id = "recently_activities" class="well">
-    <h4><i class="fa fa-history"></i> 히스토리 <span class="pull-right pointer showDetail"><i class="fa fa-ellipsis-h"></i></span> </h4>
+    <h4><i class="fa fa-history fa-spin"></i> history <span class="pull-right pointer showDetail"><small><i class="fa fa-ellipsis-h"></i></small></span> </h4>
       {{#each activityList}}
       {{> recently_activity}}
       {{/each}}
@@ -9,7 +9,7 @@
 </template>
 <template name="recently_activity">
   <p class="activity-item anim_item">
-    <span class="pull-right"><small>{{timeAgo}}</small></span>
-    <a href="/posts/{{postId}}" class="none_style "> <span class="badge {{timeClass}} " ><i class="{{activity.icon}} tooltipwrapper" data-toggle="tooltip" data-placement="top" title="{{activity.message}}" data-original-title="{{activity.message}}"></i></span> {{description}}</a>
+    <span class="pull-right"><span class="badge {{timeClass}} " ><i class="{{activity.icon}}"></i></span></span>
+    <a href="/posts/{{postId}}" class="none_style ">{{timeAgo}}.<small>{{creator.name}}</small>-{{description}}</a>
   </p>
 </template>

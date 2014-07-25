@@ -13,9 +13,9 @@
 </template>
 <template name="recently_post">
   <a  href="{{pathFor 'postPage'}}" class="none_style">
-    <span class="pull-right"><small>{{timeAgo}}</small></span>
+    <!--<span class="pull-right"><small></small></span>-->
     <p class="post-item">
-      <i class="fa fa-angle-right"></i> {{title}}
+      {{timeAgo}}. {{title}}
     </p>
   </a>
 </template>

@@ -9,11 +9,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}">
-          <i class="fa fa-child text-warning left-man logo-0"></i><i class="fa fa-child text-success right-man logo-1"></i> UnderDogg
-
-
-        </a>
+        <a class="navbar-brand" href="{{pathFor 'home'}}"><i class="fa fa-child text-warning left-man logo-0"></i><i class="fa fa-child text-success right-man logo-1"></i> UnderDogg</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
@@ -39,7 +35,7 @@
           {{> loginButtons}}
         </ul>
 
-        {{#if currentUser}} <a href="{{pathFor 'postSubmit'}}" class="btn btn-warning navbar-btn">글쓰기 </a>{{/if}}
+        {{#if currentUser}} <a href="{{pathFor 'postSubmit'}}" class="btn btn-warning navbar-btn"><span class="fa fa-pencil"></span> </a>{{/if}}
       </div>
     </div>
   </nav>

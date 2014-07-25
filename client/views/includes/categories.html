@@ -8,6 +8,7 @@
     </div>
   </div>-->
   <div id = "categories">
+    <h5>카테고리 </h5>
     <div class="row">
       {{#each categoryList}}
       {{> category}}
@@ -20,7 +21,7 @@
     <a  href="/category/{{_id}}" class="none_style">
       <p class="category-item">
         <span class="pull-right"><strong>{{postIds.length}}</strong></span>
-        <i class="fa fa-angle-right"></i> {{body}}
+        <i class="fa fa-chevron-circle-right"></i> {{body}}
       </p>
     </a>
   </div>
