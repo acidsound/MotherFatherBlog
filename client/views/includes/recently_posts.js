@@ -7,7 +7,7 @@
  */
 Template.recently_posts.helpers({
   recentlyList: function() {
-    return Posts.find({},{sort: {submitted: -1, _id: -1}, limit: 5}).fetch();
+    return Posts.find({},{sort: {submitted: -1, _id: -1}, limit: 10}).fetch();
   }
 });
 

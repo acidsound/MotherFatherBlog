@@ -9,7 +9,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}"><i class="fa fa-child text-warning"></i><i class="fa fa-child text-success"></i> UnderDoggg</a>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">
+          <i class="fa fa-child text-warning left-man logo-0"></i><i class="fa fa-child text-success right-man logo-1"></i> UnderDogg
+
+
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
@@ -40,6 +44,7 @@
     </div>
   </nav>
 </template>
+
 <template name="categoryRow">
   <li class="{{activeClass}}"><a href="/category/{{_id}}" class="setCategory">{{body}} <small>{{postIds.length}}</small></a></li>
 </template>

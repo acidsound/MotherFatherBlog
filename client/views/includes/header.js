@@ -51,3 +51,22 @@ Template.categoryRow.helpers({
     return (urlParams[2]||"") == this._id ?"active" : "";
   }
 });
+
+Template.header.rendered = function(){
+  var left_flag = true;
+  function getRandTime(){
+    return (Math.floor(Math.random() * 5) + 1)*1000;
+  }
+  var flipflop = function(){
+    left_flag = !left_flag;
+    if(left_flag){
+      $('.left-man').transition({  scale: [1.3, 1.1] ,  delay: 500 }, 'linear').transition({  scale: [1.0, 1.0] ,  delay: 500 });
+    }else{
+      $('.right-man').transition({  scale: [1.3, 1.1] ,  delay: 500 }).transition({  scale: [1.0, 1.0] ,  delay: 500 });
+    }
+    //$(className).transition({  scale: [1.5, 1.2] ,  delay: 500 }).transition({  scale: [1.0, 1.0] ,  delay: 500 });
+    setTimeout(flipflop, getRandTime());
+  };
+
+  setTimeout(flipflop, getRandTime());
+};

@@ -13,9 +13,9 @@
 </template>
 <template name="popularItem">
   <a  href="{{pathFor 'postPage'}}" class="none_style">
-  <span class="badge {{hitsClass}}">{{hitCount}}</span>
+  <!--<span class="badge {{hitsClass}}">{{hitCount}}</span>-->
   <p class="post-item">
-    {{index}}. <span class="none_style">{{title}}</span>
+    <span class="badge {{hitsClass}}">{{index}}</span> <span class="none_style">{{title}}</span>
   </p>
   </a>
 </template>

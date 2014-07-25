@@ -177,9 +177,9 @@ hr.dashed_gubun {
 #popular_posts .post-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }
-#popular_posts .badge {
+/*#popular_posts .badge {
    float:right;
-}
+}*/
 #recently_posts{}
 #recently_posts .post-item{
     text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
