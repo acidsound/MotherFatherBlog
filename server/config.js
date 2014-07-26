@@ -15,7 +15,7 @@ Cloudinary.config({
 // Redirect to a random URL, better handled client-side
 //underdogg.co.kr => www.underdogg.co.kr로 리다이렉팅
 WebApp.connectHandlers.use(function(req, res, next) {
-  //아니 씨발 indexOf 리턴값 때문에 개 삽질한거였어???
+  console.log(req.headers.host);
   if(req.headers.host.indexOf('localhost') >= 0){
     next();
   }else{
