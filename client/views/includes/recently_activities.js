@@ -39,6 +39,20 @@ Template.recently_activity.helpers({
 });
 
 Template.recently_activities.events({
+  'click .calendarBtn': function (e) {
+    e.preventDefault();
+
+    var callback = function(data, modalId){
+      clearModal(modalId);
+      if(data.result === "ok"){
+        //do nothing
+      }
+    };
+    throwModal({
+      type:"calendar",
+      callback : callback
+    });
+  },
   'click .showDetail': function (e) {
     e.preventDefault();
 

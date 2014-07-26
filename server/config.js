@@ -16,7 +16,8 @@ Cloudinary.config({
 //underdogg.co.kr => www.underdogg.co.kr로 리다이렉팅
 WebApp.connectHandlers.use(function(req, res, next) {
   //아니 씨발 indexOf 리턴값 때문에 개 삽질한거였어???
-  if(req.headers.host.indexOf('localhost') >= 0){
+  //도메인 설정할 동안만 좀 가만히좀 맨
+  /*if(req.headers.host.indexOf('localhost') >= 0){
     next();
   }else{
     if(req.headers.host.indexOf('www.underdogg.co.kr') < 0){
@@ -27,6 +28,6 @@ WebApp.connectHandlers.use(function(req, res, next) {
     }else {
       next();
     }
-  }
+  }*/
 });
 
