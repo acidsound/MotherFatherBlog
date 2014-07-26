@@ -29,5 +29,6 @@ WebApp.connectHandlers.use(function(req, res, next) {
       next();
     }
   }*/
+  next();
 });
 
