@@ -14,7 +14,7 @@ Cloudinary.config({
 
 // Redirect to a random URL, better handled client-side
 //underdogg.co.kr => www.underdogg.co.kr로 리다이렉팅
-WebApp.connectHandlers.use(function(req, res, next) {
+/*WebApp.connectHandlers.use(function(req, res, next) {
   console.log(req.headers.host);
   if(req.headers.host.indexOf('localhost') >= 0){
     next();
@@ -28,5 +28,5 @@ WebApp.connectHandlers.use(function(req, res, next) {
       next();
     }
   }
-});
+});*/
 
