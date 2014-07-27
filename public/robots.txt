@@ -6,8 +6,6 @@ Allow: /posts/*
 User-agent: *
 Allow: /rss/rssfeed_posts
 
-User-agent: *
-Disallow: /
 
 User-agent: *
 Disallow: /category/
