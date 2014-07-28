@@ -60,9 +60,9 @@ Template.header.rendered = function(){
   var flipflop = function(){
     left_flag = !left_flag;
     if(left_flag){
-      $('.left-man').transition({  scale: [1.3, 1.1] ,  delay: 500 }, 'linear').transition({  scale: [1.0, 1.0] ,  delay: 500 });
+      $('.left-man').transition({  scale: [1.7, 1.2] ,  delay: 500 }, 'linear').transition({  scale: [1.0, 1.0] ,  delay: 500 });
     }else{
-      $('.right-man').transition({  scale: [1.3, 1.1] ,  delay: 500 }).transition({  scale: [1.0, 1.0] ,  delay: 500 });
+      $('.right-man').transition({  scale: [1.7, 1.2] ,  delay: 500 }).transition({  scale: [1.0, 1.0] ,  delay: 500 });
     }
     //$(className).transition({  scale: [1.5, 1.2] ,  delay: 500 }).transition({  scale: [1.0, 1.0] ,  delay: 500 });
     setTimeout(flipflop, getRandTime());
