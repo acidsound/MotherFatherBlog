@@ -30,10 +30,10 @@ Template.postEdit.events({
       clearModal(modalId);
       if(data.result === "ok"){
         if(data.type==="ImageUrl" || data.type==="ImageUpload"){
-          var imgTag = "<p><img src="+data.url +"></img></p><p> </p>";
+          var imgTag = "<p><img src="+data.url +"></img></p><p>&nbsp;</p>";
           $('#content').html($('#content').html()+imgTag);
         }else if(data.type==="YoutubeUrl"){
-          var imgTag = '<p><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></p><p> </p>';
+          var imgTag = '<p><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></p><p>&nbsp;</p>';
           $('#content').html($('#content').html()+imgTag);
         }/*else if(data.type==="AceUrl"){
           $('#content').html($('#content').html()+"<pre>"+data.url+"</pre> <div> </div>");

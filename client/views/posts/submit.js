@@ -31,10 +31,10 @@ Template.postSubmit.events({
       clearModal(modalId);
       if(data.result === "ok"){
         if(data.type==="ImageUrl" || data.type==="ImageUpload"){
-          var imgTag = "<p><img src="+data.url +"></img></p><p> </p>";
+          var imgTag = "<p><img src="+data.url +"></img></p><p>&nbsp;</p>";
           $('#content').html($('#content').html()+imgTag);
         }else if(data.type==="YoutubeUrl"){
-          var imgTag = '<p><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></p><p> </p>';
+          var imgTag = '<p><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></p><p>&nbsp;</p>';
           //var youtubeTag = "<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+data.url+ "\" frameborder=0></iframe></div>";
           $('#content').html($('#content').html()+imgTag);
         }/*else if(data.type==="AceUrl"){
