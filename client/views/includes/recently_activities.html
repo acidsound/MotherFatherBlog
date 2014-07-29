@@ -10,7 +10,7 @@
 <template name="recently_activity">
   <a href="/posts/{{postId}}" class="none_style ">
     <p class="activity-item anim_item">
-      <span class="pull-right"><span class="badge {{timeClass}} " >{{timeAgo}}</span></span>
+      <span class="pull-right"><small>{{timeAgo}}</small></span>
       <i class="{{activity.icon}}"></i> {{activity.message}} <span class="text-muted">{{creator.name}}-{{description}}</span>
     </p>
   </a>
