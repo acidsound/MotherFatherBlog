@@ -93,7 +93,7 @@ Template.postEdit.events({
           Router.go('postPage', {_id: error.details});
       } else {
 
-        Meteor.call('addCategory',{categoryId:categoryId,postId:id}, function(err){if(err){console.log(err)}});
+        Meteor.call('addCategory',{categoryId:postProperties.category._id ,postId:id}, function(err){if(err){console.log(err)}});
         Router.go('postPage', {_id: id});
       }
     });
