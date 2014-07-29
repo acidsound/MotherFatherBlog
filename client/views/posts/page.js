@@ -22,7 +22,7 @@ Template.postItem.helpers({
     if (userId && !_.include(this.upvoters, userId)) {
       return 'btn-default upvotable';
     } else {
-      return 'disabled';
+      return 'disabled btn-muted';
     }
   },
   //이런 개시발 스러운 렌더링 문제
@@ -73,6 +73,7 @@ Template.postItem.events({
   }
 });
 Template.postItem.rendered = function(){
+
   /*var elems = $('.content-wrapper').find("img");
 
   _.forEach(elems, function(elem){

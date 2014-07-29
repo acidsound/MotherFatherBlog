@@ -77,8 +77,8 @@
       },
       "sitemaps": {
         "git": "https://github.com/gadicohen/meteor-sitemaps.git",
-        "tag": "v0.0.16",
-        "commit": "ed4d908c581071d1302b37c6ba77dbce55333dd3"
+        "tag": "v0.0.17",
+        "commit": "9d31672fbf5395dacdf707da9746d50af7d6a567"
       },
       "select2": {
         "git": "https://github.com/nate-strauser/meteor-select2.git",

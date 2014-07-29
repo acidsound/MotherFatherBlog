@@ -51,3 +51,6 @@ robots-txt
 /select2
 /feedparser
 /fullcalendar-2
+/shareit
+/phantomjs
+/facebook-sdk
