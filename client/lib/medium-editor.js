@@ -1189,7 +1189,6 @@ if (typeof module === 'object') {
             for (i = 0; i < this.elements.length; i += 1) {
                 activatePlaceholder(this.elements[i]);
                 this.elements[i].addEventListener('blur', placeholderWrapper);
-                this.elements[i].addEventListener('focus', placeholderWrapper); //20140729 hslee 문서 수정 시 플레이스 홀더가 계속 존재하는 문제로 FOCUS시에도 감지
                 this.elements[i].addEventListener('keyup', placeholderWrapper); //20140729 hslee 엠병 keypress로 되어 있어서 한글 1Byte는 인식안되는 문제를 keyup으로 변경
             }
             return this;

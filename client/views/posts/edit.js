@@ -155,11 +155,11 @@ Template.postEdit.rendered = function(){
         list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'bold', 'italic', 'createlink']
       }
     );*/
-    initMediumEditor("#content", 'post');
+
     if(this.data.content){
       $('#content').html(this.data.content);
     }
-
+    initMediumEditor("#content", 'post');
 
 
   }
