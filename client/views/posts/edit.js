@@ -156,7 +156,7 @@ Template.postEdit.rendered = function(){
       }
     );*/
     initMediumEditor("#content", {
-      buttons: ['quote', 'header2', 'pre' , 'orderedlist','unorderedlist', 'bold', 'italic', 'strikethrough', 'createlink'],
+      buttons: ['quote', 'header2', 'pre' , 'orderedlist','unorderedlist', 'bold', 'italic', 'strikethrough', 'anchor'],
       anchorInputPlaceholder: 'URL을 입력하세요.',
       placeholder:"내용을 입력하세요.",
       targetBlank: true

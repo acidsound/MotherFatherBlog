@@ -64,7 +64,7 @@ Template.commentSubmit.rendered = function(){
   if (!this.rendered){
     //initEditor();
     initMediumEditor("#content", {
-      buttons: [ 'header2', 'pre' , 'bold', 'italic', 'createlink'],
+      buttons: [ 'header2', 'pre' , 'bold', 'italic', 'anchor'],
       anchorInputPlaceholder: 'URL을 입력하세요.',
       placeholder:"댓글을 작성하세요.",
       targetBlank: true
