@@ -53,7 +53,7 @@ Template.categoryRow.helpers({
 });
 
 Template.header.rendered = function(){
-  var left_flag = true;
+  /*var left_flag = true;
   function getRandTime(){
     return (Math.floor(Math.random() * 5) + 1)*1000;
   }
@@ -68,5 +68,5 @@ Template.header.rendered = function(){
     setTimeout(flipflop, getRandTime());
   };
 
-  setTimeout(flipflop, getRandTime());
+  setTimeout(flipflop, getRandTime());*/
 };

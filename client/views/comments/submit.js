@@ -54,7 +54,9 @@ Template.commentSubmit.events({
       if (error){
         throwError(error.reason);
       } else {
+        initMediumEditor("#content", 'comment');
         imsiEditor.body.html("");
+        imsiEditor.body.focus();
         //initEditor();
       }
     });
@@ -63,12 +65,7 @@ Template.commentSubmit.events({
 Template.commentSubmit.rendered = function(){
   if (!this.rendered){
     //initEditor();
-    initMediumEditor("#content", {
-      buttons: [ 'header2', 'pre' , 'bold', 'italic', 'anchor'],
-      anchorInputPlaceholder: 'URL을 입력하세요.',
-      placeholder:"댓글을 작성하세요.",
-      targetBlank: true
-    });
+    initMediumEditor("#content", 'comment');
   }
 
 };

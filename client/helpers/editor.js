@@ -27,13 +27,23 @@ destroyPenEditor = function(){
 */
 
 
-initMediumEditor = function(elem, modalOpt) {
-
+initMediumEditor = function(elem, type) {
+  var options = {
+    anchorInputPlaceholder: 'URL을 입력하세요.',
+    placeholder:"내용을 입력하세요.",
+    targetBlank: true,
+    firstHeader:'h1',secondHeader: 'h2'
+  };
+  if(type =="post"){
+    options.buttons = ['quote', 'header2', 'pre' , 'orderedlist','unorderedlist', 'bold', 'italic', 'strikethrough', 'anchor'];
+  }else if(type == "comment"){
+    options.buttons = ['pre', 'orderedlist', 'unorderedlist', 'bold', 'italic', 'anchor'];
+  }
   if(mediumEditor == null){
-    mediumEditor = new MediumEditor(elem,modalOpt);
+    mediumEditor = new MediumEditor(elem,options);
   }else{
     destroyMediumEditor();
-    initMediumEditor(elem, modalOpt);
+    initMediumEditor(elem, options);
   }
 }
 destroyMediumEditor = function(){

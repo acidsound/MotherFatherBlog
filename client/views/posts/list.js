@@ -1,8 +1,8 @@
 Template.postsList.helpers({
   postList: function() {
+    //-_- 분명 rewind()에서 종종 에러가 생기는데 null체크를 하면 rewind() 적용이 안됨 -_- 어쩌라고
     this.posts.rewind();
     return this.posts;
-
   }
 });
 Template.postsList.events({
@@ -35,14 +35,6 @@ Template.postStrip.helpers({
 
 Template.postStrip.rendered = function() {
 
- /* $('html').find('meta[name=description]').attr('content', "arm 보드 위에 meteorJS로 만들어진 나의 수제 블로그...");
-  $('html').find('meta[name=title]').attr('content', "UnderDoggg");
-  $('html').find('meta[name=url]').attr('content', "http://www.underdogg.co.kr");
-  $('html').find('meta[name=image]').attr('content',"http://www.underdogg.co.kr/images/icon.png");
-  $('html').find('meta[name=author]').attr('content',"");
-  $('html').find('meta[name=keywords]').attr('content',"");
-
-  $('title').text("UnderDogggg");*/
 
   $(this.find('.content-title')).dotdotdot({
     watch:true

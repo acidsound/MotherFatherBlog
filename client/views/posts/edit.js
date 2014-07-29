@@ -155,12 +155,7 @@ Template.postEdit.rendered = function(){
         list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'bold', 'italic', 'createlink']
       }
     );*/
-    initMediumEditor("#content", {
-      buttons: ['quote', 'header2', 'pre' , 'orderedlist','unorderedlist', 'bold', 'italic', 'strikethrough', 'anchor'],
-      anchorInputPlaceholder: 'URL을 입력하세요.',
-      placeholder:"내용을 입력하세요.",
-      targetBlank: true
-    });
+    initMediumEditor("#content", 'post');
     if(this.data.content){
       $('#content').html(this.data.content);
     }
