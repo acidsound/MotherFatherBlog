@@ -27,10 +27,10 @@ Template.commentSubmit.events({
       clearModal(modalId);
       if(data.result === "ok"){
         if(data.type==="ImageUrl" || data.type==="ImageUpload"){
-          var imgTag = "<div><img src="+data.url +"></img></div><div>&nbsp;</div>";
+          var imgTag = "<p><img src="+data.url +"></img></p><p> </p>";
           $('#content').html($('#content').html()+imgTag);
         }else if(data.type==="YoutubeUrl"){
-          var imgTag = '<div><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></div><div>&nbsp;</div>';
+          var imgTag = '<p><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></p><p> </p>';
           $('#content').html($('#content').html()+imgTag);
         }
 
