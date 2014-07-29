@@ -37,7 +37,9 @@ Template.postSubmit.events({
           var imgTag = '<div><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></div><div>&nbsp;</div>';
           //var youtubeTag = "<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+data.url+ "\" frameborder=0></iframe></div>";
           $('#content').html($('#content').html()+imgTag);
-        }
+        }/*else if(data.type==="AceUrl"){
+          $('#content').html($('#content').html()+"<pre>"+data.url+"</pre> <div> </div>");
+        }*/
 
       }
     };

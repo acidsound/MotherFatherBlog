@@ -35,8 +35,10 @@ Template.postEdit.events({
         }else if(data.type==="YoutubeUrl"){
           var imgTag = '<div><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></div><div>&nbsp;</div>';
           $('#content').html($('#content').html()+imgTag);
+        }/*else if(data.type==="AceUrl"){
+          $('#content').html($('#content').html()+"<pre>"+data.url+"</pre> <div> </div>");
         }
-
+*/
       }
     };
     throwModal({

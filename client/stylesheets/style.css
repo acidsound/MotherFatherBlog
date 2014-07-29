@@ -256,6 +256,7 @@ hr.dashed_gubun {
 #attach_modal .image-list .image-item{padding:4px; cursor: pointer; background: #E6E9ED;}
 #attach_modal .image-list .image-item:hover{background: #967ADC;}
 #attach_modal .image-list .image-wrapper img{width: 100%;height: 80px;}
+#attach_modal #aceeditor{width: 100%; height: 150px;}
 
 #chat_detail_modal{}
 #chat_detail_modal .chat-wrapper{max-height: 400px; overflow-y:scroll;}

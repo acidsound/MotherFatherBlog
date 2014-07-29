@@ -39,7 +39,7 @@
           </div>
           <div class="col-md-6">
             <span class="glyphicon glyphicon-comment"></span> {{pluralize commentsCount 'comment'}}  &nbsp;
-            <span class="fa fa-thumbs-o-up"></span> {{pluralize votes 'like'}} <button type="button" class="upvote btn btn-xs {{upvotedClass}}"><i class="glyphicon fa fa-thumbs-o-up"></i> 엠지</button>
+            <span class="fa fa-thumbs-o-up"></span> {{pluralize votes 'like'}}
             <div class="pull-right">
               <button class="btn btn-default btn-xs goComment" type="button"><span class="glyphicon glyphicon-chevron-down "></span></button>
               {{#if ownPost}}
@@ -65,23 +65,17 @@
           {{{dynamicConent}}}
         </div>
         <hr class="">
-        <div class="row">
-          <div class="col-sm-6">
-            <button type="button" class="btn btn-primary goList">목록 <span class="glyphicon glyphicon-chevron-left"></span></button>
-
-          </div>
-          <div class="col-sm-6">
-            <div class="pull-right">
-              <div class="btn-group">
-                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">공유하기  <span class="caret"></span></button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.underdogg.co.kr/posts/{{_id}}" target="_blank"><i class="fa fa-facebook fa-fw"></i>  facebook</a></li>
-                  <li><a href="https://plus.google.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}" target="_blank"><i class="fa fa-google-plus fa-fw"></i>  google+</a></li>
-                  <li><a href="https://twitter.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}&via=TWITTER_HANDLE&text={{title}}" target="_blank"><i class="fa fa-twitter fa-fw"></i>  twitter</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <button type="button" class="btn btn-primary goList">목록 <span class="glyphicon glyphicon-chevron-left"></span></button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">공유하기  <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.underdogg.co.kr/posts/{{_id}}" target="_blank"><i class="fa fa-facebook fa-fw"></i>  facebook</a></li>
+            <li><a href="https://plus.google.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}" target="_blank"><i class="fa fa-google-plus fa-fw"></i>  google+</a></li>
+            <li><a href="https://twitter.com/share?url=http://www.underdogg.co.kr/posts/{{_id}}&via=TWITTER_HANDLE&text={{title}}" target="_blank"><i class="fa fa-twitter fa-fw"></i>  twitter</a></li>
+          </ul>
+        </div>
+        <div class="pull-right">
+          <button type="button" class="upvote btn {{upvotedClass}}"><i class="glyphicon fa fa-thumbs-o-up"></i></button>
         </div>
         <!--<br>
         <div class="row">

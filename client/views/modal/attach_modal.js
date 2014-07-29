@@ -8,15 +8,15 @@
 $.cloudinary.config({
   cloud_name:"www-underdogg-co-kr"
 });
-
+var aceEditor = null;
 
 Template.attach_modal.created = function(){
   Meteor.call("cloudinary_list_all",function(e,list){
     Session.set("image_list",list);
   });
   /*
-  Session.set('c_upload.upload_successful');
-  Session.set('c_upload.upload_failed');*/
+   Session.set('c_upload.upload_successful');
+   Session.set('c_upload.upload_failed');*/
 }
 Template.attach_modal.helpers({
   "stuff":function(){
@@ -49,7 +49,10 @@ Template.attach_modal.events({
     }else if($("#YoutubeUrl").hasClass("active")){
       data.url =$("#YoutubeUrlInput").val();
       data.type ="YoutubeUrl";
-    }
+    }/*else if($("#AceUrl").hasClass("active")){
+      data.url =aceEditor.getValue();
+      data.type ="AceUrl";
+    }*/
 
     this.callback(data, this._id);
   },
@@ -71,3 +74,10 @@ Template.attach_modal.events({
   }
 });
 
+Template.attach_modal.rendered = function(){
+  /*aceEditor = ace.edit("aceeditor");
+  aceEditor.setTheme("ace/theme/xcode");
+  aceEditor.getSession().setMode("ace/mode/javascript");
+  aceEditor.setHighlightActiveLine(true);
+  aceEditor.setReadOnly(false)*/
+}
