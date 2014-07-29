@@ -30,7 +30,7 @@ Template.recently_activity.helpers({
         return "badge-success";
       }*/
       if(this.activity.type == "post" && this.activity.method =="create"){
-        return "badge-success";
+        return "badge-warning";
       }else{
         return "badge-default";
       }

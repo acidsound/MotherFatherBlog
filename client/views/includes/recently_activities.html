@@ -9,9 +9,9 @@
 </template>
 <template name="recently_activity">
   <a href="/posts/{{postId}}" class="none_style ">
-  <p class="activity-item anim_item">
-    <span class="pull-right"><span class="badge {{timeClass}} " ><i class="{{activity.icon}}"></i></span></span>
-    {{timeAgo}}.<small>{{creator.name}}</small>-{{description}}
-  </p>
+    <p class="activity-item anim_item">
+      <span class="pull-right"><span class="badge {{timeClass}} " >{{timeAgo}}</span></span>
+      <i class="{{activity.icon}}"></i> {{activity.message}} <span class="text-muted">{{creator.name}}-{{description}}</span>
+    </p>
   </a>
 </template>
