@@ -5,7 +5,7 @@
  * Time: 오후 4:51
  * To change this template use File | Settings | File Templates.
  */
-var initEditor = function(){
+/*var initEditor = function(){
   initPenEditor( {
       editor: $("#content")[0], // {DOM Element} [required]
       class: 'content_pen_editor', // {String} class of the editor,
@@ -15,7 +15,7 @@ var initEditor = function(){
       stay : false
     }
   );
-};
+};*/
 Template.commentSubmit.events({
   'click .focusPlz' : function(event){
     event.preventDefault();
@@ -24,7 +24,6 @@ Template.commentSubmit.events({
   'click .showImageModal':function(event){
     event.preventDefault();
     var callback = function(data, modalId){
-      //미친 이런 콜백이 가능할 줄은 꿈에도 몰랐다.
       clearModal(modalId);
       if(data.result === "ok"){
         if(data.type==="ImageUrl" || data.type==="ImageUpload"){
@@ -56,14 +55,20 @@ Template.commentSubmit.events({
         throwError(error.reason);
       } else {
         imsiEditor.body.html("");
-        initEditor();
+        //initEditor();
       }
     });
   }
 });
 Template.commentSubmit.rendered = function(){
   if (!this.rendered){
-    initEditor();
+    //initEditor();
+    initMediumEditor("#content", {
+      buttons: [ 'header2', 'pre' , 'bold', 'italic', 'createlink'],
+      anchorInputPlaceholder: 'URL을 입력하세요.',
+      placeholder:"댓글을 작성하세요.",
+      targetBlank: true
+    });
   }
 
 };

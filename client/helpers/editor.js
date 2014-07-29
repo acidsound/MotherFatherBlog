@@ -5,7 +5,9 @@
  * Time: 오후 3:32
  * To change this template use File | Settings | File Templates.
  */
-penEditor = null;
+//penEditor = null;
+mediumEditor = null;
+/*
 initPenEditor = function(opts){
   if(penEditor == null){
     penEditor = new Pen(opts);
@@ -22,10 +24,11 @@ destroyPenEditor = function(){
 
   }
 };
+*/
 
 
-/*
 initMediumEditor = function(elem, modalOpt) {
+
   if(mediumEditor == null){
     mediumEditor = new MediumEditor(elem,modalOpt);
   }else{
@@ -39,4 +42,4 @@ destroyMediumEditor = function(){
     $("#medium-editor-anchor-preview-"+mediumEditor.id).remove();
     mediumEditor = null;
   }
-};*/
+};

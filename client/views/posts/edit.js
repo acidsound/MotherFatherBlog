@@ -147,15 +147,20 @@ Template.postEdit.rendered = function(){
     if(this.data.content){
       txtArea.data("wysihtml5").editor.setValue(this.data.content);
     }*/
-    initPenEditor( {
+    /*initPenEditor( {
         editor: $("#content")[0], // {DOM Element} [required]
         class: 'content_pen_editor', // {String} class of the editor,
         debug: false, // {Boolean} false by default
         textarea: '<textarea name="content"></textarea>', // fallback for old browsers
         list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'bold', 'italic', 'createlink']
       }
-    );
-
+    );*/
+    initMediumEditor("#content", {
+      buttons: ['quote', 'header2', 'pre' , 'orderedlist','unorderedlist', 'bold', 'italic', 'strikethrough', 'createlink'],
+      anchorInputPlaceholder: 'URL을 입력하세요.',
+      placeholder:"내용을 입력하세요.",
+      targetBlank: true
+    });
     if(this.data.content){
       $('#content').html(this.data.content);
     }

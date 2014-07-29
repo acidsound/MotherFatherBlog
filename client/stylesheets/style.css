@@ -97,6 +97,11 @@ hr.dashed_gubun {
 
 
 #postSubmit{}
+#postSubmit #content{
+    outline: none;
+    box-shadow:none !important;
+    border:transparent;
+}
 #postSubmit .content-wrapper{
     min-height: 400px;
 }
@@ -108,6 +113,11 @@ hr.dashed_gubun {
 }
 #postEdit .content-wrapper{
     min-height: 400px;
+}
+#postEdit #content{
+    outline: none;
+    box-shadow:none !important;
+    border:transparent;
 }
 #postEdit .content-wrapper h2{
     font-size: 24px;
@@ -166,6 +176,11 @@ hr.dashed_gubun {
 }
 
 #commentSubmit{}
+#commentSubmit #content{
+    outline: none;
+    box-shadow:none !important;
+    border:transparent;
+}
 #commentSubmit .comment-wrapper{min-height: 200px;}
 #commentSubmit .comment-wrapper #content{min-height: 80px;}
 
