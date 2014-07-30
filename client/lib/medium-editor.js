@@ -205,12 +205,13 @@ if (typeof module === 'object') {
          * @param {string} funcName name of the function to call
          * @param [args] arguments passed into funcName
          */
-        callExtensions: function (funcName) {
+
+        callExtensions: function (funcName, parentNode) { //hslee funcName -> funcName, parentNode
             if (arguments.length < 1) {
                 return;
             }
 
-            var args = Array.prototype.slice.call(arguments, 1),
+            var args = parentNode, //hslee Array.prototype.slice.call(arguments, 1) -> parentNode
                 ext,
                 name;
 
@@ -223,7 +224,6 @@ if (typeof module === 'object') {
                 }
             }
         },
-
         /**
          * Pass current Medium Editor instance to all extensions
          * if extension constructor has 'parent' attribute set to 'true'

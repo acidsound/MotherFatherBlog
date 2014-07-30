@@ -28,16 +28,59 @@ destroyPenEditor = function(){
 
 
 initMediumEditor = function(elem, type) {
+  var runAttachModal = function(editor){
+    var parentElement = editor.base.getSelectedParentElement();
+    var attachModalcallback = function(data, modalId){
+      clearModal(modalId);
+      if(data.result === "ok"){
+        var attachElement = "";
+        if(data.type==="ImageUrl" || data.type==="ImageUpload"){
+          attachElement = "<img src="+data.url +"></img>";
+          //$('#content').html($('#content').html()+imgTag);
+
+        }else if(data.type==="YoutubeUrl"){
+          attachElement = '<img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg">';
+          //var youtubeTag = "<div class='embed-responsive embed-responsive-16by9'><iframe  class='embed-responsive-item' src=\"http://www.youtube.com/embed/"+data.url+ "\" frameborder=0></iframe></div>";
+          //$('#content').html($('#content').html()+imgTag);
+        }/*else if(data.type==="AceUrl"){
+         $('#content').html($('#content').html()+"<pre>"+data.url+"</pre> <div> </div>");
+         }*/
+        $(parentElement).append(attachElement);
+      }
+    };
+    throwModal({
+      type:"attach",
+      callback : attachModalcallback
+    });
+  };
+  function Extension() {
+    this.parent = true;
+    this.button = document.createElement('button');
+    this.button.className = 'medium-editor-action';
+    this.button.innerText = ' ';
+    $(this.button).append("<i class='fa fa-paperclip'></i>")
+    this.button.onclick = this.onClick.bind(this);
+  }
+  Extension.prototype.getButton = function() {
+    return this.button;
+  };
+  Extension.prototype.onClick = function() {
+    runAttachModal(this);
+  };
+
   var options = {
     anchorInputPlaceholder: 'URL을 입력하세요.',
     placeholder:"내용을 입력하세요.",
     targetBlank: true,
-    firstHeader:'h1',secondHeader: 'h2'
+    firstHeader:'h1',secondHeader: 'h2',
+    extensions : {
+      extension: new Extension()
+    }
   };
   if(type =="post"){
-    options.buttons = ['quote', 'header2', 'pre' , 'orderedlist','unorderedlist', 'bold', 'italic', 'strikethrough', 'anchor'];
+    options.buttons = ['quote', 'header2', 'pre' , 'orderedlist','unorderedlist', 'bold', 'italic', 'strikethrough', 'anchor', 'extension'];
   }else if(type == "comment"){
-    options.buttons = ['pre', 'orderedlist', 'unorderedlist', 'bold', 'italic', 'anchor'];
+    options.buttons = ['pre', 'orderedlist', 'unorderedlist', 'bold', 'italic', 'anchor', 'extension'];
   }
   if(mediumEditor == null){
     mediumEditor = new MediumEditor(elem,options);

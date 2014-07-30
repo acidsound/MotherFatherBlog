@@ -48,6 +48,7 @@ hr.dashed_gubun {
     position:relative;
     transition:all 300ms 0ms ease-in;
 }
+.modal{z-index:2050}    /*ㅁㅣ디엄 에디터의 툴팁보다 위로 올라가도록 맨 */
 .alert{
     position: fixed;
     top: 45%;

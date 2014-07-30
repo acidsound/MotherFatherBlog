@@ -21,7 +21,7 @@ Template.commentSubmit.events({
     event.preventDefault();
     $('#content').focus();
   },
-  'click .showImageModal':function(event){
+  /*'click .showImageModal':function(event){
     event.preventDefault();
     var callback = function(data, modalId){
       clearModal(modalId);
@@ -40,7 +40,7 @@ Template.commentSubmit.events({
       type:"attach",
       callback : callback
     });
-  },
+  },*/
   'submit form': function(e, template) {
     e.preventDefault();
     var imsiEditor = {body : $(e.target).find('#content')};

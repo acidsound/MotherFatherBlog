@@ -24,7 +24,7 @@ Template.postEdit.events({
       callback : callback
     });
   },
-  'click .showImageModal':function(event){
+  /*'click .showImageModal':function(event){
     event.preventDefault();
     var callback = function(data, modalId){
       clearModal(modalId);
@@ -35,10 +35,10 @@ Template.postEdit.events({
         }else if(data.type==="YoutubeUrl"){
           var imgTag = '<p><img alt="youtube" width="100%" name="'+data.url+'" src="http://img.youtube.com/vi/'+data.url+'/0.jpg"></p><p>&nbsp;</p>';
           $('#content').html($('#content').html()+imgTag);
-        }/*else if(data.type==="AceUrl"){
+        }*//*else if(data.type==="AceUrl"){
           $('#content').html($('#content').html()+"<pre>"+data.url+"</pre> <div> </div>");
         }
-*/
+*//*
       }
     };
     throwModal({
@@ -46,7 +46,7 @@ Template.postEdit.events({
       callback : callback
     });
 
-  },
+  },*/
 
   'submit form': function(e) {
     e.preventDefault();
