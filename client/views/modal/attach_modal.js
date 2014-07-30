@@ -11,9 +11,7 @@ $.cloudinary.config({
 var aceEditor = null;
 
 Template.attach_modal.created = function(){
-  Meteor.call("cloudinary_list_all",function(e,list){
-    Session.set("image_list",list);
-  });
+
   /*
    Session.set('c_upload.upload_successful');
    Session.set('c_upload.upload_failed');*/
@@ -24,10 +22,7 @@ Template.attach_modal.helpers({
     return {name:user.profile.name, _id:user._id}
   },
   "saved_images":function(){
-    return CloudImages.find({},{sort:{"created_at":-1}});
-  },
-  "image_list":function(){
-    return Session.get("image_list");
+    return CloudImages.find({},{sort:{"created_at":-1}, limit:18});
   }
 });
 Template.attach_modal.events({
@@ -43,26 +38,18 @@ Template.attach_modal.events({
       data.url =$("#ImageUrlInput").val();
       data.type ="ImageUrl";
     }else if($("#ImageUpload").hasClass("active")){
-      data.url =$(".previewImage").attr("src");
-      $(".previewImage").attr("src","");
+      data.url =$('.image-item.select').attr("data-origin-src");
       data.type ="ImageUpload";
     }else if($("#YoutubeUrl").hasClass("active")){
       data.url =$("#YoutubeUrlInput").val();
       data.type ="YoutubeUrl";
-    }/*else if($("#AceUrl").hasClass("active")){
-      data.url =aceEditor.getValue();
-      data.type ="AceUrl";
-    }*/
-
+    }
     this.callback(data, this._id);
   },
   "click .image-item": function (event) {
     event.preventDefault();
-
-    //어쩔수가 없다. 리스트에서 아이템 클릭 시 바로 팝업 닫히면서 전달되도록 해야하는게 ㅠㅠ
-    //헐 여기서 this 는 Modal 객체가 아니라 이미지 객체이다. ㅎㄷ ㄷ
-    //어케 땡겨오지 ;; 일단 Modals.findOne()이걸로...
-    Modals.findOne().callback({result:"ok",url: this.url, type: "ImageUpload"}, Modals.findOne()._id);
+    $('.image-item').removeClass('select');
+    $(event.currentTarget).addClass('select');
   },
   "click .delete":function(){
     CloudImages.remove(this._id);
