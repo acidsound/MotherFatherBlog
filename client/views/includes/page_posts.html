@@ -1,0 +1,25 @@
+<template name="page_posts">
+
+  <div id = "page_posts">
+    <table class="table">
+      <tbody>
+      {{#each pageList}}
+        <tr>
+          <td>{{title}}</td>
+          <!--<td>{{submitted}}</td>-->
+        </tr>
+      {{/each}}
+
+      </tbody>
+    </table>
+    {{totalCount}} - {{pageList.length}}
+      <ul class="pagination">
+        <!--<li class="previous"><a href="" >PREV</a></li>-->
+        {{#each countList}}
+          <li class="{{activeClass}}  page-item" data-page-number="{{index}}"><a href="">{{dispIndex}}</a></li>
+        {{/each}}
+        <!--<li class="next"><a href="" >NEXT</a></li>-->
+      </ul>
+
+  </div>
+</template>
