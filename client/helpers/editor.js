@@ -79,9 +79,9 @@ initMediumEditor = function(elem, type) {
     }
   };
   if(type =="post"){
-    options.buttons = ['quote', 'header2', 'pre' , 'orderedlist', 'bold', 'italic', 'strikethrough', 'anchor', 'extension'];
+    options.buttons = ['quote', 'header2', 'pre' , 'orderedlist', 'anchor', 'bold', 'italic', 'strikethrough', 'extension'];
   }else if(type == "comment"){
-    options.buttons = ['pre', 'orderedlist', 'unorderedlist', 'bold', 'italic', 'anchor', 'extension'];
+    options.buttons = ['pre', 'orderedlist', 'anchor', 'bold', 'italic', 'extension'];
   }
   if(mediumEditor == null){
     mediumEditor = new MediumEditor(elem,options);
