@@ -2,17 +2,23 @@
 
   <div id = "page_posts">
     <table class="table">
+      <thead>
+      <tr>
+        <th>제목</th>
+        <th>작성일</th>
+      </tr>
+      </thead>
       <tbody>
       {{#each pageList}}
         <tr>
-          <td>{{title}}</td>
+          <td><a href="{{pathFor 'postPage'}}">{{title}}</a></td>
+          <td>{{submittedMoment}}</td>
           <!--<td>{{submitted}}</td>-->
         </tr>
       {{/each}}
 
       </tbody>
     </table>
-    {{totalCount}} - {{pageList.length}}
       <ul class="pagination">
         <!--<li class="previous"><a href="" >PREV</a></li>-->
         {{#each countList}}

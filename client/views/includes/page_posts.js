@@ -11,7 +11,12 @@ Template.page_posts.created = function(){
 }
 Template.page_posts.helpers({
   pageList: function() {
-    return Posts.find({},{sort: {submitted: -1}, limit:  Session.get('perPage'), skip: Session.get('perPage')* Session.get('pageNumber')}).fetch();
+    //submittedMoment
+    var list = Posts.find({},{sort: {submitted: -1}, limit:  Session.get('perPage'), skip: Session.get('perPage')* Session.get('pageNumber')}).fetch();
+    _.forEach(list, function(item){
+      item.submittedMoment = moment(this.submitted).format('YYYY년 MM월 DD일')
+    });
+    return list;
   },
   totalCount : function(){
     return Posts.find().count();
