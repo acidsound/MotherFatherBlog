@@ -29,7 +29,7 @@ destroyPenEditor = function(){
 
 initMediumEditor = function(elem, type) {
   var elem = elem;
-  var runAttachModal = function(editor){
+  var showAttachModal = function(editor){
     var parentElement = editor.base.getSelectedParentElement();
     var attachModalcallback = function(data, modalId){
       clearModal(modalId);
@@ -61,13 +61,12 @@ initMediumEditor = function(elem, type) {
     this.button.innerText = ' ';
     $(this.button).append("<i class='fa fa-paperclip'></i>")
     this.button.onclick = this.onClick.bind(this);
-    console.log("Fuck You");
   }
   Extension.prototype.getButton = function() {
     return this.button;
   };
   Extension.prototype.onClick = function() {
-    runAttachModal(this);
+    showAttachModal(this);
   };
 
   var options = {

@@ -13,6 +13,7 @@ Meteor.startup(function() {
     if (err) {
       Session.set('errorMessage', err.reason || 'Unknown error');
     }
+
   });
 
 
