@@ -21,24 +21,27 @@
                 <div class="iamge-upload">
                   <h5><i class="fa fa-upload"></i> 직접 업로드</h5>
                   <br>
-                  <!--프로그레스 처리할 것-->
                   {{#with stuff}}
                     {{#c_upload_stream callback="save_url"}}
-                    <span class="btn btn-success fileinput-button">
-                        <i class="fa fa-picture-o"></i>
-                        <span>이미지 선택</span>
-                        <input type="file">
-                    </span>
-
+                      {{#each c.uploading_images}}
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent_uploaded}}%">
+                            <span class="sr-only">{{percent_uploaded}}% Complete</span>
+                          </div>
+                        </div>
+                      {{else}}
+                          <span class="btn btn-success fileinput-button">
+                              <i class="fa fa-picture-o"></i>
+                              <span>이미지 선택</span>
+                              <input type="file">
+                          </span>
+                      {{/each}}
                     {{/c_upload_stream}}
                   {{/with}}
-                  {{#each c.uploading_images}}
-                  <p>{{percent_uploaded}}</p>
-                  {{/each}}
                 </div>
                 <br>
                 <div class="image-list">
-                  <h5><i class="fa fa-list"></i> 최근 저장</h5>
+                  <h5><i class="fa fa-list"></i> 최근 업로드 </h5>
                   <div class="row">
                     {{#each saved_images}}
                     <div class="col-xs-2 image-wrapper">
