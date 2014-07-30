@@ -56,3 +56,6 @@ robots-txt
 /facebook-sdk
 /ace
 /ace-editor
+/iron-layout
+/iron-core
+/iron-dynamic-template

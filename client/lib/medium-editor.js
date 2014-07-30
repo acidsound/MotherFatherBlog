@@ -206,19 +206,18 @@ if (typeof module === 'object') {
          * @param [args] arguments passed into funcName
          */
 
-        callExtensions: function (funcName, parentNode) { //hslee funcName -> funcName, parentNode
+        callExtensions: function (funcName) {
             if (arguments.length < 1) {
                 return;
             }
-
-            var args = parentNode, //hslee Array.prototype.slice.call(arguments, 1) -> parentNode
+            var args = $(Array.prototype.slice.call(arguments, 1)),
                 ext,
                 name;
-
             for (name in this.options.extensions) {
                 if (this.options.extensions.hasOwnProperty(name)) {
                     ext = this.options.extensions[name];
                     if (ext[funcName] !== undefined) {
+                        console.log("Pass!");
                         ext[funcName].apply(ext, args);
                     }
                 }
@@ -1173,6 +1172,7 @@ if (typeof module === 'object') {
 
         setPlaceholders: function () {
             var i,
+
                 activatePlaceholder = function (el) {
                     if (!(el.querySelector('img')) &&
                             !(el.querySelector('blockquote')) &&

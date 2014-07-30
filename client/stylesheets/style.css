@@ -98,13 +98,13 @@ hr.dashed_gubun {
 
 
 #postSubmit{}
-#postSubmit #content{
-    outline: none;
-    box-shadow:none !important;
-    border:transparent;
-}
 #postSubmit .content-wrapper{
     min-height: 400px;
+}
+#postSubmit .content-wrapper #content{
+    outline: none;
+    box-shadow:none;
+    border:transparent;
 }
 #postSubmit .content-wrapper h2{
     font-size: 24px;
@@ -112,12 +112,13 @@ hr.dashed_gubun {
 #postSubmit .content-wrapper .content img{
     max-width: 100%;
 }
+
 #postEdit .content-wrapper{
     min-height: 400px;
 }
-#postEdit #content{
+#postEdit .content-wrapper #content{
     outline: none;
-    box-shadow:none !important;
+    box-shadow:none;
     border:transparent;
 }
 #postEdit .content-wrapper h2{
@@ -179,7 +180,7 @@ hr.dashed_gubun {
 #commentSubmit{}
 #commentSubmit #content{
     outline: none;
-    box-shadow:none !important;
+    box-shadow:none;
     border:transparent;
 }
 #commentSubmit .comment-wrapper{min-height: 200px;}

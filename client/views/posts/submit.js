@@ -85,8 +85,9 @@ Template.postSubmit.events({
 });
 
 Template.postSubmit.rendered = function(){
+
   if (!this.rendered){
-    // run my code
+    initMediumEditor("#content", 'post');
     //initEditor();
     /*initPenEditor( {
         editor: $("#content")[0], // {DOM Element} [required]
@@ -96,6 +97,7 @@ Template.postSubmit.rendered = function(){
         list: ['blockquote', 'h2', 'pre' , 'insertorderedlist', 'insertunorderedlist', 'bold', 'italic', 'createlink']
       }
     );*/
-    initMediumEditor("#content", 'post');
+
+
   }
 };
